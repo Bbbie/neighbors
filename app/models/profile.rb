@@ -1,5 +1,6 @@
 class Profile < ApplicationRecord
-  belongs_to :users
+  has_one :user
+
 
   validates :floor, presence: true
 end

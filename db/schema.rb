@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_01_153638) do
+ActiveRecord::Schema.define(version: 2021_03_01_160205) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "card_recipients", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "card_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["card_id"], name: "index_card_recipients_on_card_id"
+    t.index ["user_id"], name: "index_card_recipients_on_user_id"
+  end
 
   create_table "cards", force: :cascade do |t|
     t.string "board"
@@ -46,6 +55,15 @@ ActiveRecord::Schema.define(version: 2021_03_01_153638) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "profiles", force: :cascade do |t|
+    t.string "floor"
+    t.string "phone_number"
+    t.text "about"
+    t.string "avatar"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -54,11 +72,21 @@ ActiveRecord::Schema.define(version: 2021_03_01_153638) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.bigint "community_id", null: false
+    t.bigint "profile_id", null: false
+    t.index ["community_id"], name: "index_users_on_community_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["profile_id"], name: "index_users_on_profile_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "card_recipients", "cards"
+  add_foreign_key "card_recipients", "users"
   add_foreign_key "cards", "users"
   add_foreign_key "comments", "cards"
   add_foreign_key "comments", "users"
+  add_foreign_key "users", "communities"
+  add_foreign_key "users", "profiles"
 end

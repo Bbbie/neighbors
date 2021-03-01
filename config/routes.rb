@@ -6,6 +6,8 @@ Rails.application.routes.draw do
       get :search
     end
   end
-  resources :cards, except: [:new, :destroy]
 
+  resources :profiles, only: [:show, :edit, :update]
+  resources :cards, except: [:new, :destroy]
 end
+

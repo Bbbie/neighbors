@@ -2,8 +2,8 @@ class Card < ApplicationRecord
   belongs_to :user
   has_many :card_recipients
   has_many :comments
-  has_one_attached :picture
+  has_many_attached :pictures
 
-  validates :board, :title, :description, :start_date, :start_time, presence: true
-  validates :category, presence: true, inclusion: { in: ['action', 'request', 'info', 'offer', 'question'] }
+  validates :board, :category, :title, :start_date, :start_time, presence: true
+  validates :category, inclusion: { in: ['action', 'request', 'info', 'offer', 'question'] }
 end

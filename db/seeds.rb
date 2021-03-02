@@ -56,7 +56,7 @@ card_three = Card.create(board: "parcels", category: "info", title: "Got yo parc
 puts "Card four..."
 card_four = Card.create(board: "mutual_help", category: "request", title: "HELP! Need WIFI!", description: "Urgent! I’ll switch my WIFI provider and would need to bridge one afternoon without having any connection! Please let me know if I can use yours. Thank you.", start_date: "14Febr", start_time: "15pm", user: seb)
 
-puts "Creating card-cecipients..."
+puts "Creating card-recipients..."
 puts "For card one..."
 CardRecipient.create(user: achim, card: card_one)
 CardRecipient.create(user: seb, card: card_one)

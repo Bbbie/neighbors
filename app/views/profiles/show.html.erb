@@ -13,7 +13,10 @@
       </tr>
     </table>
     <div class="main-content">
-      <%= cl_img_tag @profile.avatar.key %>
+      <% if @profile.avatar %>
+        <%= cl_img_tag @profile.avatar.key %>
+        <h1>Picture?</h1>
+      <% end %>
       <div class="about">
         <h4>About me</h4>
         <p><%= @profile.about %></p>

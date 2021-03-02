@@ -13,18 +13,18 @@ class ProfilesController < ApplicationController
 
   def create
     @profile = Profile.new(set_params)
-    @user = current_user
-    @profile.user = @user
+    @profile.user = current_user
     if @profile.save
-      # redirect_to "cards/"
-      redirect_to root
+      redirect_to "/cards"
     else
       render :new
     end
+    authorize @profile
   end
 
   def update
     @profile.update(set_params)
+    authorize @profile
     redirect_to "cards/"
   end
 

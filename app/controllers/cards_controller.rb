@@ -2,7 +2,16 @@ class CardsController < ApplicationController
   before_action :set_card, only: [:show, :edit]
 
   def index
+    # All cards
     @cards = policy_scope(Card)
+    # 4 Tabs in nav bar
+    # @missed_cards = @cards.where()
+    @parcels_cards = @cards.where(board: "parcels")
+    @mutual_help_cards = @cards.where(board: "mutual_help")
+    @community_cards = @cards.where(board: "community")
+    # My cards (with one filter: (archived: true)
+    @my_cards = @cards.where(:user == current_user)
+    @my_archived_cards = @my_cards.where(archived: true)
   end
 
   def show

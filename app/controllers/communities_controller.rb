@@ -7,6 +7,7 @@ class CommunitiesController < ApplicationController
         lat: community.latitude,
         lng: community.longitude
       }
+    end
   end
 
   def search

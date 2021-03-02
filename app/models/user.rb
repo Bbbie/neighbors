@@ -4,6 +4,7 @@ class User < ApplicationRecord
   belongs_to :community
   belongs_to :profile
   has_many :card_recipients
+  has_many :cards_as_recipient, through: :card_recipients, source: :cards
   has_many :cards
   has_many :comments
 

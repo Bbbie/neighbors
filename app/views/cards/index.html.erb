@@ -1,0 +1,28 @@
+
+<p>Welcome back, <%= current_user.first_name %></p>
+<h1>What you’ve missed</h1>
+<% @cards.each do |card| %>
+  <div class="index-card">
+    <div class="index-card-top">
+      <p><%= card.category %> | <%= card.created_at %></p>
+    </div>
+    <p><%= card.user.first_name %> <%= card.user.last_name %>, <%= card.user.profile.floor %></p>
+    <p><%= card.title %></p>
+    <p><%= card.description %></p>
+    <p>
+      <% card.card_recipients.each do |recipient| %>
+        <%= recipient.avatar %>
+      <% end %>
+    </p>
+  </div>
+<% end %>
+
+<h1>Parcels</h1>
+
+<h1>Mutual help</h1>
+
+<h1>Community</h1>
+
+<h1>My cards</h1>
+
+<p>Archived</p>

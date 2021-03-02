@@ -2,11 +2,13 @@ class ProfilesController < ApplicationController
   before_action :set_profile, only: [:update, :show]
 
   def show
+    authorize @profile
   end
 
   def new
     @profile = Profile.new
     @user = current_user
+    authorize @profile
   end
 
   def create

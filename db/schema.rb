@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 2021_03_02_110122) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "archived", default: false
+    t.string "pictures"
     t.index ["user_id"], name: "index_cards_on_user_id"
   end
 

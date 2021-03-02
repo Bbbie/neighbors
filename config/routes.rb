@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :profiles, only: [:show, :edit, :update]
+  resources :profiles, only: [:new, :create, :show, :update]
   resources :cards, except: [:new, :destroy] do
     resources :comments, only: :create
   end

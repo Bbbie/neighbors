@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2021_03_02_170644) do
 
   # These are extensions that must be enabled in order to support this database
@@ -87,6 +88,8 @@ ActiveRecord::Schema.define(version: 2021_03_02_170644) do
     t.string "avatar"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -108,7 +111,6 @@ ActiveRecord::Schema.define(version: 2021_03_02_170644) do
     t.inet "last_sign_in_ip"
     t.index ["community_id"], name: "index_users_on_community_id"
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["profile_id"], name: "index_users_on_profile_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
@@ -118,6 +120,6 @@ ActiveRecord::Schema.define(version: 2021_03_02_170644) do
   add_foreign_key "cards", "users"
   add_foreign_key "comments", "cards"
   add_foreign_key "comments", "users"
+  add_foreign_key "profiles", "users"
   add_foreign_key "users", "communities"
-  add_foreign_key "users", "profiles"
 end

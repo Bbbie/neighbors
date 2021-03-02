@@ -7,11 +7,11 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-
 
 // colors
 $blackish: #323232;
@@ -36,3 +36,4 @@ a {
     color: #4e3dbf;
   }
 }
+

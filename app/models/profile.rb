@@ -1,5 +1,5 @@
 class Profile < ApplicationRecord
-  has_one :user
+  belongs_to :user
   has_one_attached :avatar
 
   validates :floor, presence: true

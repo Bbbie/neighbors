@@ -2,11 +2,12 @@ class CardsController < ApplicationController
   before_action :set_card, only: [:show, :edit]
 
   def index
-    @cards = Card.all
+    @cards = policy_scope(Card)
   end
 
   def show
     @user = current_user
+    authorize @card
   end
 
   def create
@@ -18,14 +19,17 @@ class CardsController < ApplicationController
     else
       redirect_to cards_path
     end
+    authorize @card
   end
 
   def edit
     @user = current_user
+    authorize @card
   end
 
   def update
     @card.update
+    authorize @card
     redirect_to card_path(@card)
   end
 

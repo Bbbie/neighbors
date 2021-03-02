@@ -1,0 +1,73 @@
+$purple: #6951FF;
+$dark-purple: #5b46dd;
+
+.btn {
+  border-radius: 24px;
+}
+
+.btn-primary {
+  background-color: $purple;
+  border: 1px solid $purple;
+  box-shadow: 0px 2px 8px 0px rgba(105, 81, 255, 0.6);
+  &:hover {
+    background-color: $dark-purple;
+    border: 1px solid $dark-purple;
+    box-shadow: 0px 2px 12px 0px rgba(105, 81, 255, 0.8);
+  }
+  &:focus {
+    background-color: $purple !important;
+    border: 1px solid $purple !important;
+    box-shadow: 0px 0px 0px 4px rgba(105, 81, 255, 0.3) !important;
+  }
+  &:active {
+    background-color: $purple !important;
+    border: 1px solid $purple !important;
+  }
+}
+
+.btn-primary-small {
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  background-color: $purple;
+  border: 1px solid $purple;
+  color: white;
+  &:hover {
+    background-color: $dark-purple;
+    border: 1px solid $dark-purple;
+    color: white;
+  }
+  &:focus {
+    background-color: $purple !important;
+    border: 1px solid $purple !important;
+    color: white;
+  }
+  &:active {
+    background-color: $purple !important;
+    border: 1px solid $purple !important;
+    color: white;
+  }
+}
+
+.btn-secondary-small {
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid $purple;
+  color: $purple;
+  &:hover {
+    background-color: $dark-purple;
+    border: 1px solid $dark-purple;
+    color:white;
+  }
+  &:focus {
+    background-color: $purple !important;
+    border: 1px solid $purple !important;
+    color:white;
+  }
+  &:active {
+    background-color: $purple !important;
+    border: 1px solid $purple !important;
+    color:white;
+  }
+}

@@ -10,3 +10,40 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+// nav bar home, login etc.
+
+
+// nav bar dashboard
+
+.boards {
+  display: inline-flex;
+}
+
+.board-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  margin-left: 20px;
+  background-color: #F2F2F2;
+  border-radius: 8px;
+  &active {
+    background-color: #6951FF;
+  }
+  &hover {
+    background-color: #6951FF;
+  }
+}
+
+#nav-logo-short {
+  font-family: 'Asap', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 40px;
+  color: #323232;
+  &hover {
+    color: #323232;
+  }
+}

@@ -1,0 +1,31 @@
+.category {
+  display: inline-block;
+  text-align: center;
+  min-width: 44px;
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
+  padding: 3px 9px;
+  border-radius: 20px;
+}
+
+.info {
+  background-color: #49CCF9;
+}
+
+.request {
+  background-color: #5577FF;
+}
+
+.question {
+  background-color: #FD71AF;
+}
+
+.offer {
+  background-color: #FFC800;
+}
+
+.action {
+  background-color: #00B888;
+}
+

@@ -15,36 +15,33 @@
       <div class="secondary-link"><%= link_to "Show all", cards_path(query: "my-cards") %></div>
       <div class="primary-link"><%= link_to "Show archived", cards_path(query: "my-cards-archived") %></div>
       <% end %>
-
     </div>
-    <%= link_to "Add card", cards_path(query: "new"), class: "btn btn-primary add" %>
+    <%= link_to "Add card", cards_path(query: "new"), class: "btn btn-primary btn-shadow add" %>
   </div>
 
   <div class="cards">
     <% @cards.each do |card| %>
-      <div class="index-card">
-        <div class="index-card-top">
-          <p><%= card.category %> | <%= card.created_at %></p>
+      <div class="card">
+        <div class="card-content">
+          <div class="card-top">
+            <p class="category <%= card.category %>"><%= card.category %></p>
+            <p class="date-time"><%= card.created_at %></p>
+          </div>
+          <div class="card-middle">
+            <p class="from-who"><%= card.user.first_name %> <%= card.user.last_name %>, <%= card.user.profile.floor %></p>
+            <p class="title"><%= card.title %></p>
+          </div>
+          <p class="date-time">When: <%= card.start_date%>, <%= card.start_time%> to <%= card.end_date%>, <%= card.end_time%></p>
+          <p class="card-description description-card"><%= truncate(card.description,  :length => 82) %></p>
+          <div class="card-avatars">
+            <% card.users.each do |recipient| %>
+              <div class="card-index-avatars">
+                <div class="placeholder-avatar-small"></div>
+              </div>
+            <% end %>
+          </div>
         </div>
-        <p><%= card.user.first_name %> <%= card.user.last_name %>, <%= card.user.profile.floor %></p>
-        <p><%= card.title %></p>
-        <p><%= card.description %></p>
-        <p>
-          <% card.users.each do |recipient| %>
-            <div class="card-index-avatars">
-              <div class="placeholder-avatar-small"></div>
-            </div>
-          <% end %>
-        </p>
       </div>
     <% end %>
   </div>
-
 </div>
-
-
-
-
-
-
-

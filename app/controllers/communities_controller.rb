@@ -8,7 +8,6 @@ class CommunitiesController < ApplicationController
         lng: community.longitude
       }
     end
-
   end
 
   def search

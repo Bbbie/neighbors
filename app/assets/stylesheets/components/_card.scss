@@ -1,0 +1,36 @@
+// on cards index
+.card{
+  background-color: white;
+  border-radius: 24px;
+  border: none !important;
+  width: 356px;
+  margin-right: 30px;
+  box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.12);
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.card-middle {
+  margin-bottom: 20px;
+}
+
+.card-description {
+  margin-bottom: 30px;
+}
+
+.card-avatars, .card-index-avatars {
+  margin: 0;
+  padding: 0;
+}

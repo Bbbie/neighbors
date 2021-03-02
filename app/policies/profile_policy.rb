@@ -6,10 +6,10 @@ class ProfilePolicy < ApplicationPolicy
   end
 
   def new?
-    true
+    create?
   end
 
-  def create
+  def create?
     true
   end
 
@@ -17,7 +17,7 @@ class ProfilePolicy < ApplicationPolicy
     true
   end
 
-  def update
+  def update?
     record.user == user
   end
 end

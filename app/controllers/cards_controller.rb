@@ -29,7 +29,7 @@ class CardsController < ApplicationController
     # View
     elsif params[:query] == "my-cards-archived"
       @cards = policy_scope(Card).where(user: current_user, archived: true)
-      @title = "My archived cards"
+      @title = "My cards"
 
     # Default to board = missed
     else

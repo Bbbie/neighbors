@@ -15,9 +15,8 @@
       <div class="secondary-link"><%= link_to "Show all", cards_path(query: "my-cards") %></div>
       <div class="primary-link"><%= link_to "Show archived", cards_path(query: "my-cards-archived") %></div>
       <% end %>
-
     </div>
-    <%= link_to "Add card", cards_path(query: "new"), class: "btn btn-primary add" %>
+    <%= link_to "Add card", cards_path(query: "new"), class: "btn btn-primary btn-shadow add" %>
   </div>
 
   <div class="cards">
@@ -39,7 +38,6 @@
       </div>
     <% end %>
   </div>
-
 </div>
 
 

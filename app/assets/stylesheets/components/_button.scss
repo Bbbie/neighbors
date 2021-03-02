@@ -13,69 +13,61 @@ a {
   border-radius: 24px;
 }
 
+.btn-medium {
+  border-radius: 24px;
+  padding: 6px 10px;
+}
+
+.btn-small {
+  border-radius: 24px;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
 .btn-primary {
   background-color: $purple;
   border: 1px solid $purple;
-  box-shadow: 0px 2px 8px 0px rgba(105, 81, 255, 0.6);
   &:hover {
     background-color: $dark-purple;
     border: 1px solid $dark-purple;
+  }
+  &:focus {
+    background-color: $purple !important;
+    border: 1px solid $purple !important;
+  }
+  &:active {
+    background-color: $purple !important;
+    border: 1px solid $purple !important;
+  }
+}
+
+.btn-shadow {
+  box-shadow: 0px 2px 8px 0px rgba(105, 81, 255, 0.6);
+  &:hover {
     box-shadow: 0px 2px 12px 0px rgba(105, 81, 255, 0.8);
   }
   &:focus {
-    background-color: $purple !important;
-    border: 1px solid $purple !important;
     box-shadow: 0px 0px 0px 4px rgba(105, 81, 255, 0.3) !important;
   }
-  &:active {
-    background-color: $purple !important;
-    border: 1px solid $purple !important;
-  }
 }
 
-.btn-primary-small {
-  font-size: 14px;
-  padding: 8px 12px;
-  border-radius: 20px;
-  background-color: $purple;
-  border: 1px solid $purple;
-  color: white;
-  &:hover {
-    background-color: $dark-purple;
-    border: 1px solid $dark-purple;
-    color: white;
-  }
-  &:focus {
-    background-color: $purple !important;
-    border: 1px solid $purple !important;
-    color: white;
-  }
-  &:active {
-    background-color: $purple !important;
-    border: 1px solid $purple !important;
-    color: white;
-  }
-}
-
-.btn-secondary-small {
-  font-size: 14px;
-  padding: 8px 12px;
-  border-radius: 20px;
-  border: 1px solid $purple;
+.btn-secondary {
   color: $purple;
+  background-color: rgba(255, 255, 255, 0.0) !important;
+  border: 1px solid $purple;
   &:hover {
-    background-color: $dark-purple;
+    color: $dark-purple;
+    background-color: rgba(255, 255, 255, 0.0) !important;
     border: 1px solid $dark-purple;
-    color:white;
   }
   &:focus {
-    background-color: $purple !important;
+    color: $dark-purple;
+    background-color: rgba(255, 255, 255, 0.0) !important;
     border: 1px solid $purple !important;
-    color:white;
   }
   &:active {
-    background-color: $purple !important;
+    color: $dark-purple;
+    background-color: rgba(255, 255, 255, 0.0) !important;
     border: 1px solid $purple !important;
-    color:white;
   }
 }

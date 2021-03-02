@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   belongs_to :community
-  belongs_to :profile
+  has_one :profile
   has_many :card_recipients
   has_many :cards_as_recipient, through: :card_recipients, source: :cards
   has_many :cards

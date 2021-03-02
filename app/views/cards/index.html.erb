@@ -1,6 +1,63 @@
 
 <p>Welcome back, <%= current_user.first_name %></p>
-<h1>What you’ve missed</h1>
+
+<!-- LINKS, TO BE PLACED IN NAV BAR -->
+<!-- missed -->
+<div class="for-nav">
+  <div class="icon-box">
+    <%= link_to cards_path(query: "missed") do %>
+      <%= image_tag "ic-board_parcels.svg", class: "nav-icon" %>
+    <% end %>
+  </div>
+</div>
+<!-- parcels -->
+<div class="for-nav">
+  <div class="icon-box">
+    <%= link_to cards_path(query: "parcels") do %>
+      <%= image_tag "ic-board_parcels.svg", class: "nav-icon" %>
+    <% end %>
+  </div>
+</div>
+<!-- mutual help -->
+<div class="for-nav">
+  <div class="icon-box">
+    <%= link_to cards_path(query: "mutual-help") do %>
+      <%= image_tag "ic-board_mutual-help.svg", class: "nav-icon" %>
+    <% end %>
+  </div>
+</div>
+<!-- community -->
+<div class="for-nav">
+  <div class="icon-box">
+    <%= link_to cards_path(query: "community") do %>
+      <%= image_tag "ic-board_community.svg", class: "nav-icon" %>
+    <% end %>
+  </div>
+</div>
+<!-- LINK GOES IN MENU HIDDEN BEHIND AVATAR -->
+<!-- my-cards -->
+<div class="for-nav">
+  <div class="icon-box">
+    <%= link_to cards_path(query: "my-cards") do %>
+      <%= image_tag "ic-mycards.svg", class: "nav-icon" %>
+    <% end %>
+  </div>
+</div>
+<!-- LINK GOES ON MY CARDS PAGE, not seperate -->
+<!-- my-cards-archived -->
+<div class="for-nav">
+  <div class="icon-box">
+    <%= link_to cards_path(query: "my-cards-archived") do %>
+      <%= image_tag "ic-mycards.svg", class: "nav-icon" %>
+    <% end %>
+  </div>
+</div>
+
+
+
+<!-- SELECTED CARDS  -->
+
+<h1><%= @title %></h1>
 <% @cards.each do |card| %>
   <div class="index-card">
     <div class="index-card-top">
@@ -10,19 +67,15 @@
     <p><%= card.title %></p>
     <p><%= card.description %></p>
     <p>
-      <% card.card_recipients.each do |recipient| %>
-        <%= recipient.avatar %>
+      <% card.users.each do |recipient| %>
+        <div class="card-index-avatars">
+          <div class="placeholder-avatar-small"></div>
+        </div>
       <% end %>
     </p>
   </div>
 <% end %>
 
-<h1>Parcels</h1>
 
-<h1>Mutual help</h1>
 
-<h1>Community</h1>
 
-<h1>My cards</h1>
-
-<p>Archived</p>

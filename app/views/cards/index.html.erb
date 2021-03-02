@@ -1,49 +1,49 @@
+<div class="container-dashboard">
 
-<p>Welcome back, <%= current_user.first_name %></p>
-<h1><%= @title %></h1>
-
-<%= link_to "Add card", cards_path(query: "new"), class: "btn btn-primary" %>
-
-<!-- LINK GOES IN MENU HIDDEN BEHIND AVATAR -->
-<!-- my-cards -->
-<div class="for-nav">
-  <div class="icon-box">
-    <%= link_to cards_path(query: "my-cards") do %>
-      <%= image_tag "ic-mycards.svg", class: "nav-icon" %>
-    <% end %>
-  </div>
-</div>
-
-<!-- LINK GOES ON MY CARDS PAGE, not seperate -->
-<!-- my-cards-archived -->
-<div class="for-nav">
-  <div class="icon-box">
-    <%= link_to cards_path(query: "my-cards-archived") do %>
-      <%= image_tag "ic-mycards.svg", class: "nav-icon" %>
-    <% end %>
-  </div>
-</div>
-
-
-
-<!-- SELECTED CARDS  -->
-<% @cards.each do |card| %>
-  <div class="index-card">
-    <div class="index-card-top">
-      <p><%= card.category %> | <%= card.created_at %></p>
+  <div class="top">
+    <div class="dashboard-headings">
+      <p>Welcome back, <%= current_user.first_name %></p>
+      <h1><%= @title %></h1>
     </div>
-    <p><%= card.user.first_name %> <%= card.user.last_name %>, <%= card.user.profile.floor %></p>
-    <p><%= card.title %></p>
-    <p><%= card.description %></p>
-    <p>
-      <% card.users.each do |recipient| %>
-        <div class="card-index-avatars">
-          <div class="placeholder-avatar-small"></div>
-        </div>
+    <div class="my-cards-tabs">
+      <!-- if view is my-cards -->
+      <% if current_page?(cards_path(query: "my-cards")) %>
+      <div class="primary-link"><%= link_to "Show all", cards_path(query: "my-cards") %></div>
+      <div class="secondary-link"><%= link_to "Show archived", cards_path(query: "my-cards-archived") %></div>
+      <!-- iif view is my-cards-archived -->
+      <% elsif current_page?(cards_path(query: "my-cards-archived")) %>
+      <div class="secondary-link"><%= link_to "Show all", cards_path(query: "my-cards") %></div>
+      <div class="primary-link"><%= link_to "Show archived", cards_path(query: "my-cards-archived") %></div>
       <% end %>
-    </p>
+
+    </div>
+    <%= link_to "Add card", cards_path(query: "new"), class: "btn btn-primary add" %>
   </div>
-<% end %>
+
+  <div class="cards">
+    <% @cards.each do |card| %>
+      <div class="index-card">
+        <div class="index-card-top">
+          <p><%= card.category %> | <%= card.created_at %></p>
+        </div>
+        <p><%= card.user.first_name %> <%= card.user.last_name %>, <%= card.user.profile.floor %></p>
+        <p><%= card.title %></p>
+        <p><%= card.description %></p>
+        <p>
+          <% card.users.each do |recipient| %>
+            <div class="card-index-avatars">
+              <div class="placeholder-avatar-small"></div>
+            </div>
+          <% end %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+
+</div>
+
+
+
 
 
 

@@ -29,11 +29,9 @@ ul {
   padding: 0;
 }
 
-a {
-  text-decoration: none !important;
-  color: $purple;
-  &:hover {
-    color: #4e3dbf;
-  }
+.container-dashboard {
+  max-width: 750px;
+  margin-top: 50px;
+  margin-left: 100px;
 }
 

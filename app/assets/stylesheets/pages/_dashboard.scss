@@ -1,0 +1,33 @@
+.top .add {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.primary-link {
+  border-bottom: 1px solid #6951FF;
+  margin-left: 24px;
+}
+
+.secondary-link {
+  margin-left: 24px;
+}
+
+.secondary-link a {
+  text-decoration: none !important;
+  color: #9a9a9a;
+  &:hover {
+    color: #7c7c7c;
+  }
+}
+
+.my-cards-tabs {
+  display: inline-flex;
+  margin-bottom: 18px;
+}

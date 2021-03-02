@@ -1,6 +1,14 @@
 $purple: #6951FF;
 $dark-purple: #5b46dd;
 
+a {
+  text-decoration: none !important;
+  color: $purple;
+  &:hover {
+    color: #4e3dbf;
+  }
+}
+
 .btn {
   border-radius: 24px;
 }

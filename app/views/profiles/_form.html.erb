@@ -1,1 +1,7 @@
-_form.html.erb
+<%= simple_form_for @profile do |f| %>
+  <%= f.input :floor %>
+  <%= f.input :phone_number %>
+  <%= f.input :about, as: :text %>
+  <%= f.input :avatar, as: :file %>
+  <%= f.button :submit %>
+<% end %>

@@ -13,4 +13,27 @@
 @import "components/index";
 @import "pages/index";
 
+// colors
+$blackish: #323232;
+$purple: #6951FF;
+$dark-purple: #5b46dd;
+
+// general css stuff
+body {
+  background-color: #fafafa;
+  color: $blackish;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none !important;
+  color: $purple;
+  &:hover {
+    color: #4e3dbf;
+  }
+}
 

@@ -18,3 +18,19 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
+
+.card-index-avatars {
+  display: inline-flex;
+}
+
+.placeholder-avatar-small {
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  margin-right: -15px;
+  background-image: url("empty-avatar_1.svg");
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+}

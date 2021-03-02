@@ -2,16 +2,40 @@ class CardsController < ApplicationController
   before_action :set_card, only: [:show, :edit]
 
   def index
-    # All cards
-    @cards = policy_scope(Card)
-    # 4 Tabs in nav bar
-    # @missed_cards = @cards.where()
-    @parcels_cards = @cards.where(board: "parcels")
-    @mutual_help_cards = @cards.where(board: "mutual_help")
-    @community_cards = @cards.where(board: "community")
-    # My cards (with one filter: (archived: true)
-    @my_cards = @cards.where(:user == current_user)
-    @my_archived_cards = @my_cards.where(archived: true)
+    # View parcels board
+    if params[:query] == "parcels"
+      @cards = policy_scope(Card).where(board: "parcels")
+      @title = "Parcels"
+
+    # View mutual help board
+    elsif params[:query] == "mutual-help"
+      @cards = policy_scope(Card).where(board: "mutual_help")
+      @title = "Mutual help"
+
+    # View community board
+    elsif params[:query] == "community"
+      @cards = policy_scope(Card).where(board: "community")
+      @title = "Community"
+
+    # View missed board
+    # elsif params[:query] == "missed"
+    #   @cards = policy_scope(Card).where(created_at.to_i > currentuser.last_sign_in_at.to_i)
+
+    # View my cards page
+    elsif params[:query] == "my-cards"
+      @cards = policy_scope(Card).where(user: current_user)
+      @title = "My cards"
+
+    # View
+    elsif params[:query] == "my-cards-archived"
+      @cards = policy_scope(Card).where(user: current_user, archived: true)
+      @title = "My archived cards"
+
+    # Default to board = missed
+    else
+      @cards = policy_scope(Card).where(board: "parcels")
+      @title = "Parcels"
+    end
   end
 
   def show

@@ -11,7 +11,6 @@ class Community < ApplicationRecord
   pg_search_scope :search_by_address,
     against: [:address],
     using: {
-    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+      tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
-
 end

@@ -26,7 +26,12 @@
           <div class="card-upper-content">
             <div class="card-top">
               <p class="category <%= card.category %>"><%= card.category %></p>
-              <p class="date-time"><%= card.created_at.strftime("%a, %B %m | %l:%M %p") %></p>
+              <div class="time-menu">
+                <p class="date-time"><%= card.created_at.strftime("%a, %B %m | %l:%M %p") %></p>
+                <% if current_user == card.user %>
+                  <%= image_tag "ic-menu.svg", class: "icon-menu" %>
+                <% end %>
+              </div>
             </div>
             <div class="card-middle">
               <p class="from-who"><%= card.user.first_name %> <%= card.user.last_name %>, <%= card.user.profile.floor %></p>

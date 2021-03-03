@@ -29,11 +29,11 @@
   margin-left: 20px;
   background-color: #F2F2F2;
   border-radius: 8px;
-  &active {
-    background-color: #6951FF;
+  &:hover {
+    background-color: #E7E7E7;
+  &:active {
+    background-color: #E0E0E0;
   }
-  &hover {
-    background-color: #6951FF;
   }
 }
 

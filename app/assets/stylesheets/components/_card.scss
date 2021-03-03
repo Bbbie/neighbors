@@ -62,12 +62,12 @@
   margin-right: 6px;
 }
 
-.edit {
-  padding-bottom: 10px;
-}
+// .edit {
+//   padding-bottom: 10px;
+// }
 
-.hover-link .edit {
-  padding-bottom: 10px;
+.archive {
+  margin-top: 4px;
 }
 
 .card-actions {
@@ -75,6 +75,7 @@
   top: 50px;
   right: 20px;
   width: 110px;
+  height: 80px;
   transition: ease .3s;
   background-color: white;
   border: 1px solid #EEEEEE;
@@ -92,9 +93,10 @@
 
 .hover-link {
   display: inline-flex;
+  color: #9a9a9a;
 }
 
-.hover-link .edit {
-  margin-bottom: 10px;
-}
+
+
+
 

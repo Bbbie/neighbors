@@ -1,5 +1,6 @@
 // on cards index
-.card{
+.card {
+  position: relative;
   background-color: white;
   border-radius: 24px;
   border: none !important;
@@ -52,7 +53,48 @@
   width: 24px;
   height: 24px;
   margin-left: 8px;
-  &:hover {
-
-  }
+  margin-right: 6px;
 }
+
+.icon-hover-menu {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+}
+
+.edit {
+  padding-bottom: 10px;
+}
+
+.hover-link .edit {
+  padding-bottom: 10px;
+}
+
+.card-actions {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  width: 110px;
+  transition: ease .3s;
+  background-color: white;
+  border: 1px solid #EEEEEE;
+  border-radius: 9px;
+  padding: 10px;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.12);
+}
+.display-menu {
+  display: none;
+}
+
+.dashboard-headings {
+  margin-bottom: 44px;
+}
+
+.hover-link {
+  display: inline-flex;
+}
+
+.hover-link .edit {
+  margin-bottom: 10px;
+}
+

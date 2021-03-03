@@ -29,7 +29,7 @@
               <div class="time-menu">
                 <p class="date-time"><%= card.created_at.strftime("%a, %B %m | %l:%M %p") %></p>
                 <% if current_user == card.user %>
-                  <%= image_tag "ic-menu.svg", class: "icon-menu" %>
+                  <%= image_tag "ic-menu.svg", class: "icon-menu", data: { card_id: card.id }, id: "menu-icon" %>
                 <% end %>
               </div>
             </div>
@@ -58,6 +58,18 @@
             </div>
           </div>
         </div>
+        <% if current_user == card.user %>
+          <div class='<%= "toggle-id-#{card.id} card-actions display-menu" %>'>
+            <div class="hover-link edit">
+              <%= image_tag "ic-edit.svg", class: "icon-hover-menu" %>
+              <p>Edit</p>
+            </div>
+            <div class="hover-link">
+              <%= image_tag "ic-archive.svg", class: "icon-hover-menu" %>
+              <p>Archive</p>
+            </div>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>

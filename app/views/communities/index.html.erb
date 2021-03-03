@@ -1,5 +1,6 @@
 <div class="container">
-  <% if @community %>
+  <% raise %>
+  <% if !@community.empty? %>
     <div class="left-text">
       <h1>Yay! There's a community in your house already 🎉</h1>
       <p>Come, join your neighbors now!</p>
@@ -15,7 +16,7 @@
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
     </div>
-  <% else %>
+  <% elsif @community.empty? %>
     <div class="left-text">
       <h1>There's no community in your house yet 😯</h1>
       <p>Start a community now!</p>

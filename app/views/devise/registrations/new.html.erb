@@ -1,5 +1,5 @@
 <h2>Welcome!</h2>
-<% raise %>
+
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
@@ -23,7 +23,7 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-    <%= f.input :community, :value => params["community"], as: :hidden %>
+    <%= f.input :community, :value => params[:community], as: :hidden %>
   </div>
 
   <div class="form-actions">

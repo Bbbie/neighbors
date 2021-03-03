@@ -1,11 +1,11 @@
 <div class="container">
-  <% raise %>
+
   <% if !@community.empty? %>
     <div class="left-text">
       <h1>Yay! There's a community in your house already 🎉</h1>
       <p>Come, join your neighbors now!</p>
       <% if  !current_user %>
-        <%= link_to "Create account", new_user_registration_path(community: @community) %>
+        <%= link_to "Create account", new_user_registration_path(community: @community[0]) %>
       <% end %>
       <p>Add number of neighbors</p>
     </div>

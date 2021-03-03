@@ -13,4 +13,8 @@ class CommunityPolicy < ApplicationPolicy
   def search?
     true
   end
+
+  def create?
+    true
+  end
 end

@@ -1,7 +1,7 @@
 class CommunityPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      scope
       # scope.where(record.address == params[:address])
     end
   end

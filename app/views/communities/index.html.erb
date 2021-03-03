@@ -21,7 +21,7 @@
       <h1>There's no community in your house yet 😯</h1>
       <p>Start a community now!</p>
       <% if  !current_user %>
-        <%= link_to "Create account", community_path(address: params[:query]), :method => :post %>
+        <%= render "form", community: @empty_community %>
       <% end %>
       <p>Add number of neighbors</p>
     </div>

@@ -1,3 +1,9 @@
+.container-dashboard {
+  max-width: 750px;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
 .top .add {
   position: fixed;
   bottom: 40px;
@@ -33,7 +39,12 @@
 }
 
 .cards {
-  display: inline-flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 40px;
+  width: 100%
+
 }
 
 .dashboard-headings {

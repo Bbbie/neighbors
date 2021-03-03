@@ -23,22 +23,34 @@
     <% @cards.each do |card| %>
       <div class="card">
         <div class="card-content">
-          <div class="card-top">
-            <p class="category <%= card.category %>"><%= card.category %></p>
-            <p class="date-time"><%= card.created_at %></p>
+          <div class="card-upper-content">
+            <div class="card-top">
+              <p class="category <%= card.category %>"><%= card.category %></p>
+              <p class="date-time"><%= card.created_at.strftime("%a, %B %m | %l:%M %p") %></p>
+            </div>
+            <div class="card-middle">
+              <p class="from-who"><%= card.user.first_name %> <%= card.user.last_name %>, <%= card.user.profile.floor %></p>
+              <p class="title"><%= card.title %></p>
+            </div>
+            <p class="date-time">When: <%= card.start_date%>, <%= card.start_time%>
+              <% if card.end_date && card.end_time %>
+                to <%= card.end_date%>, <%= card.end_time%>
+              <% elsif card.end_date %>
+                to <%= card.end_date%>
+              <% elsif card.end_time %>
+                to <%= card.end_time%>
+              <% end %>
+            </p>
+            <p class="card-description description-card"><%= truncate(card.description,  :length => 82) %></p>
           </div>
-          <div class="card-middle">
-            <p class="from-who"><%= card.user.first_name %> <%= card.user.last_name %>, <%= card.user.profile.floor %></p>
-            <p class="title"><%= card.title %></p>
-          </div>
-          <p class="date-time">When: <%= card.start_date%>, <%= card.start_time%> to <%= card.end_date%>, <%= card.end_time%></p>
-          <p class="card-description description-card"><%= truncate(card.description,  :length => 82) %></p>
-          <div class="card-avatars">
-            <% card.users.each do |recipient| %>
-              <div class="card-index-avatars">
-                <div class="placeholder-avatar-small"></div>
-              </div>
-            <% end %>
+          <div class="card-lower-content">
+            <div class="card-avatars">
+              <% card.users.each do |recipient| %>
+                <div class="card-index-avatars">
+                  <div class="placeholder-avatar-small"></div>
+                </div>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>

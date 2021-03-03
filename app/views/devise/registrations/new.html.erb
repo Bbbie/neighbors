@@ -23,7 +23,7 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-    <%= f.input :community, :value => params[:community], as: :hidden %>
+    <%= f.input :community_id, input_html: {:value => params[:community]}, as: :hidden %>
   </div>
 
   <div class="form-actions">

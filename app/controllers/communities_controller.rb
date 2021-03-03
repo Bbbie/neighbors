@@ -19,6 +19,7 @@ class CommunitiesController < ApplicationController
   end
 
   def create
+    raise
     @community = Community.new(community_params)
     if @community.save
       redirect_to "/users/sign_up"

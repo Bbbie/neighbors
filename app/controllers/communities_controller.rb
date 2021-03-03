@@ -27,7 +27,7 @@ class CommunitiesController < ApplicationController
   def create
     @community = Community.new(address: params["community"]["address"])
     if @community.save
-      redirect_to new_user_registration_path
+      redirect_to new_user_registration_path(:community => @community)
     else
       redirect_to "/communities"
     end

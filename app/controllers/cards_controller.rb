@@ -18,8 +18,9 @@ class CardsController < ApplicationController
       @title = "Community"
 
     # View missed board
-    # elsif params[:query] == "missed"
-    #   @cards = policy_scope(Card).where(created_at.to_i > currentuser.last_sign_in_at.to_i)
+    elsif params[:query] == "missed"
+     @cards = policy_scope(Card).where("created_at > ?", current_user.last_logout)
+     @title = "What you've missed"
 
     # View my cards page
     elsif params[:query] == "my-cards"

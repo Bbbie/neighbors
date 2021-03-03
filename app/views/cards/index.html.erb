@@ -26,7 +26,22 @@
           <div class="card-upper-content">
             <div class="card-top">
               <p class="category <%= card.category %>"><%= card.category %></p>
-              <p class="date-time"><%= card.created_at.strftime("%a, %B %m | %l:%M %p") %></p>
+              <div class="time-menu">
+                <p class="date-time">
+                  <% if card.created_at == Date.today %>
+                    Today, <%= card.created_at.strftime("%l:%M %p") %>
+                  <% elsif card.created_at == Date.yesterday %>
+                    Yesterday, <%= card.created_at.strftime("%l:%M %p") %>
+                  <% elsif (card.created_at > Date.today - 7) && (card.created_at < Date.yesterday) %>
+                    <%= card.created_at.strftime("%A, %l:%M %p") %>
+                  <% else %>
+                    <%= card.created_at.strftime("%B %m, %l:%M %p") %>
+                  <% end %>
+                </p>
+                <% if current_user == card.user %>
+                  <%= image_tag "ic-menu.svg", class: "icon-menu", data: { card_id: card.id }, id: "menu-icon" %>
+                <% end %>
+              </div>
             </div>
             <div class="card-middle">
               <p class="from-who"><%= card.user.first_name %> <%= card.user.last_name %>, <%= card.user.profile.floor %></p>
@@ -53,6 +68,27 @@
             </div>
           </div>
         </div>
+        <% if current_user == card.user %>
+          <div class='<%= "toggle-id-#{card.id} card-actions display-menu" %>'>
+            <div class="link-wrapper">
+
+              <div class="hover-link edit">
+                <%= link_to edit_card_path(card), class: "actual-link" do %>
+                  <%= image_tag "ic-edit.svg", class: "icon-hover-menu" %>
+                  <p class="hover-menu-text">Edit</p>
+                <% end %>
+              </div>
+
+              <div class="hover-link archive">
+                <%= link_to cards_path, class: "actual-link" do %>
+                  <%= image_tag "ic-archive.svg", class: "icon-hover-menu" %>
+                  <p class="hover-menu-text">Archive</p>
+                <% end %>
+              </div>
+
+            </div>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>

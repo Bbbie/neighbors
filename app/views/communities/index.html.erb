@@ -1,9 +1,12 @@
 <div class="container">
-  <% if @community %>
+
+  <% if !@community.empty? %>
     <div class="left-text">
       <h1>Yay! There's a community in your house already 🎉</h1>
       <p>Come, join your neighbors now!</p>
-      <%= link_to "Create account", new_user_registration_path %>
+      <% if  !current_user %>
+        <%= link_to "Create account", new_user_registration_path(community: @community[0]) %>
+      <% end %>
       <p>Add number of neighbors</p>
     </div>
     <div class="map-container">
@@ -13,11 +16,13 @@
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
     </div>
-  <% else %>
+  <% elsif @community.empty? %>
     <div class="left-text">
       <h1>There's no community in your house yet 😯</h1>
       <p>Start a community now!</p>
-      <%= link_to "Create account", new_user_registration_path %>
+      <% if  !current_user %>
+        <%= link_to "Create community", new_user_registration_path(address: params[:query]) %>
+      <% end %>
       <p>Add number of neighbors</p>
     </div>
     <div class="map-container">

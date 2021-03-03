@@ -32,7 +32,15 @@
               <p class="from-who"><%= card.user.first_name %> <%= card.user.last_name %>, <%= card.user.profile.floor %></p>
               <p class="title"><%= card.title %></p>
             </div>
-            <p class="date-time">When: <%= card.start_date%>, <%= card.start_time%> to <%= card.end_date%>, <%= card.end_time%></p>
+            <p class="date-time">When: <%= card.start_date%>, <%= card.start_time%>
+              <% if card.end_date && card.end_time %>
+                to <%= card.end_date%>, <%= card.end_time%>
+              <% elsif card.end_date %>
+                to <%= card.end_date%>
+              <% elsif card.end_time %>
+                to <%= card.end_time%>
+              <% end %>
+            </p>
             <p class="card-description description-card"><%= truncate(card.description,  :length => 82) %></p>
           </div>
           <div class="card-lower-content">

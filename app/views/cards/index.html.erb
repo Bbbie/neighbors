@@ -2,7 +2,7 @@
 
   <div class="top">
     <div class="dashboard-headings">
-      <p>Welcome back, <%= current_user.first_name %></p>
+      <p>Welcome back, <%= current_user.first_name.capitalize %></p>
       <h1><%= @title %></h1>
     </div>
     <div class="my-cards-tabs">
@@ -10,7 +10,7 @@
       <% if current_page?(cards_path(query: "my-cards")) %>
       <div class="primary-link"><%= link_to "Show all", cards_path(query: "my-cards") %></div>
       <div class="secondary-link"><%= link_to "Show archived", cards_path(query: "my-cards-archived") %></div>
-      <!-- iif view is my-cards-archived -->
+      <!-- if view is my-cards-archived -->
       <% elsif current_page?(cards_path(query: "my-cards-archived")) %>
       <div class="secondary-link"><%= link_to "Show all", cards_path(query: "my-cards") %></div>
       <div class="primary-link"><%= link_to "Show archived", cards_path(query: "my-cards-archived") %></div>

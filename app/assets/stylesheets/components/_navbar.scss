@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +10,40 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+
+.homepage-login {
+  margin-right: 10px;
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+  color: blue !important;
+  border-radius: 20px;
+  border: 1px solid blue;
+
+  a {
+    font-size: 18px;
+    font-family: Roboto;
+    font-weight: 400;
+
+
+  }
+
+}
+
+.homepage-signup {
+
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+  background-color: #6951FF;
+  color: #FAFAFA !important;
+  border-radius: 20px;
+  border: 1px solid #6951FF;
+
+    a {
+      font-size: 18px;
+      font-family: Roboto;
+      font-weight: 400;
+    }
+
 }

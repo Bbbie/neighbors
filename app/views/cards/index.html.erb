@@ -60,13 +60,22 @@
         </div>
         <% if current_user == card.user %>
           <div class='<%= "toggle-id-#{card.id} card-actions display-menu" %>'>
-            <div class="hover-link edit">
-              <%= image_tag "ic-edit.svg", class: "icon-hover-menu" %>
-              <p class="hover-menu-text">Edit</p>
-            </div>
-            <div class="hover-link archive">
-              <%= image_tag "ic-archive.svg", class: "icon-hover-menu" %>
-              <p class="hover-menu-text">Archive</p>
+            <div class="link-wrapper">
+
+              <div class="hover-link edit">
+                <%= link_to edit_card_path(card), class: "actual-link" do %>
+                  <%= image_tag "ic-edit.svg", class: "icon-hover-menu" %>
+                  <p class="hover-menu-text">Edit</p>
+                <% end %>
+              </div>
+
+              <div class="hover-link archive">
+                <%= link_to cards_path, class: "actual-link" do %>
+                  <%= image_tag "ic-archive.svg", class: "icon-hover-menu" %>
+                  <p class="hover-menu-text">Archive</p>
+                <% end %>
+              </div>
+
             </div>
           </div>
         <% end %>

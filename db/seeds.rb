@@ -157,7 +157,7 @@ CardRecipient.create(user: cassandra, card: card_seven)
 CardRecipient.create(user: claudia, card: card_seven)
 
 puts ">Card 8..."
-card_eight = Card.create(board: "mutual_help", category: "request", title: "Tomatos & Bread 4 free", description: "I’m going on vacation tomorrow and still have some leftovers in my fridge! Come get em if you like.", start_date: "Feb 2", user: sebastian)
+card_eight = Card.create(board: "mutual_help", category: "offer", title: "Tomatos & Bread 4 free", description: "I’m going on vacation tomorrow and still have some leftovers in my fridge! Come get em if you like.", start_date: "Feb 2", user: sebastian)
 CardRecipient.create(user: ana, card: card_eight)
 CardRecipient.create(user: achim, card: card_eight)
 CardRecipient.create(user: magnus, card: card_eight)

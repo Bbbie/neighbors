@@ -4,16 +4,21 @@
     <button type="button" class="btn btn-default" data-dismiss="modal">x</button>
   </div>
   <div id="messages" class="chat-body">
-    <div class="messages-container" id="message">
-      <i class="author">
-        <span>#Author</span>
-        <small>#Time</small>
-      </i>
-      <p>#Message</p>
-    </div>
+    <% card.comments.each do |comment| %>
+      <div class="messages-container" id="message-<%= comment.id %>">
+        <i class="author">
+          <span><%= comment.user.first_name.capitalize %> <%= card.user.last_name.capitalize %></span>
+          <small><%= comment.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+        </i>
+        <p><%= comment.content %></p>
+      </div>
+    <% end %>
   </div>
   <div class="input-field">
-    <p>#Message-input</p>
+    <%= simple_form_for [card, @comment], remote: true do |f| %>
+      <%= f.input :content, label: false, placeholder: "Enter your message here!" %>
+      <%= f.submit "Send" %>
+    <% end %>
   </div>
 
 </div>

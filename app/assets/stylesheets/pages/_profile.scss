@@ -1,0 +1,41 @@
+.profile-picture {
+  background-color: white;
+  border-radius: 24px;
+  height: 395px;
+  width: 395px;
+  object-fit: cover;
+  box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.12);
+}
+
+.info-top {
+  display: inline-flex;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.info-top .number {
+  margin-left: 30px;
+}
+
+.info-top .from-who, .main-content .from-who {
+  margin-bottom: 6px;
+}
+
+.main-content {
+  display: inline-flex;
+}
+
+.profile-picture-box {
+  margin-right: 80px;
+}
+
+.back-link {
+  display: inline-flex;
+  p {
+    color: #323232;
+    margin-left: 14px;
+  }
+  p:hover {
+    color: #323232;
+  }
+}

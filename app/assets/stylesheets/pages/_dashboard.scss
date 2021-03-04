@@ -1,13 +1,13 @@
 .container-dashboard {
   max-width: 750px;
   margin-top: 50px;
-  margin-left: 100px;
+  margin-left: 170px;
 }
 
-.top .add {
+.add {
   position: fixed;
-  bottom: 40px;
-  right: 40px;
+  bottom: 60px;
+  right: 60px;
 }
 
 .top {
@@ -44,4 +44,8 @@
   column-gap: 30px;
   row-gap: 40px;
   width: 100%
+}
+
+.empty-state {
+  width: 409px;
 }

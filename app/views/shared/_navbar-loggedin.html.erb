@@ -75,16 +75,36 @@
         <ul class="navbar-nav mr-auto">
           <% if user_signed_in? %>
 
-              <li class="nav-item dropdown">
+              <li class="nav-item dropup">
                 <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu dropright" aria-labelledby="navbarDropdown">
 
-                  <%= link_to "My cards", cards_path(query: "my-cards"), class: "dropdown-item" %>
-                  <%= link_to "My profile", "#", class: "dropdown-item" %>
-                  <%= link_to "Settings", "#", class: "dropdown-item" %>
-                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                <div class="dropdown-group">
+                   <%= image_tag "ic-mycards.svg", class: "nav-dropdown-icon" %>
+                  <%= link_to "My cards", cards_path(query: "my-cards"), class: "drop-item" %>
+
                 </div>
-              </li>
+
+                <div class="dropdown-group">
+                  <%= image_tag "ic-profile.svg", class: "nav-dropdown-icon" %>
+                  <%= link_to "My profile", profile_path(current_user.profile), class: "drop-item" %>
+
+                </div>
+
+                <div class="dropdown-group">
+                   <%= image_tag "ic-settings.svg", class: "nav-dropdown-icon" %>
+                  <%= link_to "Settings", "#", class: "drop-item" %>
+
+                </div>
+
+                <div class="dropdown-group">
+                  <%= image_tag "ic-logout.svg", class: "nav-dropdown-icon" %>
+                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "drop-item" %>
+
+                </div>
+
+              </div>
+            </li>
 
           <% else %>
             <li class="nav-item">
@@ -97,4 +117,6 @@
 
   </ul>
 </nav>
+
+
 

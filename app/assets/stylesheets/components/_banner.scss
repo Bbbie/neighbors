@@ -1,0 +1,39 @@
+.home-banner .home-container .search {
+  display: flex;
+  max-width: 546px;
+  #address-input {
+    flex-grow: 1;
+  }
+  .btn {
+    margin-left: 8px;
+  }
+}
+
+.home-banner .headline  {
+  max-width: 400px;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.home-banner .sub-header {
+  max-width: 500px;
+  margin-bottom: 60px;
+  color: white;
+}
+
+.home-banner {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("banner.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  height: 560px;
+}
+
+.home h2 {
+  font-size:
+  24px;
+}
+
+

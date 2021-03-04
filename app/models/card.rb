@@ -5,6 +5,6 @@ class Card < ApplicationRecord
   has_many :comments
   has_many_attached :pictures
 
-  validates :board, :category, :title, :start_date, :start_time, presence: true
+  validates :board, :category, :title, presence: true
   validates :category, inclusion: { in: ['action', 'request', 'info', 'offer', 'question'] }
 end

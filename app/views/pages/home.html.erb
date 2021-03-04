@@ -1,70 +1,76 @@
 <!-- HERE BANNER -->
-
-<div class="banner">
-  <div class="banner-content">
-    <h1>Build a community inside your house</h1>
-    <p>Connect with your direct neighbors and Lorem ipsum dolor sit amet, consectetur</p>
-    <div class="search-field">
-      <%= form_tag communities_path, method: :get do %>
-        <%= text_field_tag :query, params[:query], id: "address_input", placeholder: "Enter your address" %>
-        <%= submit_tag "Find community" %>
-      <% end %>
-    </div>
+<div class="home-banner">
+  <div class="home-container">
+    <h1 class="headline">Build a community inside your house</h1>
+    <p class="sub-header">Join your neighbors now or be the founder and create a community to get to know each other!</p>
+    <%= form_tag communities_path,  class: "search", method: :get do %>
+      <%= text_field_tag :query, params[:query], class: "form-control", id: "address_input", placeholder: "Enter your address" %>
+      <%= submit_tag "Find community", class: "btn btn-primary btn-shadow" %>
+    <% end %>
   </div>
 </div>
 
 <!-- HERE CONTAINER WITH CARDS -->
-
-<div class="container">
-  <div class="main-content">
-    <h2>How it works</h2>
-    <!-- HERE CARDS -->
-    <div class="cards">
-      <div class="card">
-        <img src="#" alt="parcels">
-        <div class="card-info">
-          <h3>Parcels</h3>
-          <p>Find out where your parcels are and when you can pick them up</p>
-        </div>
+<div class="home-container how">
+   <h2 class="headline">How it works</h2>
+   <!-- HERE CARDS -->
+   <div class="cards-home">
+     <div class="card-home">
+      <%= image_tag "illu-parcels.svg", class: "home-illu" %>
+      <div class="card-info">
+        <h3>Parcels</h3>
+        <p>Find out where your parcels are and when you can pick them up</p>
       </div>
-      <div class="card">
-        <img src="#" alt="parcels">
-        <div class="card-info">
-          <h3>Mutual help</h3>
-          <p>Share infos, ask questions, post requests and help each other out</p>
-        </div>
+    </div>
+    <div class="card-home">
+      <%= image_tag "illu-mutual-help.svg", class: "home-illu" %>
+      <div class="card-info">
+        <h3>Mutual help</h3>
+        <p>Share infos, ask questions, post requests and help each other out</p>
       </div>
-      <div class="card">
-        <img src="#" alt="parcels">
-        <div class="card-info">
-          <h3>Community</h3>
-          <p>Plan mutual activities and get to know your neigbors</p>
-        </div>
+    </div>
+    <div class="card-home">
+      <%= image_tag "illu-community.svg", class: "home-illu" %>
+      <div class="card-info">
+        <h3>Community</h3>
+        <p>Plan mutual activities and get to know your neigbors</p>
       </div>
     </div>
   </div>
 </div>
 
+<!-- FOOTER ONLY ON THIS PAGE!! -->
+<div class="footer-home">
+  <div class="footer-container">
+    <div class="copyright">
+      <h2 class="neighbors-footer">neighbors.</h2>
+      <p class="footer-info">Copyright Neighbors GmbH 2021</p>
+      <p class="footer-info">All rights reserved </p>
+    </div>
 
+    <div class="footer-column">
+      <h3>Company 🧞</h3>
+      <p class="footer-link">About us</p>
+      <p class="footer-link">FAQ</p>
+      <p class="footer-link">Careers</p>
+      <p class="footer-link">Blog</p>
+      <p class="footer-link">Contact us</p>
+    </div>
 
-<!-- FONT LAYOUTS AS EXAMPLES -->
-<br>
-<br>
-<br>
-<h2 class="sub-header">Here are examples for font for the font styles we use in figma!
-Please use tags with the corresponding classes.</h2>
-<br>
-<p class="category info">info</p>
-<p class="category request">request</p>
-<p class="category offer">offer</p>
-<p class="category question">question</p>
-<p class="category action">request</p>
-<h1 class="headline">heading</h1>
-<h2 class="sub-header">Sub Header</h2>
-<p class="title">Title</p>
-<p class="description-card">I’m going on vacation tomorrow and still have some leftovers in my fridge!</p>
-<p class="description-modal">Lovely neighbors, actually our backyard could be super nice if we moved the trash canisters in the corner where the motorcycles are and used the space to make it greener and probably also add some benches and tables where we could meet in summer. This would be a super cool project to start when it’s getting warmer so we could already enjoy our cool backyard this summer and host some barbecues! 🍻 What do you think?? </p>
-<p class="from-who">Johanna Machalz, HH 2.OG</p>
-<p class="date-time">today, 13:36</p>
-<p class="text-small">Some smaller text</p>
-<p class="date-time-small">today, 13:36</p>
+    <div class="footer-column">
+      <h3>Legal 🗃</h3>
+      <p class="footer-link">Legal notice</p>
+      <p class="footer-link">Terms of Service</p>
+      <p class="footer-link">Privacy policy</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Follow us 🚶</h3>
+      <div class="links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

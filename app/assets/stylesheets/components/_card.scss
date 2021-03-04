@@ -184,3 +184,21 @@
   height: 550px;
 }
 
+
+// cards on home
+
+.card-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 40px 30px;
+  text-align: left;
+  background-color: white;
+  border-radius: 24px;
+  border: none !important;
+  width: 313px;
+  box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.12);
+  .home-illu {
+    margin-bottom: 27px;
+  }
+}

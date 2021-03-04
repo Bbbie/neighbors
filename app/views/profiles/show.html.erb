@@ -13,7 +13,7 @@
       </tr>
     </table>
     <div class="main-content">
-      <% if @profile.avatar %>
+      <% if @profile.avatar.attached? %>
         <%= cl_img_tag @profile.avatar.key %>
         <h1>Picture?</h1>
       <% end %>

@@ -80,6 +80,17 @@
   }
 }
 
+#nav-logo-long {
+  font-family: 'Asap', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 32px;
+  color: #323232;
+  &hover {
+    color: #323232;
+  }
+}
+
 .navbar-vertical {
   position: absolute;
   top: 0;

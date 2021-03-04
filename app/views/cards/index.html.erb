@@ -16,6 +16,11 @@
       <div class="primary-link"><%= link_to "Show archived", cards_path(query: "my-cards-archived") %></div>
       <% end %>
     </div>
+    <div class="neighbors">
+      <% current_user.community.users.each do |user| %>
+        <%= image_tag user.profile.avatar, class: "avatar-big" %>
+      <% end %>
+    </div>
     <%= link_to "Add card", cards_path(query: "new"), class: "btn btn-primary btn-shadow add" %>
   </div>
 
@@ -65,7 +70,7 @@
             <div class="card-avatars">
               <% card.users.each do |recipient| %>
                 <div class="card-index-avatars">
-                  <div class="placeholder-avatar-small"></div>
+                  <%= image_tag recipient.profile.avatar, class: "avatar-small" %>
                 </div>
               <% end %>
             </div>

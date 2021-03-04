@@ -6,8 +6,14 @@
 
 .top .add {
   position: fixed;
-  bottom: 40px;
-  right: 40px;
+  bottom: 60px;
+  right: 60px;
+}
+
+.top .neighbors {
+  position: fixed;
+  top: 60px;
+  right: 60px;
 }
 
 .top {

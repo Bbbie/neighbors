@@ -23,7 +23,7 @@
   <div class="cards">
     <% @cards.each do |card| %>
     <!-- MODAL LINK STARTS HERE -->
-      <button type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#myModal">
+      <button type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#myModal-<%= card.id %>">
         <!-- CARD CONTENT STARTS HERE -->
         <div class="card-content">
           <div class="card-upper-content">
@@ -92,9 +92,9 @@
           </div>
         <% end %>
       </button>
-      <!-- RENDERING SHOW -->
-      <%= render 'show', :card => card %>
     <% end %>
+    <!-- RENDERING SHOW -->
+    <%= render 'show', :cards => @cards %>
   </div>
 </div>
 

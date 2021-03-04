@@ -16,11 +16,28 @@
       <div class="primary-link"><%= link_to "Show archived", cards_path(query: "my-cards-archived") %></div>
       <% end %>
     </div>
-    <div class="neighbors">
+    <div id="neighbors">
       <% current_user.community.users.each do |user| %>
         <%= image_tag user.profile.avatar, class: "avatar-big" %>
       <% end %>
     </div>
+    <div id="neighbors-index" class="display-none">
+      <div class="neighbors-top">
+        <div>
+          <p class="title">Your community</p>
+          <p class="from-who">6 members</p>
+        </div>
+        <%= image_tag "ic-close.svg", id: "ic-close" %>
+      </div>
+      <% current_user.community.users.each do |user| %>
+        <div class="neighbor">
+        <%= image_tag user.profile.avatar, class: "avatar-small-list" %>
+        <p class="description-card"><%= user.first_name %> <%= user.last_name %> <%= user.profile.floor %></p>
+        </div>
+      <% end %>
+    </div>
+
+
     <%= link_to "Add card", cards_path(query: "new"), class: "btn btn-primary btn-shadow add" %>
   </div>
 

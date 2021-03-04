@@ -37,6 +37,7 @@ class CardsController < ApplicationController
       @cards = policy_scope(Card).where(board: "parcels")
       @title = "Parcels"
     end
+    @comment = Comment.new
   end
 
   def show

@@ -50,14 +50,33 @@
             </div>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
       </div>
+      <!-- HERE STARTS COMMENT SECTION -->
       <div class="modal-right">
-        <h1>#CHAT</h1>
+        <div class="chat-header">
+          <h4>Got any comment?</h4>
+          <button type="button" class="btn btn-default" data-dismiss="modal">x</button>
+        </div>
+        <div id="messages" class="chat-body">
+          <% card.comments.each do |comment| %>
+            <div class="messages-container" id="message-<%= comment.id %>">
+              <i class="author">
+                <span><%= comment.user.first_name.capitalize %> <%= card.user.last_name.capitalize %></span>
+                <small><%= comment.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+              </i>
+              <p><%= comment.content %></p>
+            </div>
+          <% end %>
+        </div>
+        <div class="input-field">
+          <%= simple_form_for [card, @comment], remote: true do |f| %>
+            <%= f.input :content, placeholder: "Enter your message here!" %>
+            <%= f.submit "Send", class: "btn btn-primary" %>
+          <% end %>
+        </div>
       </div>
     </div>
 
   </div>
 </div>
+

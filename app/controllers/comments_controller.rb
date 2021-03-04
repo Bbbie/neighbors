@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     @comment.card = Card.find(params[:card_id])
     @comment.save
+    authorize @comment
     redirect_to cards_path
   end
 

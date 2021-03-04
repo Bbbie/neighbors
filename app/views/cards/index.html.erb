@@ -21,7 +21,7 @@
 
   <div class="cards">
     <% @cards.each do |card| %>
-      <div class="card">
+      <%= link_to cards_path(card), class: "card" do %>
         <div class="card-content">
           <div class="card-upper-content">
             <div class="card-top">
@@ -89,7 +89,11 @@
             </div>
           </div>
         <% end %>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>
+
+
+<!-- Show view partial -->
+<%= render 'show', card: @card %>

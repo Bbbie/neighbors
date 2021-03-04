@@ -6,7 +6,13 @@
   border: none !important;
   width: 356px;
   height: 282px;
+  transition: all .3s ease-in-out;
   box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.12);
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12)
 }
 
 .card-content {
@@ -128,6 +134,35 @@
   color: #9a9a9a !important;
   &:hover {
     color: #9a9a9a !important;
+  }
+}
+
+// de-coloring fonts
+
+.card .title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #323232;
+  &:hover {
+    color: #323232;
+  }
+}
+
+.card .description-card {
+  font-size: 16px;
+  font-weight: 400;
+  color: #323232;
+  &:hover {
+    color: #323232;
+  }
+}
+
+.card .from-who {
+  font-size: 14px;
+  font-weight: 400;
+  color: #323232;
+  &:hover {
+    color: #323232;
   }
 }
 

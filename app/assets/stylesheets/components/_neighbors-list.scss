@@ -38,3 +38,10 @@
 .display-none {
   display: none;
 }
+
+#neighbors-index p {
+  color: #323232;
+  &:hover {
+    color: #323232;
+  }
+}

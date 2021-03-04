@@ -44,7 +44,7 @@
             <div class="card-avatars">
               <% card.users.each do |recipient| %>
                 <div class="card-index-avatars">
-                  <div class="placeholder-avatar-small"></div>
+                  <%= image_tag recipient.profile.avatar, class: "avatar-small" %>
                 </div>
               <% end %>
             </div>

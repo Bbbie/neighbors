@@ -48,22 +48,22 @@ my_community = Community.create(address: "Dircksenstraße 117, 10178 Berlin")
 
 # CREATING PROFILES
 puts "Creating impressive profiles now..."
-ana_profile = Profile.create(floor: "VH, 3.OG", phone_number: "123456789123", about: "You probably know me because I accept my own parcels, so sorry for that! 😇 I’m a nurse and usually work crazy shifts and leave for work when you guys are asleep and vice versa... I live in this house for 5 months now and thought it’s really time to get to know you guys and girls! Hope we’ll get a little closer or at least we figure out our hot parcel mess a little better! xoxo")
+ana_profile = Profile.create(floor: "VH, 3.OG", phone_number: "01573374806", about: "You probably know me because I accept my own parcels, so sorry for that! 😇 I’m a nurse and usually work crazy shifts and leave for work when you guys are asleep and vice versa... I live in this house for 5 months now and thought it’s really time to get to know you guys and girls! Hope we’ll get a little closer or at least we figure out our hot parcel mess a little better! xoxo")
 ana_profile.avatar.attach(io: avatar_ana, filename: 'avatar-ana.jpg', content_type: 'image/jpg')
 
-sebastian_profile = Profile.create(floor: "HH, EG", phone_number: "123456789123")
+sebastian_profile = Profile.create(floor: "HH, EG", phone_number: "01573374806")
 sebastian_profile.avatar.attach(io: avatar_sebastian, filename: 'avatar-sebastian.jpg', content_type: 'image/jpg')
 
-achim_profile = Profile.create(floor: "VH, 5.OG", phone_number: "123456789123", about: "I came to Berlin 7 years ago for my studies and fell in love with the city ever since. I’ve lived in different districts, Schoeneberg, Neukoelln and now here with you in Kreuzberg!In my free time I like to play music, go bouldering, hang out at Victoriapark or just get away from the city to go kayaking in Spreewald. If you’d like to hang out shoot me a Whatsapp or just stop me in the hallway the old-fashioned and way nicer way 😉!")
+achim_profile = Profile.create(floor: "VH, 5.OG", phone_number: "01573374806", about: "I came to Berlin 7 years ago for my studies and fell in love with the city ever since. I’ve lived in different districts, Schoeneberg, Neukoelln and now here with you in Kreuzberg!In my free time I like to play music, go bouldering, hang out at Victoriapark or just get away from the city to go kayaking in Spreewald. If you’d like to hang out shoot me a Whatsapp or just stop me in the hallway the old-fashioned and way nicer way 😉!")
 achim_profile.avatar.attach(io: avatar_achim, filename: 'avatar-achim.jpg', content_type: 'image/jpg')
 
 cassandra_profile = Profile.create(floor: "VH, 1.OG")
 cassandra_profile.avatar.attach(io: avatar_magnus, filename: 'avatar-magnus.jpg', content_type: 'image/jpg')
 
-magnus_profile = Profile.create(floor: "HH, 2.OG", phone_number: "123456789123", about: "Hey there, nice to meet you!")
+magnus_profile = Profile.create(floor: "HH, 2.OG", phone_number: "01573374806", about: "Hey there, nice to meet you!")
 magnus_profile.avatar.attach(io: avatar_cassandra, filename: 'avatar-cassandra.jpg', content_type: 'image/jpg')
 
-claudia_profile = Profile.create(floor: "HH, 4.OG", phone_number: "123456789123", about: "Hey neighbors!")
+claudia_profile = Profile.create(floor: "HH, 4.OG", phone_number: "01573374806", about: "Hey neighbors!")
 claudia_profile.avatar.attach(io: avatar_claudia, filename: 'avatar-claudia.jpg', content_type: 'image/jpg')
 
 

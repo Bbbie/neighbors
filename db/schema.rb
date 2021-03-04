@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_03_103645) do
+ActiveRecord::Schema.define(version: 2021_03_04_135147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,7 +58,6 @@ ActiveRecord::Schema.define(version: 2021_03_03_103645) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "archived", default: false
-    t.string "pictures"
     t.index ["user_id"], name: "index_cards_on_user_id"
   end
 
@@ -84,7 +83,6 @@ ActiveRecord::Schema.define(version: 2021_03_03_103645) do
     t.string "floor"
     t.string "phone_number"
     t.text "about"
-    t.string "avatar"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false

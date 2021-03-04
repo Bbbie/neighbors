@@ -52,19 +52,19 @@ ana_profile = Profile.create(floor: "VH, 3.OG", phone_number: "123456789123", ab
 ana_profile.avatar.attach(io: avatar_ana, filename: 'avatar-ana.jpg', content_type: 'image/jpg')
 
 sebastian_profile = Profile.create(floor: "HH, EG", phone_number: "123456789123")
-ana_profile.avatar.attach(io: avatar_sebastian, filename: 'avatar-sebastian.jpg', content_type: 'image/jpg')
+sebastian_profile.avatar.attach(io: avatar_sebastian, filename: 'avatar-sebastian.jpg', content_type: 'image/jpg')
 
 achim_profile = Profile.create(floor: "VH, 5.OG", phone_number: "123456789123", about: "I came to Berlin 7 years ago for my studies and fell in love with the city ever since. I’ve lived in different districts, Schoeneberg, Neukoelln and now here with you in Kreuzberg!In my free time I like to play music, go bouldering, hang out at Victoriapark or just get away from the city to go kayaking in Spreewald. If you’d like to hang out shoot me a Whatsapp or just stop me in the hallway the old-fashioned and way nicer way 😉!")
-ana_profile.avatar.attach(io: avatar_achim, filename: 'avatar-achim.jpg', content_type: 'image/jpg')
+achim_profile.avatar.attach(io: avatar_achim, filename: 'avatar-achim.jpg', content_type: 'image/jpg')
 
 cassandra_profile = Profile.create(floor: "VH, 1.OG")
-ana_profile.avatar.attach(io: avatar_magnus, filename: 'avatar-magnus.jpg', content_type: 'image/jpg')
+cassandra_profile.avatar.attach(io: avatar_magnus, filename: 'avatar-magnus.jpg', content_type: 'image/jpg')
 
 magnus_profile = Profile.create(floor: "HH, 2.OG", phone_number: "123456789123", about: "Hey there, nice to meet you!")
-ana_profile.avatar.attach(io: avatar_cassandra, filename: 'avatar-cassandra.jpg', content_type: 'image/jpg')
+magnus_profile.avatar.attach(io: avatar_cassandra, filename: 'avatar-cassandra.jpg', content_type: 'image/jpg')
 
 claudia_profile = Profile.create(floor: "HH, 4.OG", phone_number: "123456789123", about: "Hey neighbors!")
-ana_profile.avatar.attach(io: avatar_claudia, filename: 'avatar-claudia.jpg', content_type: 'image/jpg')
+claudia_profile.avatar.attach(io: avatar_claudia, filename: 'avatar-claudia.jpg', content_type: 'image/jpg')
 
 
 # CREATING USERS

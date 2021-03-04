@@ -19,9 +19,12 @@
     <%= link_to "Add card", cards_path(query: "new"), class: "btn btn-primary btn-shadow add" %>
   </div>
 
+  <!-- DISPLAY CARDS -->
   <div class="cards">
     <% @cards.each do |card| %>
-      <%= link_to cards_path(card), class: "card" do %>
+    <!-- MODAL LINK STARTS HERE -->
+      <button type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#myModal">
+        <!-- CARD CONTENT STARTS HERE -->
         <div class="card-content">
           <div class="card-upper-content">
             <div class="card-top">
@@ -89,11 +92,10 @@
             </div>
           </div>
         <% end %>
-      <% end %>
+      </button>
+      <!-- RENDERING SHOW -->
+      <%= render 'show', :card => card %>
     <% end %>
   </div>
 </div>
 
-
-<!-- Show view partial -->
-<%= render 'show', card: @card %>

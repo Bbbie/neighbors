@@ -166,3 +166,20 @@
   }
 }
 
+.modal-content {
+  flex-direction: row;
+  .modal-left {
+    box-shadow: 3px 1px 8px rgba(0,0,0,.1);
+  }
+  .modal-right {
+    width: 400px;
+  }
+}
+
+
+
+.card-modal {
+  border-radius: 10px;
+  height: 550px;
+}
+

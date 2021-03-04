@@ -1,1 +1,63 @@
-<h1>test</h1>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+
+    <!-- Modal content-->
+    <div class="modal-content card-modal">
+      <div class="modal-left">
+        <div class="card-content">
+          <div class="card-upper-content">
+            <div class="card-top">
+              <p class="category <%= card.category %>"><%= card.category %></p>
+              <div class="time-menu">
+                <p class="date-time">
+                  <% if card.created_at == Date.today %>
+                    Today, <%= card.created_at.strftime("%l:%M %p") %>
+                  <% elsif card.created_at == Date.yesterday %>
+                    Yesterday, <%= card.created_at.strftime("%l:%M %p") %>
+                  <% elsif (card.created_at > Date.today - 7) && (card.created_at < Date.yesterday) %>
+                    <%= card.created_at.strftime("%A, %l:%M %p") %>
+                  <% else %>
+                    <%= card.created_at.strftime("%B %m, %l:%M %p") %>
+                  <% end %>
+                </p>
+                <% if current_user == card.user %>
+                  <%= image_tag "ic-menu.svg", class: "icon-menu", data: { card_id: card.id }, id: "menu-icon" %>
+                <% end %>
+              </div>
+            </div>
+            <div class="card-middle">
+              <p class="from-who"><%= card.user.first_name %> <%= card.user.last_name %>, <%= card.user.profile.floor %></p>
+              <p class="title"><%= card.title %></p>
+            </div>
+            <p class="date-time">When: <%= card.start_date%>, <%= card.start_time%>
+              <% if card.end_date && card.end_time %>
+                to <%= card.end_date%>, <%= card.end_time%>
+              <% elsif card.end_date %>
+                to <%= card.end_date%>
+              <% elsif card.end_time %>
+                to <%= card.end_time%>
+              <% end %>
+            </p>
+            <p class="card-description description-card"><%= truncate(card.description,  :length => 82) %></p>
+          </div>
+          <div class="card-lower-content">
+            <div class="card-avatars">
+              <% card.users.each do |recipient| %>
+                <div class="card-index-avatars">
+                  <div class="placeholder-avatar-small"></div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      <div class="modal-right">
+        <h1>#CHAT</h1>
+      </div>
+    </div>
+
+  </div>
+</div>

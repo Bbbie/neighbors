@@ -71,4 +71,9 @@ a {
     border: 1px solid $purple !important;
   }
 }
+// bootstrap fix
 
+.btn-light:hover {
+  background-color: rgba(255, 255, 255, 0) !important;
+  border-color: rgba(255, 255, 255, 0) !important;
+}

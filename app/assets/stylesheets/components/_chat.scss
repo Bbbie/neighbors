@@ -2,8 +2,66 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 60px;
+  border-bottom: solid 1px rgba(0,0,0,.1);
   h4 {
     margin-left: 15px;
+    font-size: 15px;
+    color: BLACK;
+    opacity: 0.7;
+    font-weight: 400;
+  }
+  .btn-default {
+    font-size: 14px;
+    padding: 0 5px;
+    opacity: .7;
+  }
+}
+.chat-body {
+  height: 360px;
+}
+
+.input-field {
+  border-top: solid 1px rgba(0,0,0,.1);
+  padding-bottom: 15px;
+}
+
+.simple-form {
+  position: relative;
+}
+
+.form-control {
+  border: none;
+  height: 110px;
+
+}
+.btn-chat {
+  position: absolute;
+  right: 25px;
+  bottom: 15px;
+  font-size: 13px;
+  padding: 5px 15px;
+}
+
+.messages-container {
+  padding: 7px 10px;
+  background-color: #FAFAFA;
+  margin: 10px 0;
+  border-radius: 8px;
+  .author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    small{
+      opacity: .8;
+    }
+    span {
+      font-size: 13px;
+    }
+    p {
+      padding: 7px 5px;
+      color: black;
+    }
   }
 }

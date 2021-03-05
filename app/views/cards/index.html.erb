@@ -35,9 +35,7 @@
         <% end %>
       <% end %>
     </div>
-
-
-    <%= link_to "Add card", cards_path(query: "new"), class: "btn btn-primary btn-shadow add" %>
+    <button type="button" class="btn btn-primary btn-shadow add" data-toggle="modal" data-target="#new-card">Add card</button>
   </div>
 
   <!-- DISPLAY CARDS -->
@@ -126,4 +124,16 @@
     <p class="title">Nothing to see here, yet! Add a card now</p>
   <% end %>
 </div>
+
+<!-- RENDERING NEW -->
+
+<%= render "form", card: @empty_card %>
+
+
+
+
+
+
+
+
 

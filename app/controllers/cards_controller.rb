@@ -37,6 +37,8 @@ class CardsController < ApplicationController
       @cards = policy_scope(Card).where(board: "parcels")
       @title = "Parcels"
     end
+    @empty_card = Card.new
+    @empty_recipient = CardRecipient.new
     @comment = Comment.new
   end
 
@@ -49,8 +51,12 @@ class CardsController < ApplicationController
     @card = Card.new(card_params)
     @user = current_user
     @card.user = @user
+    @card_users = User.where(id: params['card'][:user_ids])
+    @card_users.each do |user|
+      CardRecipient.create(user: user, card: @card)
+    end
     if @card.save
-      redirect_to card_path(@card)
+      redirect_to cards_path
     else
       redirect_to cards_path
     end

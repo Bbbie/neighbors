@@ -39,3 +39,11 @@ document.addEventListener('turbolinks:load', () => {
   menu();
   neighbors();
 });
+
+
+
+
+
+
+
+

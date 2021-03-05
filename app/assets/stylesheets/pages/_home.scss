@@ -1,1 +1,21 @@
 // Specific CSS for your home-page
+
+.home-container {
+  width: 997px;
+  margin: 0 auto;
+}
+
+.home-container .cards-home {
+  display: flex;
+  justify-content: space-between;
+  .cards-info {
+
+  }
+}
+
+.home-container.how {
+  margin-top: 40px;
+  .headline {
+    margin-bottom: 40px;
+  }
+}

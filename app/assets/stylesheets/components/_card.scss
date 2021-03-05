@@ -1,5 +1,6 @@
 // on cards index
-.card {
+.custom-card {
+  text-align: left;
   position: relative;
   background-color: white;
   border-radius: 24px;
@@ -10,7 +11,7 @@
   box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.12);
 }
 
-.card:hover {
+.custom-card:hover {
   transform: scale(1.01);
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12)
 }
@@ -170,9 +171,11 @@
   flex-direction: row;
   .modal-left {
     box-shadow: 3px 1px 8px rgba(0,0,0,.1);
+    width: 900px;
   }
   .modal-right {
-    width: 400px;
+    width: 600px;
+    padding: 5px 20px;
   }
 }
 
@@ -183,3 +186,21 @@
   height: 550px;
 }
 
+
+// cards on home
+
+.card-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 40px 30px;
+  text-align: left;
+  background-color: white;
+  border-radius: 24px;
+  border: none !important;
+  width: 313px;
+  box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.12);
+  .home-illu {
+    margin-bottom: 27px;
+  }
+}

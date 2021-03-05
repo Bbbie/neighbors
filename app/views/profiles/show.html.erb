@@ -1,34 +1,67 @@
-<%= link_to "go back", :back %>
-<div class="container">
-  <h1>I am <%= @profile.user.first_name %> <%= @profile.user.last_name %></h1>
-  <div class="info">
-    <table>
-      <tr>
-        <th>Where I live</th>
-        <th>My number</th>
-      </tr>
-      <tr>
-        <td><%= @profile.floor %></td>
-        <td><%= @profile.phone_number %></td>
-      </tr>
-    </table>
+<div class="container-dashboard">
+  <!-- BACK BUTTON -->
+  <%= link_to :back do %>
+    <div class="back-link">
+      <%= image_tag "ic-back-inline.svg", class: "nav-icon" %>
+      <p class="description-card">go back</p>
+    </div>
+  <% end %>
+
+  <h1 class="headline">I am <%= @profile.user.first_name %> <%= @profile.user.last_name %> 👋</h1>
+  <div class="profile-info">
+    <div class="info-top">
+      <div>
+        <p class="from-who">Where I live</p>
+        <p class="description-modal"><%= @profile.floor %></p>
+      </div>
+      <div class="number">
+        <p class="from-who">My number</p>
+        <p class="description-modal"><%= @profile.phone_number %></p>
+      </div>
+    </div>
+
     <div class="main-content">
-      <% if @profile.avatar.attached? %>
+
+      <% if @profile.avatar%>
         <%= cl_img_tag @profile.avatar.key %>
         <h1>Picture?</h1>
       <% end %>
-      <div class="about">
-        <h4>About me</h4>
-        <p><%= @profile.about %></p>
+
+
+      <div class="profile-picture-box">
+        <% if @profile.avatar %>
+          <%= image_tag @profile.avatar, class: "profile-picture" %>
+        <% else %>
+          <%= image_tag "empty-avatar_1", class: "profile-picture" %>
+        <% end %>
       </div>
+      <% if @profile.about %>
+
+      <div class="about">
+        <p class="from-who">About me</h2>
+        <p class="description-modal"><%= @profile.about %></p>
+      </div>
+      <% end %>
     </div>
   </div>
+
+  <!-- EDIT BUTTON -->
+  <% if @profile.user == current_user %>
+    <%= link_to "Edit profile", profile_path(@profile), class: "btn btn-primary btn-shadow add" %>
+  <% end %>
 </div>
 
-<% if @profile.user == current_user %>
-  <a href="#">Edit profile</a>
-<% end %>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <!-- HERE EDIT FORM. TO ACTIVATE WHEN CLICK ON EDIT -->
 <div class="edit-form">
   <h1>Edit your profile</h1>

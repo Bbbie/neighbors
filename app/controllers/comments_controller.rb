@@ -2,9 +2,10 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     @comment.user = current_user
-    @comment.card = Card.find(params[:card_id])
+    @card = Card.find(params[:card_id])
+    @comment.card = @card
     @comment.save
-    redirect_to cards_path
+    authorize @comment
   end
 
   private

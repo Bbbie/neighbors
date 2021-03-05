@@ -6,7 +6,7 @@
       <p class="description-card">go back</p>
     </div>
   <% end %>
-
+  <!-- HEADER -->
   <h1 class="headline">I am <%= @profile.user.first_name %> <%= @profile.user.last_name %> 👋</h1>
   <div class="profile-info">
     <div class="info-top">
@@ -19,7 +19,7 @@
         <p class="description-modal"><%= @profile.phone_number %></p>
       </div>
     </div>
-
+    <!-- MAIN CONTENT -->
     <div class="main-content">
 
       <div class="profile-picture-box">
@@ -30,7 +30,7 @@
         <% end %>
       </div>
       <% if @profile.about %>
-      
+
       <div class="about">
         <p class="from-who">About me</h2>
         <p class="description-modal"><%= @profile.about %></p>
@@ -46,18 +46,5 @@
 </div>
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<!-- HERE EDIT FORM. TO ACTIVATE WHEN CLICK ON EDIT -->
-<div class="edit-form">
-  <h1>Edit your profile</h1>
-  <%= render "form", profile: @profile %>
-</div>
+<!-- HERE RENDER EDIT FORM. TO ACTIVATE WHEN CLICK ON EDIT-->
+

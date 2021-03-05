@@ -32,6 +32,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { menu } from '../components/hover-menu';
 import { neighbors } from '../components/neighbors-index';
 import { initFlatpickr } from "../plugins/flatpickr";
+import { initChat } from '../components/comments';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -40,16 +41,14 @@ document.addEventListener('turbolinks:load', () => {
   initFlatpickr();
   menu();
   neighbors();
+  initChat();
 });
-
-
 
 
 // const cards = document.querySelectorAll(".card-content");
 // cards.forEach(card => card.addEventListener("click", () => {
 //   window.alert("Hello")
 // }))
-
 
 
 

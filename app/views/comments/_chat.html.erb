@@ -3,7 +3,7 @@
     <h4>Got any comment?</h4>
     <button type="button" class="btn btn-default" data-dismiss="modal">x</button>
   </div>
-  <div id="messages" class="chat-body">
+  <div id="messages" class="chat-body overflow-auto">
     <% card.comments.each do |comment| %>
       <div class="messages-container" id="message-<%= comment.id %>">
         <i class="author">
@@ -17,7 +17,7 @@
   <div class="input-field">
     <%= simple_form_for [ card, @comment ], remote: true do |f| %>
       <%= f.input :content, label: false, placeholder: "Enter your message here!" %>
-      <%= f.submit "Send" %>
+      <%= f.submit "Send", class: "btn btn-primary btn-shadow btn-chat" %>
     <% end %>
   </div>
 

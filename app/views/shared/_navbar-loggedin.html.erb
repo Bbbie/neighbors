@@ -1,6 +1,6 @@
 <!-- A vertical navbar -->
 <!-- <nav class="list-group"> -->
-<nav class="navbar navbar-expand-sm navbar-light navbar-lewagon navbar-vertical">
+<nav class="navbar sticky-top navbar-expand-sm navbar-light navbar-lewagon navbar-vertical">
   <ul class="nav flex-column nav-vertical">
 
 
@@ -76,7 +76,9 @@
           <% if user_signed_in? %>
 
               <li class="nav-item dropup">
-                <%= image_tag current_user.profile.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <% if current_user.profile.avatar.attached? %>
+                  <%= cl_image_tag current_user.profile.avatar.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <% end %>
                 <div class="dropdown-menu dropright" aria-labelledby="navbarDropdown">
 
                 <div class="dropdown-group">

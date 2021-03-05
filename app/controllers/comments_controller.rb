@@ -6,7 +6,6 @@ class CommentsController < ApplicationController
     @comment.card = @card
     @comment.save
     authorize @comment
-    redirect_to cards_path(@comment, anchor: "myModal<%= @card.id %>")
   end
 
   private

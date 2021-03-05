@@ -76,7 +76,7 @@
           <% if user_signed_in? %>
 
               <li class="nav-item dropup">
-                <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <%= image_tag current_user.profile.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <div class="dropdown-menu dropright" aria-labelledby="navbarDropdown">
 
                 <div class="dropdown-group">

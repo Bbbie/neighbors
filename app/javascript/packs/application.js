@@ -45,7 +45,14 @@ document.addEventListener('turbolinks:load', () => {
 //   window.alert("Hello")
 // }))
 
-
+const messages_container = document.querySelector("#messages");
+const forms = document.querySelectorAll(".simple_form");
+forms.forEach(function(form) {
+  form.addEventListener("submit", (event) => {
+    const inputField = event.getElementById("comment_content");
+    console.log(inputField.value);
+  })
+})
 
 
 

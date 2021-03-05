@@ -87,8 +87,9 @@
 
                 <div class="dropdown-group">
                   <%= image_tag "ic-profile.svg", class: "nav-dropdown-icon" %>
-                  <%= link_to "My profile", profile_path(current_user.profile), class: "drop-item" %>
-
+                  <% if current_user.profile %>
+                    <%= link_to "My profile", profile_path(current_user.profile), class: "drop-item" %>
+                  <% end %>
                 </div>
 
                 <div class="dropdown-group">

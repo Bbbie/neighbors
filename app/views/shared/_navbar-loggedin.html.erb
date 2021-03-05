@@ -76,7 +76,9 @@
           <% if user_signed_in? %>
 
               <li class="nav-item dropup">
-                <%= image_tag current_user.profile.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <% if current_user.profile.avatar.attached? %>
+                  <%= cl_image_tag current_user.profile.avatar.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <% end %>
                 <div class="dropdown-menu dropright" aria-labelledby="navbarDropdown">
 
                 <div class="dropdown-group">

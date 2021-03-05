@@ -16,9 +16,9 @@
   margin-right: 10px;
   padding-right: 10px !important;
   padding-left: 10px !important;
-  color: #6951FF !important;
+  color: white;
   border-radius: 20px;
-  border: 1px solid #6951FF;
+  border: 1px solid white;
 
   a {
     font-size: 18px;
@@ -80,14 +80,14 @@
   }
 }
 
-#nav-logo-long {
+.nav-logo-long {
   font-family: 'Asap', sans-serif;
   font-weight: bold;
   font-style: italic;
   font-size: 32px;
-  color: #323232;
+  color: white;
   &hover {
-    color: #323232;
+    color: white;
   }
 }
 
@@ -114,3 +114,17 @@
     flex-direction: column;
 }
 
+.navbar-transparent {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-margin-top {
+  position: relative !important;
+}
+
+.nav-logo-grey {
+  color: #323232 !important;
+}

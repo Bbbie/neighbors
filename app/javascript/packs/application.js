@@ -40,12 +40,6 @@ document.addEventListener('turbolinks:load', () => {
   neighbors();
 });
 
-// const cards = document.querySelectorAll(".card-content");
-// cards.forEach(card => card.addEventListener("click", () => {
-//   window.alert("Hello")
-// }))
-
-
 
 
 

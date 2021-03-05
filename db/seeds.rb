@@ -2,7 +2,11 @@ require 'open-uri'
 
 # DESTROY OLD SEEDS
 puts "🗑 Destroying old seeds..."
-puts "> card_recipiente..."
+
+puts "> comments..."
+Comment.destroy_all
+
+puts "> card_recipients..."
 CardRecipient.destroy_all
 
 puts "> cards..."

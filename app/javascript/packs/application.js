@@ -31,6 +31,7 @@ import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { menu } from '../components/hover-menu';
 import { neighbors } from '../components/neighbors-index';
+import { initChat } from '../components/comments';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -38,6 +39,7 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   menu();
   neighbors();
+  initChat();
 });
 
 

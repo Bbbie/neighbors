@@ -3,7 +3,7 @@
     <h4>Got any comment?</h4>
     <button type="button" class="btn btn-default" data-dismiss="modal">x</button>
   </div>
-  <div id="messages" class="chat-body">
+  <div id="messages" class="chat-body overflow-auto">
     <% card.comments.each do |comment| %>
       <div class="messages-container" id="message-<%= comment.id %>">
         <i class="author">

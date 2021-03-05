@@ -12,8 +12,8 @@ const initChat = () => {
     const inputField = document.getElementById("comment_content");
     const html = `<div class="messages-container" id="message-<%= comment.id %>">
         <i class="author">
-          <span>ENTER FIRST_NAME</span>
-          <small>ENTER TIME</small>
+          <span>Cassandra Hinrichsen</span>
+          <small>Less than a minute ago</small>
         </i>
         <p>${inputField.value}</p>
       </div>`

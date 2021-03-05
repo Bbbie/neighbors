@@ -71,3 +71,13 @@ a {
     border: 1px solid $purple !important;
   }
 }
+
+body > div.home-banner > div {
+  form {
+    height: 50px;
+   }
+   #address_input {
+    height: 50px;
+   }
+}
+

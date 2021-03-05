@@ -16,21 +16,27 @@
    <!-- HERE CARDS -->
    <div class="cards-home">
      <div class="card-home">
-      <%= image_tag "illu-parcels.svg", class: "home-illu" %>
+      <%= link_to cards_path(query: "parcels") do %>
+        <%= image_tag "illu-parcels.svg", class: "home-illu" %>
+      <% end %>
       <div class="card-info">
         <h3>Parcels</h3>
         <p>Find out where your parcels are and when you can pick them up</p>
       </div>
     </div>
     <div class="card-home">
-      <%= image_tag "illu-mutual-help.svg", class: "home-illu" %>
+      <%= link_to cards_path(query: "mutual-help") do %>
+        <%= image_tag "illu-mutual-help.svg", class: "home-illu" %>
+      <% end %>
       <div class="card-info">
         <h3>Mutual help</h3>
         <p>Share infos, ask questions, post requests and help each other out</p>
       </div>
     </div>
     <div class="card-home">
-      <%= image_tag "illu-community.svg", class: "home-illu" %>
+      <%= link_to cards_path(query: "community") do %>
+        <%= image_tag "illu-community.svg", class: "home-illu" %>
+      <% end %>
       <div class="card-info">
         <h3>Community</h3>
         <p>Plan mutual activities and get to know your neigbors</p>

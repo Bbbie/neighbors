@@ -6,7 +6,7 @@
 //   })
 // })
 const initChat = () => {
-  const messagesContainer = document.querySelector("#messages");
+  const messagesContainer = document.querySelector(".chat-body");
   const form = document.querySelector(".simple_form");
   form.addEventListener("submit", (event) => {
     const inputField = document.getElementById("comment_content");

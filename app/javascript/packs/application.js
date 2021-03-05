@@ -40,19 +40,6 @@ document.addEventListener('turbolinks:load', () => {
   neighbors();
 });
 
-// const cards = document.querySelectorAll(".card-content");
-// cards.forEach(card => card.addEventListener("click", () => {
-//   window.alert("Hello")
-// }))
-
-const messages_container = document.querySelector("#messages");
-const forms = document.querySelectorAll(".simple_form");
-forms.forEach(function(form) {
-  form.addEventListener("submit", (event) => {
-    const inputField = event.getElementById("comment_content");
-    console.log(inputField.value);
-  })
-})
 
 
 

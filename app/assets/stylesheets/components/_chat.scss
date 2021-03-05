@@ -7,7 +7,7 @@
   h4 {
     margin-left: 15px;
     font-size: 15px;
-    color: BLACK;
+    color: black;
     opacity: 0.7;
     font-weight: 400;
   }
@@ -26,22 +26,23 @@
   padding-bottom: 15px;
 }
 
-.simple-form {
+.chat-input-field-group {
   position: relative;
+  .form-group {
+    textarea.form-control {
+      border: none;
+      height: 75px;
+    }
+  }
+  .btn-chat {
+    position: absolute;
+    right: 25px;
+    bottom: -3px;
+    font-size: 13px;
+    padding: 5px 15px;
+  }
 }
 
-.form-control {
-  border: none;
-  height: 110px;
-
-}
-.btn-chat {
-  position: absolute;
-  right: 25px;
-  bottom: 15px;
-  font-size: 13px;
-  padding: 5px 15px;
-}
 
 .messages-container {
   padding: 7px 10px;

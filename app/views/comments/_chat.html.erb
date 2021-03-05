@@ -17,7 +17,7 @@
   <div class="input-field">
     <%= simple_form_for [ card, @comment ], remote: true do |f| %>
       <%= f.input :content, label: false, placeholder: "Enter your message here!" %>
-      <%= f.submit "Send" %>
+      <%= f.submit "Send", class: "btn btn-primary btn-shadow btn-chat" %>
     <% end %>
   </div>
 

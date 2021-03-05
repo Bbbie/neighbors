@@ -22,6 +22,12 @@
 
     <div class="main-content">
 
+      <% if @profile.avatar%>
+        <%= cl_img_tag @profile.avatar.key %>
+        <h1>Picture?</h1>
+      <% end %>
+
+
       <div class="profile-picture-box">
         <% if @profile.avatar %>
           <%= image_tag @profile.avatar, class: "profile-picture" %>
@@ -30,7 +36,7 @@
         <% end %>
       </div>
       <% if @profile.about %>
-      
+
       <div class="about">
         <p class="from-who">About me</h2>
         <p class="description-modal"><%= @profile.about %></p>

@@ -31,14 +31,19 @@ import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { menu } from '../components/hover-menu';
 import { neighbors } from '../components/neighbors-index';
+import { initFlatpickr } from "../plugins/flatpickr";
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initMapbox();
+  initFlatpickr();
   menu();
   neighbors();
 });
+
+
+
 
 // const cards = document.querySelectorAll(".card-content");
 // cards.forEach(card => card.addEventListener("click", () => {

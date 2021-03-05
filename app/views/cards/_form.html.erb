@@ -1,1 +1,37 @@
-<!-- PARTIAL FOR CARD EDIT -->
+<div id="new-card" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+
+
+    <!-- PARTIAL FOR CARD EDIT -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-10">
+          <div class="new-modal">
+            <%= simple_form_for card  do |f| %>
+              <h1>Add a card</h1>
+
+              <div class="form-inputs">
+                <%= f.input :board, collection: Card::CARD_BOARDS %>
+                <%= f.input :category, collection: Card::CARD_CATEGORIES %>
+                <%= f.association :users, collection: User.all, multiple: true, include_hidden: false, label_method: :last_name, label: "Who is this card for?", prompt: "All neighbors" %>
+                <%# f.input :user, collection: User.all, input_html: { multiple: true }, include_hidden: false %>
+                <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+                <%= f.input :start_time  %>
+                <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+                <%= f.input :end_time %>
+                <%= f.input :title %>
+                <%= f.input :description %>
+                <%= f.input :pictures, as: :file, multiple: true %>
+              </div>
+
+              <div class="form-actions">
+                <%= f.submit "Save Card", class: "btn btn-primary btn-shadow"%>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

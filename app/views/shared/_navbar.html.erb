@@ -13,12 +13,18 @@
 
       <li class="nav-item d-flex" >
         <% if !user_signed_in? %>
-           <%= link_to "Log In", new_user_session_path, class: "btn btn-secondary btn-medium" %>
-           <%= link_to "Sign Up", search_communities_path, class: "btn btn-secondary btn-medium" %>
+          <% if current_page?(root_path) %>
+            <!-- If user is on home, login is white -->
+            <%= link_to "Log In", new_user_session_path, class: "btn btn-secondary-white btn-medium btn-login" %>
+          <% else %>
+            <!-- if not on home, it's regular -->
+            <%= link_to "Log In", new_user_session_path, class: "btn btn-secondary btn-medium btn-login" %>
+          <% end %>
+          <%= link_to "Sign Up", search_communities_path, class: "btn btn-primary btn-medium" %>
         <% else %>
           <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-primary btn-medium"%>
+        <% end %>
       </li>
-      <% end %>
     </ul>
   </div>
 </div>

@@ -77,3 +77,14 @@ a {
   background-color: rgba(255, 255, 255, 0) !important;
   border-color: rgba(255, 255, 255, 0) !important;
 }
+
+.btn-light:active {
+  background-color: rgba(255, 255, 255, 0) !important;
+  border-color: rgba(255, 255, 255, 0) !important;
+}
+
+.btn-light:focus {
+  background-color: rgba(255, 255, 255, 0) !important;
+  border-color: rgba(255, 255, 255, 0) !important;
+  box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0) !important;
+}

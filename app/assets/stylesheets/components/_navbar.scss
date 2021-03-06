@@ -19,15 +19,11 @@
   color: white;
   border-radius: 20px;
   border: 1px solid white;
-
   a {
     font-size: 18px;
     font-family: Roboto;
     font-weight: 400;
-
-
   }
-
 }
 
 .homepage-signup {
@@ -63,9 +59,16 @@
   border-radius: 8px;
   &:hover {
     background-color: #E7E7E7;
+  }
   &:active {
     background-color: #E0E0E0;
   }
+}
+
+.active-purple {
+  background-color: #6951FF;
+  &:hover {
+    background-color: #5b46dd;
   }
 }
 
@@ -75,7 +78,7 @@
   font-style: italic;
   font-size: 40px;
   color: #323232;
-  &hover {
+  &:hover {
     color: #323232;
   }
 }
@@ -86,7 +89,7 @@
   font-style: italic;
   font-size: 32px;
   color: white;
-  &hover {
+  &:hover {
     color: white;
   }
 }
@@ -96,7 +99,6 @@
   top: 0;
   height: 100vh;
   flex-direction: column;
-
 }
 
 .nav-vertical {
@@ -106,12 +108,12 @@
 }
 
 .navbar-icons {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar-transparent {

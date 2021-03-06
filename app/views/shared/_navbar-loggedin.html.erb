@@ -15,13 +15,25 @@
         <div class="boards">
         <!-- missed -->
 
-          <div class="board-icon">
-            <div class="icon-box">
-              <%= link_to cards_path(query: "missed") do %>
-                <%= image_tag "ic-board_missed.svg", class: "nav-icon" %>
-              <% end %>
+          <% if cards_path(query: "missed") %>
+            <div class="board-icon">
+              <div class="icon-box">
+                <%= link_to cards_path(query: "missed") do %>
+                  <%= image_tag "ic-board_missed.svg", class: "nav-icon" %>
+                <% end %>
+              </div>
             </div>
-          </div>
+          <% else %>
+            <%= link_to cards_path(query: "missed") do %>
+              <div class="board-icon active-purple">
+                <div class="icon-box">
+                  <%= image_tag "ic-board_missed-white.svg", class: "nav-icon" %>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+
       </li>
 
         <!-- parcels -->

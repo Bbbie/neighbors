@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-lewagon navbar-transparent <%= 'navbar-margin-top' if controller_name == 'registrations' || controller_name == 'sessions' %>">
+<div class="navbar navbar-expand-sm navbar-lewagon navbar-horizontal nav-transparent fixed <%= 'navbar-margin-top' if controller_name == 'registrations' || controller_name == 'sessions' %>" id="nav">
 
   <!-- HOME link via 'neighbors' if logged out to home, if logged-in, to dashboard -->
   <%= link_to user_signed_in? ? cards_path(query: "missed") : root_path, class: "navbar-brand" do %>

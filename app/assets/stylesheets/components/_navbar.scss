@@ -88,11 +88,19 @@
   flex-direction: column;
 }
 
-.navbar-transparent {
-  background-color: transparent;
+.navbar-horizontal {
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.nav-transparent {
+  background-color: transparent;
+
+}
+
+.nav-grey {
+  background-color: rgba(250, 250, 250, 0.9);
 }
 
 .navbar-margin-top {
@@ -105,4 +113,8 @@
 
 .btn-login {
   margin-right: 10px;
+}
+
+.fixed {
+  position: fixed;
 }

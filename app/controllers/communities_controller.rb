@@ -9,7 +9,8 @@ class CommunitiesController < ApplicationController
         @markers = @community.geocoded.map do |community|
           {
             lat: community.latitude,
-            lng: community.longitude
+            lng: community.longitude,
+            image_url: helpers.asset_url('map-marker.png')
           }
         end
       else

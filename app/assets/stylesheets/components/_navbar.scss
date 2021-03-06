@@ -11,36 +11,8 @@
   width: 40px;
 }
 
-// nav bar home, login etc.
-.homepage-login {
-  margin-right: 10px;
-  padding-right: 10px !important;
-  padding-left: 10px !important;
-  color: white;
-  border-radius: 20px;
-  border: 1px solid white;
-  a {
-    font-size: 18px;
-    font-family: Roboto;
-    font-weight: 400;
-  }
-}
+// buttons: see button component
 
-.homepage-signup {
-
-  padding-right: 10px !important;
-  padding-left: 10px !important;
-  background-color: #6951FF;
-  color: #FAFAFA !important;
-  border-radius: 20px;
-  border: 1px solid #6951FF;
-
-    a {
-      font-size: 18px;
-      font-family: Roboto;
-      font-weight: 400;
-    }
-}
 
 // nav bar dashboard
 
@@ -116,11 +88,19 @@
   flex-direction: column;
 }
 
-.navbar-transparent {
-  background-color: transparent;
+.navbar-horizontal {
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.nav-transparent {
+  background-color: transparent;
+
+}
+
+.nav-grey {
+  background-color: rgba(250, 250, 250, 0.9);
 }
 
 .navbar-margin-top {
@@ -129,4 +109,12 @@
 
 .nav-logo-grey {
   color: #323232 !important;
+}
+
+.btn-login {
+  margin-right: 10px;
+}
+
+.fixed {
+  position: fixed;
 }

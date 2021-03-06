@@ -35,7 +35,8 @@
         <% end %>
       <% end %>
     </div>
-    <button type="button" class="btn btn-primary btn-shadow add" data-toggle="modal" data-target="#new-card">Add card</button>
+
+    <button type="button" class="btn-plus btn-shadow add" data-toggle="modal" data-target="#new-card"><%= image_tag "ic_plus-big.svg" %></button>
   </div>
 
   <!-- DISPLAY CARDS -->
@@ -128,12 +129,3 @@
 <!-- RENDERING NEW -->
 
 <%= render "form", card: @empty_card %>
-
-
-
-
-
-
-
-
-

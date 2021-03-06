@@ -15,8 +15,10 @@
         <p class="description-modal"><%= @profile.floor %></p>
       </div>
       <div class="number">
-        <p class="from-who">My number</p>
-        <p class="description-modal"><%= @profile.phone_number %></p>
+        <% if @profile.phone_number %>
+          <p class="from-who">My number</p>
+          <p class="description-modal"><%= @profile.phone_number %></p>
+        <% end %>
       </div>
     </div>
     <!-- MAIN CONTENT -->
@@ -41,10 +43,11 @@
 
   <!-- EDIT BUTTON -->
   <% if @profile.user == current_user %>
-    <%= link_to "Edit profile", profile_path(@profile), class: "btn btn-primary btn-shadow add" %>
+    <button type="button" class="btn-plus btn-shadow add" data-toggle="modal" data-target="#profile"><%= image_tag "ic-edit-white.svg" %></button>
   <% end %>
 </div>
 
 
 <!-- HERE RENDER EDIT FORM. TO ACTIVATE WHEN CLICK ON EDIT-->
 
+<%= render "form", profile: @profile %>

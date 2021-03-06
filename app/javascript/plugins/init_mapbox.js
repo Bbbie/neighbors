@@ -15,12 +15,22 @@ const initMapbox = () => {
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v10'
+      style: 'mapbox://styles/ammyvare/ckll1vrvz0h8g17ppqurhprd0'
     });
 
     const markers = JSON.parse(mapElement.dataset.markers);
       markers.forEach((marker) => {
-      new mapboxgl.Marker()
+
+      // HTML element ustom marker
+      const element = document.createElement('div');
+      element.className = 'marker';
+      element.style.backgroundImage = `url('${marker.image_url}')`;
+      element.style.backgroundSize = 'contain';
+      element.style.width = '60px';
+      element.style.height = '60px';
+
+      // pass element as argument
+      new mapboxgl.Marker(element)
         .setLngLat([ marker.lng, marker.lat ])
         .addTo(map);
     });
@@ -29,7 +39,6 @@ const initMapbox = () => {
 
     map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
                                       mapboxgl: mapboxgl }));
-
   }
 };
 

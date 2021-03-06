@@ -1,22 +1,25 @@
 <div class="navbar navbar-expand-sm navbar-lewagon navbar-transparent <%= 'navbar-margin-top' if controller_name == 'registrations' || controller_name == 'sessions' %>">
-    <%= link_to cards_path(query: "parcels"), class: "navbar-brand" do %>
-    <h1 class="nav-logo-long <%= 'nav-logo-grey' if controller_name == 'registrations' || controller_name == 'sessions' %>">neighbors.</h1>
-      <% end %>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
 
-        <li class="nav-item d-flex" >
-          <% if !user_signed_in? %>
-            <%= link_to "Log In", new_user_session_path, class: "nav-link homepage-login" %>
-            <%= link_to "Sign Up", new_user_registration_path, class: "nav-link homepage-signup" %>
-          <% else %>
-            <%= link_to "Sign Out", destroy_user_session_path, class: "nav-link homepage-signup" %>
-        </li>
-        <% end %>
-      </ul>
-    </div>
+  <!-- HOME link via 'neighbors' if logged out to home, if logged-in, to dashboard -->
+  <%= link_to user_signed_in? ? cards_path(query: "missed") : root_path, class: "navbar-brand" do %>
+   <h1 class="nav-logo-long <%= 'nav-logo-grey' if controller_name == 'registrations' || controller_name == 'sessions' || controller_name == 'communities' %>">neighbors.</h1>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item d-flex" >
+        <% if !user_signed_in? %>
+           <%= link_to "Log In", new_user_session_path, class: "btn btn-secondary btn-medium" %>
+           <%= link_to "Sign Up", search_communities_path, class: "btn btn-secondary btn-medium" %>
+        <% else %>
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-primary btn-medium"%>
+      </li>
+      <% end %>
+    </ul>
   </div>
+</div>
 

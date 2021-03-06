@@ -90,6 +90,27 @@ a {
     border: 1px solid $purple !important;
   }
 }
+
+.btn-secondary-white {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.0) !important;
+  border: 1px solid #fff;
+  &:hover {
+    color: $dark-purple;
+    background-color: rgba(255, 255, 255, 0.0) !important;
+    border: 1px solid $dark-purple;
+  }
+  &:focus {
+    color: $dark-purple;
+    background-color: rgba(255, 255, 255, 0.0) !important;
+    border: 1px solid #fff !important;
+  }
+  &:active {
+    color: $dark-purple;
+    background-color: rgba(255, 255, 255, 0.0) !important;
+    border: 1px solid #fff !important;
+  }
+}
 // bootstrap fix
 
 .btn-light {

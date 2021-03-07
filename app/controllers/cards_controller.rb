@@ -5,22 +5,22 @@ class CardsController < ApplicationController
     # View parcels board
     if params[:query] == "parcels"
       @cards = policy_scope(Card).where(board: "parcels")
-      @title = "Parcels"
+      @title = "Parcels 📦"
 
     # View mutual help board
     elsif params[:query] == "mutual-help"
       @cards = policy_scope(Card).where(board: "mutual_help")
-      @title = "Mutual help"
+      @title = "Mutual help 🤝"
 
     # View community board
     elsif params[:query] == "community"
       @cards = policy_scope(Card).where(board: "community")
-      @title = "Community"
+      @title = "Community 👯"
 
     # View missed board
     elsif params[:query] == "missed"
      @cards = policy_scope(Card).where("created_at > ?", current_user.last_logout)
-     @title = "What you've missed"
+     @title = "What you've missed 📣"
 
     # View my cards page
     elsif params[:query] == "my-cards"

@@ -118,3 +118,11 @@
 .fixed {
   position: fixed;
 }
+
+.nav-log {
+  display: inline-flex;
+  align-items: center;
+  p {
+    margin-right: 20px;
+  }
+}

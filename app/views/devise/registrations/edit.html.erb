@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-6">
-      <div class="form-background">
+      <div class="form-background  form-logged-out">
         <h2 class="headline">Edit <%= resource_name.to_s.humanize %></h2>
 
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -27,7 +27,7 @@
                         input_html: { autocomplete: "current-password" } %>
           </div>
 
-          <div class="form-actions">
+          <div class="form-actions ">
             <%= f.button :submit, "Update" %>
           </div>
         <% end %>

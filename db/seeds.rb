@@ -154,8 +154,8 @@ CardRecipient.create(user: claudia, card: card_six)
 
 puts ">Card 7..."
 card_seven = Card.create(board: "mutual_help", category: "question", title: "Has anybody seen my cat? 😿", description: "Alert, alert! My cat is gone since five days already! That happens sometimes but usually he comes back after 3 days max... I am really worried! Please let me know if you see him. He's called Jimmy! This is what he looks like:", start_date: "Jan 28", user: ana)
-card_seven.pictures.each do |photo|
-  photo.attach(io: picture_cat, filename: 'picture-cat.jpg', content_type: 'image/jpg')
+card_seven.pictures.each do |picture|
+  picture.attach(io: picture_cat, filename: 'picture-cat.jpg', content_type: 'image/jpg')
 end
 CardRecipient.create(user: sebastian, card: card_seven)
 CardRecipient.create(user: achim, card: card_seven)

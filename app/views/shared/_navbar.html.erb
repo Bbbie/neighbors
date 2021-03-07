@@ -16,7 +16,7 @@
           <% if current_page?(root_path) %>
             <%= link_to "Log In", new_user_session_path, class: "btn btn-secondary-white btn-medium btn-login" %>
             <%= link_to "Sign Up", search_communities_path, class: "btn btn-primary btn-medium" %>
-          <% elsif current_page?(communities_path) || current_page?(search_communities_path) || current_page?(new_profile_path) %>
+          <% elsif current_page?(communities_path) || current_page?(search_communities_path) || current_page?(new_profile_path) || current_page?(new_user_registration_path) %>
             <div class="nav-log">
             <p class="description-card">Got an account?</p>
             <%= link_to "Log In", new_user_session_path, class: "btn btn-secondary btn-medium btn-login" %>

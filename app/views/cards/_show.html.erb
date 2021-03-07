@@ -29,16 +29,29 @@
               <p class="from-who"><%= card.user.first_name %> <%= card.user.last_name %>, <%= card.user.profile.floor %></p>
               <p class="title"><%= card.title %></p>
             </div>
-            <p class="date-time">When: <%= card.start_date%>, <%= card.start_time%>
-              <% if card.end_date && card.end_time %>
-                to <%= card.end_date%>, <%= card.end_time%>
-              <% elsif card.end_date %>
-                to <%= card.end_date%>
-              <% elsif card.end_time %>
-                to <%= card.end_time%>
-              <% end %>
-            </p>
+              <p class="date-time">
+                <% if card.start_date || card.end_date || card.start_time || card.end_time %>
+                  <% time_date = [card.start_date, card.end_date, card.start_time, card.end_time] %>
+                  When:
+                  <% time_date.each do |item| %>
+                    <% if item %>
+                      <% if item == card.start_date %>
+                        <%= item %>
+                      <% elsif item == card.end_date && card.end_date != card.start_date %>
+                        - <%= item %>
+                      <% elsif item == card.start_time %>
+                        , <%= item %>
+                      <% elsif item == card.end_time %>
+                        - <%= item %>
+                      <% end %>
+                    <% end %>
+                  <% end %>
+                <% end%>
+              </p>
             <p class="card-description description-card"><%= card.description %></p>
+            <%# card.pictures.each do |picture| %>
+              <%#= image_tag picture, class: "card-photos" %>
+            <%# end %>
           </div>
           <div class="card-lower-content">
             <div class="card-avatars">

@@ -3,19 +3,27 @@
 <nav class="navbar sticky-top navbar-expand-sm navbar-light navbar-lewagon navbar-vertical">
   <ul class="nav flex-column nav-vertical">
 
-
       <li class="nav-item">
         <%= link_to cards_path do%>
           <h1 id="nav-logo-short">n</h1>
         <% end %>
       </li>
-      <div class="navbar-icons">
-      <!-- BOARD LINKS -->
-      <li class="nav-item">
-        <div class="boards">
-        <!-- missed -->
 
-          <% if cards_path(query: "missed") %>
+      <!-- BOARD LINKS -->
+      <div class="navbar-icons">
+
+      <!-- missed -->
+      <li class="nav-item">
+        <% if cards_path(query: "missed") %>
+          <% if current_page?(cards_path(query: "missed")) %>
+            <div class="board-icon-purple">
+              <div class="icon-box">
+                <%= link_to cards_path(query: "missed") do %>
+                  <%= image_tag "ic-board_missed-white.svg", class: "nav-icon" %>
+                <% end %>
+              </div>
+            </div>
+          <% else %>
             <div class="board-icon">
               <div class="icon-box">
                 <%= link_to cards_path(query: "missed") do %>
@@ -23,21 +31,21 @@
                 <% end %>
               </div>
             </div>
-          <% else %>
-            <%= link_to cards_path(query: "missed") do %>
-              <div class="board-icon active-purple">
-                <div class="icon-box">
-                  <%= image_tag "ic-board_missed-white.svg", class: "nav-icon" %>
-                </div>
-              </div>
-            <% end %>
           <% end %>
-        </div>
-
+        <% end %>
       </li>
 
-        <!-- parcels -->
+      <!-- parcels -->
       <li class="nav-item">
+        <% if current_page?(cards_path(query: "parcels")) %>
+          <div class="board-icon-purple">
+            <div class="icon-box">
+              <%= link_to cards_path(query: "parcels") do %>
+                <%= image_tag "ic-board_parcels-white.svg", class: "nav-icon" %>
+              <% end %>
+            </div>
+          </div>
+        <% else %>
           <div class="board-icon">
             <div class="icon-box">
               <%= link_to cards_path(query: "parcels") do %>
@@ -45,11 +53,20 @@
               <% end %>
             </div>
           </div>
+        <% end %>
       </li>
 
-        <!-- mutual help -->
-
+      <!-- mutual help -->
       <li class="nav-item">
+        <% if current_page?(cards_path(query: "mutual-help")) %>
+          <div class="board-icon-purple">
+            <div class="icon-box">
+              <%= link_to cards_path(query: "mutual-help") do %>
+                <%= image_tag "ic-board_mutual-help-white.svg", class: "nav-icon" %>
+              <% end %>
+            </div>
+          </div>
+        <% else %>
           <div class="board-icon">
             <div class="icon-box">
               <%= link_to cards_path(query: "mutual-help") do %>
@@ -57,23 +74,32 @@
               <% end %>
             </div>
           </div>
+        <% end %>
       </li>
 
-        <!-- community -->
-
-        <li class="nav-item">
-            <div class="board-icon">
-
-              <div class="icon-box">
-                <%= link_to cards_path(query: "community") do %>
-                  <%= image_tag "ic-board_community.svg", class: "nav-icon" %>
-                <% end %>
-              </div>
+      <!-- community -->
+      <li class="nav-item">
+        <% if current_page?(cards_path(query: "community")) %>
+          <div class="board-icon-purple">
+            <div class="icon-box">
+              <%= link_to cards_path(query: "community") do %>
+                <%= image_tag "ic-board_community-white.svg", class: "nav-icon" %>
+              <% end %>
             </div>
-
+          </div>
+        <% else %>
+          <div class="board-icon">
+            <div class="icon-box">
+              <%= link_to cards_path(query: "community") do %>
+                <%= image_tag "ic-board_community.svg", class: "nav-icon" %>
+              <% end %>
             </div>
-        </li>
+          </div>
+        <% end %>
+      </li>
     </div>
+  </ul>
+  <ul>
 
     <li class="nav-item">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -129,7 +155,6 @@
         </ul>
       </div>
     </li>
-
   </ul>
 </nav>
 

@@ -37,6 +37,23 @@
   }
 }
 
+.board-icon-purple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 10px;
+  background-color: #6951FF;
+  border-radius: 8px;
+  &:hover {
+    background-color: #5b46dd;
+  }
+  &:active {
+    background-color: #5b46dd;
+  }
+}
+
 .active-purple {
   background-color: #6951FF;
   &:hover {
@@ -71,11 +88,13 @@
   top: 0;
   height: 100vh;
   flex-direction: column;
+  align-items: center;
 }
 
 .nav-vertical {
   height: 100%;
   justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 

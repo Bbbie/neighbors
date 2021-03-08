@@ -5,23 +5,15 @@
       <button type="button" class="btn btn-default" data-dismiss="modal"><%= image_tag "ic-close.svg", class: "nav-icon" %></button>
     </div>
 
-    <div id="messages" class="chat-body overflow-auto">
+    <div id="messages-<%= card.id %>"data-card-id="<%= card.id %>" class="chat-body overflow-auto">
       <% card.comments.each do |comment| %>
-        <div class="chat-bubble">
-          <%= image_tag comment.user.profile.avatar, class: "avatar-small" %>
-          <div class="messages-container" id="message-<%= comment.id %>">
-            <div class="author">
-              <p class="text-small"><%= comment.user.first_name.capitalize %> <%= card.user.last_name.capitalize %></p>
-              <p class="date-time-small"><%= comment.created_at.strftime("%b %e at %l:%M%p") %></p>
-            </div>
-            <p><%= comment.content %></p>
-          </div>
-        </div>
+        <%= render "comments/message", card: card, comment: comment, empty_comment: empty_comment %>
       <% end %>
     </div>
   </div>
+
   <div class="input-field chat-input-field-group">
-    <%= simple_form_for [ card, @comment ], remote: true do |f| %>
+    <%= simple_form_for [ card, empty_comment ], remote: true do |f| %>
       <%= f.input :content, label: false, placeholder: "Enter your message here!", class: "chat-input-field" %>
       <%= f.submit "Send", class: "btn-primary btn-small btn-chat" %>
     <% end %>

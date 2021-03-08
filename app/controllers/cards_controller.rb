@@ -19,8 +19,8 @@ class CardsController < ApplicationController
 
     # View missed board
     elsif params[:query] == "missed"
-     @cards = policy_scope(Card).where("created_at > ?", current_user.last_logout).where(archived: false).order(created_at: :desc)
-     @title = "What you've missed"
+      @cards = policy_scope(Card).where("created_at > ?", current_user.last_logout)
+      @title = "What you've missed"
 
     # View my cards page
     elsif params[:query] == "my-cards"
@@ -34,7 +34,7 @@ class CardsController < ApplicationController
     end
     @empty_card = Card.new
     @empty_recipient = CardRecipient.new
-    @comment = Comment.new
+    @empty_comment = Comment.new
   end
 
   def show
@@ -50,11 +50,7 @@ class CardsController < ApplicationController
     @card_users.each do |user|
       CardRecipient.create(user: user, card: @card)
     end
-    if @card.save
-      redirect_to cards_path
-    else
-      redirect_to cards_path
-    end
+    redirect_to cards_path
     authorize @card
   end
 

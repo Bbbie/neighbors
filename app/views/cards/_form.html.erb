@@ -11,10 +11,10 @@
 <!--               <div class="form-inputs"> -->
                 <%= f.input :board, collection: Card::CARD_BOARDS %>
                 <%= f.input :category, collection: Card::CARD_CATEGORIES %>
-                <%= f.association :users, collection: User.all, multiple: true, include_hidden: false, label_method: :last_name, label: "Who is this card for?", prompt: "All neighbors" %>
+                <%= f.association :users, collection: User.all, multiple: true, include_hidden: false, label_method: :last_name, label: "Who is this card for?", prompt: "One or more recipients" %>
                 <%# f.input :user, collection: User.all, input_html: { multiple: true }, include_hidden: false %>
                 <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-                <%= f.input :start_time  %>
+                <%= f.input :start_time, as: :time %>
                 <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
                 <%= f.input :end_time %>
                 <%= f.input :title %>

@@ -31,6 +31,7 @@ class CardsController < ApplicationController
     elsif params[:query] == "my-cards-archived"
       @cards = policy_scope(Card).where(user: current_user, archived: true).order(created_at: :desc)
       @title = "My cards"
+
     else
       @cards = policy_scope(Card).where("created_at > ?", current_user.last_logout)
       @title = "What you've missed"
@@ -53,7 +54,13 @@ class CardsController < ApplicationController
     @card_users.each do |user|
       CardRecipient.create(user: user, card: @card)
     end
-    redirect_to cards_path
+    if @card.board == "parcels"
+      redirect_to cards_path(query: "parcels")
+    elsif @card.board == "mutual_help"
+      redirect_to cards_path(query: "mutual_help")
+    elsif cards_path(query: "community")
+      redirect_to cards_path(query: "community")
+    end
     authorize @card
   end
 

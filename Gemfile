@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.6'
 
 
+gem 'active_record_union'
+
 # Authorization via pundit
 gem 'pundit'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

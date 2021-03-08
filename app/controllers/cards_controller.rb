@@ -4,37 +4,37 @@ class CardsController < ApplicationController
   def index
     # View parcels board
     if params[:query] == "parcels"
-      @cards = policy_scope(Card).where(board: "parcels")
+      @cards = policy_scope(Card).where(board: "parcels").order(created_at: :desc)
       @title = "Parcels"
 
     # View mutual help board
     elsif params[:query] == "mutual-help"
-      @cards = policy_scope(Card).where(board: "mutual_help")
+      @cards = policy_scope(Card).where(board: "mutual_help").order(created_at: :desc)
       @title = "Mutual help"
 
     # View community board
     elsif params[:query] == "community"
-      @cards = policy_scope(Card).where(board: "community")
+      @cards = policy_scope(Card).where(board: "community").order(created_at: :desc)
       @title = "Community"
 
     # View missed board
     elsif params[:query] == "missed"
-     @cards = policy_scope(Card).where("created_at > ?", current_user.last_logout)
+     @cards = policy_scope(Card).where("created_at > ?", current_user.last_logout).order(created_at: :desc)
      @title = "What you've missed"
 
     # View my cards page
     elsif params[:query] == "my-cards"
-      @cards = policy_scope(Card).where(user: current_user)
+      @cards = policy_scope(Card).where(user: current_user).order(created_at: :desc)
       @title = "My cards"
 
     # View
     elsif params[:query] == "my-cards-archived"
-      @cards = policy_scope(Card).where(user: current_user, archived: true)
+      @cards = policy_scope(Card).where(user: current_user, archived: true).order(created_at: :desc)
       @title = "My cards"
 
     # Default to board = missed
     else
-      @cards = policy_scope(Card).where(board: "parcels")
+      @cards = policy_scope(Card).where(board: "missed").order(created_at: :desc)
       @title = "Parcels"
     end
     @empty_card = Card.new

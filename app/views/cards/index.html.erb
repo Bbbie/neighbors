@@ -70,7 +70,7 @@
                   <p class="title"><%= card.title %></p>
                 </div>
                 <p class="date-time">
-                      <% if card.start_date || card.end_date || card.start_time || card.end_time %>
+                      <% if card.start_date.present? || card.end_date.present? || card.start_time.present? || card.end_time.present? %>
                         When:
                         <% if card.start_date %>
                           <%= card.start_date %>

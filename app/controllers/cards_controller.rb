@@ -31,6 +31,9 @@ class CardsController < ApplicationController
     elsif params[:query] == "my-cards-archived"
       @cards = policy_scope(Card).where(user: current_user, archived: true).order(created_at: :desc)
       @title = "My cards"
+    else
+      @cards = policy_scope(Card).where("created_at > ?", current_user.last_logout)
+      @title = "What you've missed"
     end
     @empty_card = Card.new
     @empty_recipient = CardRecipient.new

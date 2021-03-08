@@ -77,7 +77,7 @@
 
               <li class="nav-item dropup">
                 <% if current_user.profile.avatar.attached? %>
-                  <%= cl_image_tag current_user.profile.avatar.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                  <%= cl_image_tag current_user.profile.avatar.key, class: "avatar-big dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <% end %>
                 <div class="dropdown-menu dropright" aria-labelledby="navbarDropdown">
 

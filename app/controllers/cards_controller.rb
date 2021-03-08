@@ -31,11 +31,6 @@ class CardsController < ApplicationController
     elsif params[:query] == "my-cards-archived"
       @cards = policy_scope(Card).where(user: current_user, archived: true).order(created_at: :desc)
       @title = "My cards"
-
-    # Default to board = missed
-    else
-      @cards = policy_scope(Card).where(board: "missed").order(created_at: :desc)
-      @title = "Parcels"
     end
     @empty_card = Card.new
     @empty_recipient = CardRecipient.new
@@ -72,6 +67,14 @@ class CardsController < ApplicationController
     @card.update
     authorize @card
     redirect_to card_path(@card)
+  end
+
+  def archive
+    @card = Card.find(params[:id])
+    @card.archived = true
+    @card.save
+    redirect_to cards_path(query: "my-cards-archived")
+    authorize @card
   end
 
   private

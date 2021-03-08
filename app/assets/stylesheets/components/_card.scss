@@ -215,3 +215,21 @@
     margin-bottom: 27px;
   }
 }
+
+// photos uploaded
+.card-photos {
+  display: flex;
+  height: 200px;
+  width: auto;
+  border-radius: 5px;
+  margin-bottom: 50px;
+
+}
+
+.card-pictures {
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+}
+

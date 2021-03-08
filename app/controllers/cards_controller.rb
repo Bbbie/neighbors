@@ -8,7 +8,7 @@ class CardsController < ApplicationController
       @title = "Parcels"
 
     # View mutual help board
-    elsif params[:query] == "mutual-help"
+    elsif params[:query] == "mutual_help"
       @cards = policy_scope(Card).where(board: "mutual_help").where(archived: false).order(created_at: :desc)
       @title = "Mutual help"
 
@@ -50,8 +50,10 @@ class CardsController < ApplicationController
     @card_users.each do |user|
       CardRecipient.create(user: user, card: @card)
     end
-    redirect_to cards_path
     authorize @card
+    @card.save
+    redirect_to cards_path(query: @card.board)
+
   end
 
   def edit
@@ -79,6 +81,6 @@ class CardsController < ApplicationController
   end
 
   def card_params
-    params.require(:card).permit(:board, :category, :title, :description, :start_date, :start_time, :end_date, :end_time, :picture, :archived)
+    params.require(:card).permit(:board, :category, :title, :description, :start_date, :start_time, :end_date, :end_time, :archived, pictures: [] )
   end
 end

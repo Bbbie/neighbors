@@ -53,6 +53,7 @@
   display: block;
   cursor: pointer;
   box-sizing: border-box;
+  font-weight: 400;
   width: 150px;
   text-align: left;
   padding: 10px 10px 30px 10px;
@@ -62,8 +63,8 @@
   background-color: white;
 }
 .input_board:hover+label {
-  background-color: #5b46dd;
-  border: 1px solid #5b46dd;
+  background-color: rgba(105, 81, 255, 1);
+  border: 1px solid rgba(105, 81, 255, 1);
   color: white;
 }
 .input_board:checked+label {
@@ -114,14 +115,12 @@
   transition: all .1s ease-in-out;
 }
 .input_category:hover+label {
-  background-color: #5b46dd;
-  border: 1px solid #5b46dd;
+  background-color: rgba(105, 81, 255, 1);
   color: white;
 }
 
 .input_category:checked+label {
   background-color: rgba(105, 81, 255, 1);
-  border: 1px solid rgba(105, 81, 255, 1);
   color: white;
 }
 

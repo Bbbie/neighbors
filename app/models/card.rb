@@ -12,5 +12,4 @@ class Card < ApplicationRecord
 
   CARD_BOARDS = ['parcels', 'mutual_help', 'community']
   CARD_CATEGORIES = ['action', 'request', 'info', 'offer', 'question']
-  CARD_CATEGORIES_PARCELS = ['info', 'question']
 end

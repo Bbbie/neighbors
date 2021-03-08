@@ -17,8 +17,6 @@
   margin-bottom: 40px;
 }
 
-
-
 .center-action {
   display: flex;
   flex-direction: column;
@@ -38,11 +36,100 @@
   }
 }
 
-// .form-inputs .names {
-//   width: 100%;
-//   display: inline-flex;
-// }
+// create card inputs
 
-// .form-inputs .names #user_first_name {
-//     margin-right: 10px !important;
-// }
+.board-item, .category-item {
+  display: inline-block;
+  padding-right: 4px;
+}
+
+.input_board, .input_category {
+  position: absolute;
+  transform: scale(0);
+}
+
+
+.input_board+label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 150px;
+  text-align: left;
+  padding: 10px 10px 30px 10px;
+  margin-right: 8px;
+  border: 1px solid #EAEAEA;
+  border-radius: 12px;
+  background-color: white;
+}
+.input_board:hover+label {
+  background-color: #5b46dd;
+  border: 1px solid #5b46dd;
+  color: white;
+}
+.input_board:checked+label {
+  background-color: rgba(105, 81, 255, 1);
+  border: 1px solid rgba(105, 81, 255, 1);
+  color: white;
+}
+
+#snippet_board_parcels + label {
+  color: #FD1015;
+}
+
+#snippet_board_parcels:checked + label {
+  background-color: #FD1015;
+  border-color: #FD1015;
+}
+
+
+#snippet_board_parcels + label {
+  color: #FFC65A;
+}
+
+#snippet_board_parcels:checked + label {
+  background-color: #FFC65A;
+  border-color: #FFC65A;
+}
+
+
+#snippet_board_parcels + label {
+  color: #62DDF5;
+}
+
+#snippet_board_parcels + label {
+  background-color: #62DDF5;
+  border-color: #62DDF5;
+}
+
+.input_category+label {
+  background-color: none;
+  border: 1px solid rgba(105, 81, 255, 1);
+  text-align: center;
+  min-width: 44px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(105, 81, 255, 1);
+  padding: 3px 9px;
+  border-radius: 20px;
+  transition: all .1s ease-in-out;
+}
+.input_category:hover+label {
+  background-color: #5b46dd;
+  border: 1px solid #5b46dd;
+  color: white;
+}
+
+.input_category:checked+label {
+  background-color: rgba(105, 81, 255, 1);
+  border: 1px solid rgba(105, 81, 255, 1);
+  color: white;
+}
+
+
+.input_users {
+
+}
+.input_users:checked {
+  background-color: rgba(105, 81, 255, 1);
+}
+

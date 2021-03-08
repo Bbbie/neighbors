@@ -32,10 +32,10 @@ avatar_sebastian = open(uri_sebastian)
 uri_achim = URI.parse("https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
 avatar_achim = open(uri_achim)
 
-uri_magnus = URI.parse("https://images.pexels.com/photos/1181391/pexels-photo-1181391.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
+uri_magnus = URI.parse("https://images.pexels.com/photos/774095/pexels-photo-774095.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
 avatar_magnus = open(uri_magnus)
 
-uri_cassandra = URI.parse("https://images.pexels.com/photos/774095/pexels-photo-774095.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+uri_cassandra = URI.parse("https://images.pexels.com/photos/1181391/pexels-photo-1181391.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
 avatar_cassandra = open(uri_cassandra)
 
 uri_claudia = URI.parse("https://images.pexels.com/photos/1082962/pexels-photo-1082962.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
@@ -104,7 +104,7 @@ magnus.community = my_community
 magnus.save
 
 puts "> 💁 Creating Magnus..."
-claudia = User.new(email: "claudi@gmail.com", password: "123456", first_name: "Cassandra", last_name: "Hinrichsen")
+claudia = User.new(email: "claudi@gmail.com", password: "123456", first_name: "Claudia", last_name: "Hinrichsen")
 claudia.profile = claudia_profile
 claudia.community = my_community
 claudia.save
@@ -127,18 +127,21 @@ CardRecipient.create(user: cassandra, card: card_two)
 CardRecipient.create(user: claudia, card: card_two)
 
 puts "Creating parcel cards..."
-puts ">Card 3..."
-card_three = Card.create(board: "parcels", category: "info", title: "Got yo parcel!", start_date: "Feb 02", start_time: "12 PM", end_date: "Feb 02", end_time: "6 PM", user: achim)
-CardRecipient.create(user: ana, card: card_three)
 
-puts ">Card 4..."
-card_four = Card.create(board: "parcels", category: "info", title: "I got your parcel!", description: "Hey there, got your parcel. Just come by in the time specified above or let me know when it suits you better.", start_date: "12Febr", start_date: "Feb 01", start_time: "8 AM", end_date: "Feb 01", end_time: "8 PM", user: claudia)
-CardRecipient.create(user: achim, card: card_four)
+puts ">Card 3..."
+card_three = Card.create(board: "parcels", category: "info", title: "Your parcel is here!", start_date: "Feb 02", start_time: "12 PM", end_date: "Feb 02", end_time: "6 PM", user: achim)
+CardRecipient.create(user: ana, card: card_three)
 
 puts ">Card 5..."
 card_five = Card.create(board: "parcels", category: "question", title: "Did you get my parcel?", description: "The delivery gut didn't leave a note, I only know that the parcel is supposed to be on your floor.. Did you get it?", user: magnus)
 CardRecipient.create(user: sebastian, card: card_five)
 CardRecipient.create(user: ana, card: card_five)
+
+puts ">Card 4..."
+card_four = Card.create(board: "parcels", category: "info", title: "I got your parcel!", description: "Hey there, got your parcel. Just come by in the time specified above or let me know when it suits you better.", start_date: "12Febr", start_date: "Feb 01", start_time: "8 AM", end_date: "Feb 01", end_time: "8 PM", user: achim)
+CardRecipient.create(user: cassandra, card: card_four)
+
+
 
 
 puts "Creating mutual help cards..."
@@ -151,8 +154,8 @@ CardRecipient.create(user: claudia, card: card_six)
 
 puts ">Card 7..."
 card_seven = Card.create(board: "mutual_help", category: "question", title: "Has anybody seen my cat? 😿", description: "Alert, alert! My cat is gone since five days already! That happens sometimes but usually he comes back after 3 days max... I am really worried! Please let me know if you see him. He's called Jimmy! This is what he looks like:", start_date: "Jan 28", user: ana)
-card_seven.pictures.each do |photo|
-  photo.attach(io: picture_cat, filename: 'picture-cat.jpg', content_type: 'image/jpg')
+card_seven.pictures.each do |picture|
+  picture.attach(io: picture_cat, filename: 'picture-cat.jpg', content_type: 'image/jpg')
 end
 CardRecipient.create(user: sebastian, card: card_seven)
 CardRecipient.create(user: achim, card: card_seven)

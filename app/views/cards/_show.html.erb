@@ -4,9 +4,29 @@
     <!-- Modal content-->
     <div class="modal-content card-modal">
       <div class="modal-left">
-        <div class="card-content">
+        <div class="card-content-show">
           <div class="card-upper-content">
             <div class="card-top">
+
+              <% if current_user == card.user && card.archived == false %>
+                <div class='<%= "toggle-id-#{card.id} card-actions display-menu" %>'>
+                  <div class="link-wrapper">
+                    <div class="hover-link edit">
+                      <%= link_to edit_card_path(card), class: "actual-link" do %>
+                        <%= image_tag "ic-edit.svg", class: "icon-hover-menu" %>
+                        <p class="hover-menu-text">Edit</p>
+                      <% end %>
+                    </div>
+                    <div class="hover-link archive">
+                      <%= link_to archive_card_path(card), class: "actual-link" do %>
+                        <%= image_tag "ic-archive.svg", class: "icon-hover-menu" %>
+                        <p class="hover-menu-text">Archive</p>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+
               <p class="category <%= card.category %>"><%= card.category %></p>
               <div class="time-menu">
                 <p class="date-time">
@@ -20,7 +40,7 @@
                     <%= card.created_at.strftime("%B %m, %l:%M %p") %>
                   <% end %>
                 </p>
-                <% if current_user == card.user %>
+                <% if current_user == card.user && card.archived == false %>
                   <%= image_tag "ic-menu.svg", class: "icon-menu", data: { card_id: card.id }, id: "menu-icon" %>
                 <% end %>
               </div>
@@ -29,16 +49,29 @@
               <p class="from-who"><%= card.user.first_name %> <%= card.user.last_name %>, <%= card.user.profile.floor %></p>
               <p class="title"><%= card.title %></p>
             </div>
-            <p class="date-time">When: <%= card.start_date%>, <%= card.start_time%>
-              <% if card.end_date && card.end_time %>
-                to <%= card.end_date%>, <%= card.end_time%>
-              <% elsif card.end_date %>
-                to <%= card.end_date%>
-              <% elsif card.end_time %>
-                to <%= card.end_time%>
-              <% end %>
-            </p>
+              <p class="date-time">
+                <% if card.start_date || card.end_date || card.start_time || card.end_time %>
+                  <% time_date = [card.start_date, card.end_date, card.start_time, card.end_time] %>
+                  When:
+                  <% time_date.each do |item| %>
+                    <% if item %>
+                      <% if item == card.start_date %>
+                        <%= item %>
+                      <% elsif item == card.end_date && card.end_date != card.start_date %>
+                        - <%= item %>
+                      <% elsif item == card.start_time %>
+                        , <%= item %>
+                      <% elsif item == card.end_time %>
+                        - <%= item %>
+                      <% end %>
+                    <% end %>
+                  <% end %>
+                <% end%>
+              </p>
             <p class="card-description description-card"><%= card.description %></p>
+            <%# card.pictures.each do |picture| %>
+              <%#= image_tag picture, class: "card-photos" %>
+            <%# end %>
           </div>
           <div class="card-lower-content">
             <div class="card-avatars">

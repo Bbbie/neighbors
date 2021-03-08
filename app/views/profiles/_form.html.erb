@@ -1,7 +1,18 @@
-<%= simple_form_for profile do |f| %>
-  <%= f.input :floor %>
-  <%= f.input :phone_number %>
-  <%= f.input :about, as: :text %>
-  <%= f.input :avatar, as: :file %>
-  <%= f.button :submit %>
-<% end %>
+<div id="profile" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content card-modal">
+      <div class="modal-body overflow-auto new-modal">
+        <%= simple_form_for profile do |f| %>
+          <h1 class="headline">Your profile</h1>
+          <%= f.input :floor %>
+          <%= f.input :phone_number %>
+          <%= f.input :about, as: :text %>
+          <%= f.input :avatar, as: :file %>
+          <div class="form-actions">
+            <%= f.submit "Save", class: "btn btn-primary btn-shadow"%>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

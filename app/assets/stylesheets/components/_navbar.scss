@@ -11,40 +11,8 @@
   width: 40px;
 }
 
-// nav bar home, login etc.
-.homepage-login {
-  margin-right: 10px;
-  padding-right: 10px !important;
-  padding-left: 10px !important;
-  color: white;
-  border-radius: 20px;
-  border: 1px solid white;
+// buttons: see button component
 
-  a {
-    font-size: 18px;
-    font-family: Roboto;
-    font-weight: 400;
-
-
-  }
-
-}
-
-.homepage-signup {
-
-  padding-right: 10px !important;
-  padding-left: 10px !important;
-  background-color: #6951FF;
-  color: #FAFAFA !important;
-  border-radius: 20px;
-  border: 1px solid #6951FF;
-
-    a {
-      font-size: 18px;
-      font-family: Roboto;
-      font-weight: 400;
-    }
-}
 
 // nav bar dashboard
 
@@ -63,9 +31,33 @@
   border-radius: 8px;
   &:hover {
     background-color: #E7E7E7;
+  }
   &:active {
     background-color: #E0E0E0;
   }
+}
+
+.board-icon-purple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 10px;
+  background-color: #6951FF;
+  border-radius: 8px;
+  &:hover {
+    background-color: #5b46dd;
+  }
+  &:active {
+    background-color: #5b46dd;
+  }
+}
+
+.active-purple {
+  background-color: #6951FF;
+  &:hover {
+    background-color: #5b46dd;
   }
 }
 
@@ -75,7 +67,7 @@
   font-style: italic;
   font-size: 40px;
   color: #323232;
-  &hover {
+  &:hover {
     color: #323232;
   }
 }
@@ -86,7 +78,7 @@
   font-style: italic;
   font-size: 32px;
   color: white;
-  &hover {
+  &:hover {
     color: white;
   }
 }
@@ -96,33 +88,41 @@
   top: 0;
   height: 100vh;
   flex-direction: column;
-
+  align-items: center;
 }
 
 .nav-vertical {
   height: 100%;
   justify-content: space-between;
+  align-items: center;
   position: relative;
   align-items: center;
 }
 
 .navbar-icons {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-
+  height: 100%;
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
 
-.navbar-transparent {
-  background-color: transparent;
+.navbar-horizontal {
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.nav-transparent {
+  background-color: transparent;
+
+}
+
+.nav-grey {
+  background-color: rgba(250, 250, 250, 0.9);
 }
 
 .navbar-margin-top {
@@ -131,4 +131,20 @@
 
 .nav-logo-grey {
   color: #323232 !important;
+}
+
+.btn-login {
+  margin-right: 10px;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.nav-log {
+  display: inline-flex;
+  align-items: center;
+  p {
+    margin-right: 20px;
+  }
 }

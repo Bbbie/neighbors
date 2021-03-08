@@ -1,15 +1,14 @@
 <div id="new-card" class="modal fade" role="dialog">
   <div class="modal-dialog modal-lg modal-dialog-centered">
-
+    <div class="modal-content card-modal">
     <!-- PARTIAL FOR CARD EDIT -->
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-10">
-          <div class="new-modal">
+<!--     <div class="container"> -->
+          <!-- <div class="new-modal"> -->
+          <div class="modal-body overflow-auto form-background">
             <%= simple_form_for card  do |f| %>
               <h1>Add a card</h1>
 
-              <div class="form-inputs">
+<!--               <div class="form-inputs"> -->
                 <%= f.input :board, collection: Card::CARD_BOARDS %>
                 <%= f.input :category, collection: Card::CARD_CATEGORIES %>
                 <%= f.association :users, collection: User.all, multiple: true, include_hidden: false, label_method: :last_name, label: "Who is this card for?", prompt: "All neighbors" %>
@@ -21,15 +20,15 @@
                 <%= f.input :title %>
                 <%= f.input :description %>
                 <%= f.input :pictures, as: :file, multiple: true %>
-              </div>
+              <!-- </div> -->
 
               <div class="form-actions">
                 <%= f.submit "Save Card", class: "btn btn-primary btn-shadow"%>
               </div>
             <% end %>
           </div>
-        </div>
-      </div>
+      <!-- </div> -->
+    <!-- </div> -->
     </div>
   </div>
 </div>

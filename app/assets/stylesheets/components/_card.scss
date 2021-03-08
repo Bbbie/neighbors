@@ -167,23 +167,34 @@
   }
 }
 
+// modal
+
 .modal-content {
   flex-direction: row;
   .modal-left {
     box-shadow: 3px 1px 8px rgba(0,0,0,.1);
-    width: 900px;
   }
   .modal-right {
-    width: 600px;
-    padding: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
-
+.card-content-show {
+  width: 490px;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 .card-modal {
-  border-radius: 10px;
-  height: 550px;
+  width: 870px !important;
+  border-radius: 24px;
+  height: 642px;
+  border: none !important;
 }
 
 

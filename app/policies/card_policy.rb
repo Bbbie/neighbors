@@ -22,4 +22,8 @@ class CardPolicy < ApplicationPolicy
   def update?
     edit?
   end
+
+  def archive?
+    true
+  end
 end

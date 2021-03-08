@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
   after_action :verify_authorized, except: [:index, :search], unless: :skip_pundit?
   after_action :verify_policy_scoped, only: [:index, :search], unless: :skip_pundit?
 
+  def after_sign_in_path_for(user)
+    stored_location_for(user) || cards_path(query: "missed")
+  end
+
   private
 
   def configure_permitted_parameters

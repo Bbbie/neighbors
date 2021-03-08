@@ -1,5 +1,5 @@
 class CardsController < ApplicationController
-  before_action :set_card, only: [:show, :edit]
+  before_action :set_card, only: [:show, :edit, :archive]
 
   def index
     # View parcels board
@@ -70,7 +70,6 @@ class CardsController < ApplicationController
   end
 
   def archive
-    @card = Card.find(params[:id])
     @card.archived = true
     @card.save
     redirect_to cards_path(query: "my-cards-archived")

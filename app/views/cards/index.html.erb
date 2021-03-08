@@ -18,7 +18,11 @@
     <div id="neighbors">
       <% current_user.community.users.each do |user| %>
         <div class="pairs">
-          <%= image_tag user.profile.avatar, class: "avatar-big" %>
+          <% if user.profile.avatar.attached? %>
+            <%= image_tag user.profile.avatar, class: "avatar-big" %>
+          <% else  %>
+            <%= avatar_for(user.profile) %>
+          <% end %>
           <div class="hidden-name"><%= user.first_name %> <br> <%= user.last_name %></div>
         </div>
       <% end %>
@@ -33,7 +37,11 @@
       </div>
       <% current_user.community.users.each do |user| %>
         <%= link_to profile_path(user.profile), class:"neighbor" do %>
-          <%= image_tag user.profile.avatar, class: "avatar-small-list" %>
+          <% if user.profile.avatar.attached? %>
+            <%= image_tag user.profile.avatar, class: "avatar-small-list" %>
+          <% else %>
+            <%= avatar_for(user.profile) %>
+          <% end %>
           <p class="description-card"><%= user.first_name %> <%= user.last_name %>, <%= user.profile.floor %></p>
         <% end %>
       <% end %>

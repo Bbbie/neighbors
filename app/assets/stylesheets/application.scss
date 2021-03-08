@@ -105,3 +105,25 @@ h2 {
   font-weight: 400;
   color: #9a9a9a;
 }
+
+.container-search-center {
+  height: 300px;
+  margin-top: 20%;
+  .home-container {
+    margin-left: 58px;
+    .headline {
+      padding-bottom: 10px;
+    }
+  }
+  .search-field {
+    margin: 20px 60px;
+    .search-input {
+      display: flex;
+      max-width: 546px;
+    }
+    .btn {
+    margin-left: 8px;
+  }
+  }
+}
+

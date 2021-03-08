@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # devise_for :users
-  devise_for :users, controllers: { sessions: 'users/sessions' }
+  devise_for :users, controllers: { sessions: 'users/sessions', registrations: "registrations" }
   root to: 'pages#home'
   resources :communities, only: [:index, :create] do
     collection do

@@ -1,2 +1,10 @@
-<h1>Hi, <%= @current_user.first_name.capitalize %> 👋</h1>
-<%= render "form", profile: @profile %>
+<h1>Hi, <%= current_user.first_name.capitalize %> 👋</h1>
+<%= simple_form_for @profile do |f| %>
+  <%= f.input :floor %>
+  <%= f.input :phone_number %>
+  <%= f.input :about, as: :text %>
+  <%= f.input :avatar, as: :file %>
+  <div class="form-actions">
+    <%= f.submit "Save", class: "btn btn-primary btn-shadow"%>
+  </div>
+<% end %>

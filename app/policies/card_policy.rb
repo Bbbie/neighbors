@@ -1,10 +1,9 @@
 class CardPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all.order(created_at: :desc)
-      # scope.where(current_user == user).order(created_at: :desc).or(scope.where(record.users.include?(user))).order(created_at: :desc)
-      # scope.where(current_user == user).order(created_at: :desc) || scope.where(record.users.exists?(user)).order(created_at: :desc)
-      # scope.where(current_user == user).order(created_at: :desc) || scope.where(record.users.present?(user)).order(created_at: :desc)
+      my_cards = user.cards
+      recipients = user.cards_as_recipient
+      everything = my_cards.union(recipients)
     end
   end
 
@@ -22,5 +21,9 @@ class CardPolicy < ApplicationPolicy
 
   def update?
     edit?
+  end
+
+  def archive?
+    true
   end
 end

@@ -32,8 +32,9 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { menu } from '../components/hover-menu';
 import { neighbors } from '../components/neighbors-index';
 import { initFlatpickr } from "../plugins/flatpickr";
-import { initChat } from '../components/comments';
+// import { initChat } from '../components/comments';
 import { navbarScroll } from '../components/navbar';
+import { initCardCable } from '../channels/card_channel';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -43,7 +44,8 @@ document.addEventListener('turbolinks:load', () => {
   initFlatpickr();
   menu();
   neighbors();
-  initChat();
+  // initChat();
+  initCardCable();
 });
 
 

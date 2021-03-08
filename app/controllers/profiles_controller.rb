@@ -25,7 +25,11 @@ class ProfilesController < ApplicationController
   def update
     @profile.update(set_params)
     authorize @profile
-    redirect_to "cards/"
+    if @profile.update(set_params)
+      redirect_to @profile
+    else
+      render :new
+    end
   end
 
   private

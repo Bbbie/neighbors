@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
   before_action :set_profile, only: [:update, :show]
 
   def show
+    @profile_user = @profile.user
     authorize @profile
   end
 

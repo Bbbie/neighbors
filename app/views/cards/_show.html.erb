@@ -69,25 +69,22 @@
                 <% end%>
               </p>
             <p class="card-description description-card"><%= card.description %></p>
-
-
-          </div>
+        </div>
           <div class="card-lower-content">
-
-
-            <div class="card-pictures">
-              <% card.pictures.each do |picture| %>
-                <%= image_tag picture, class: "card-photos" %>
-              <% end %>
+             <div class="card-pictures uploaded-pic">
+                <% card.pictures.each do |picture| %>
+                  <%= image_tag picture, class: "card-photos" %>
+                <% end %>
             </div>
+          </div>
 
-            <div class="card-avatars">
+            <div class="card-avatars padding-avatar-sm-top">
               <% card.users.each do |recipient| %>
                 <div class="card-index-avatars">
                   <%= image_tag recipient.profile.avatar, class: "avatar-small" %>
                 </div>
               <% end %>
-            </div>
+
           </div>
         </div>
       </div>

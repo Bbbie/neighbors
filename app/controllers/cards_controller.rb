@@ -19,8 +19,12 @@ class CardsController < ApplicationController
 
     # View missed board
     elsif params[:query] == "missed"
-      @cards = policy_scope(Card).where("created_at > ?", current_user.last_logout)
+      # @cards = policy_scope(Card).joins(:comments).where("cards.created_at > ? OR comments.created_at > ?", current_user.last_logout, current_user.last_logout)
+      missed_cards = policy_scope(Card).where("created_at > ?", current_user.last_logout)
+      missed_comments = policy_scope(Card).joins(:comments).where("comments.created_at > ?", current_user.last_logout)
+      @cards = missed_cards.union(missed_comments)
       @title = "What you've missed"
+      # Card.last.comments.last.created_at
 
     # View my cards page
     elsif params[:query] == "my-cards"

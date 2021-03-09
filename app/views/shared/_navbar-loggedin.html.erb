@@ -16,6 +16,7 @@
           <% if current_page?(cards_path(query: "missed")) %>
             <div class="board-icon-purple">
               <div class="icon-box">
+                <div class="noti-badge no-noti"></div>
                 <%= link_to cards_path(query: "missed") do %>
                   <%= image_tag "ic-board_missed-white.svg", class: "nav-icon" %>
                 <% end %>
@@ -24,6 +25,7 @@
           <% else %>
             <div class="board-icon">
               <div class="icon-box">
+                <div class="noti-badge no-noti"></div>
                 <%= link_to cards_path(query: "missed") do %>
                   <%= image_tag "ic-board_missed.svg", class: "nav-icon" %>
                 <% end %>
@@ -38,6 +40,7 @@
         <% if current_page?(cards_path(query: "parcels")) %>
           <div class="board-icon-purple">
             <div class="icon-box">
+              <div class="noti-badge no-noti"></div>
               <%= link_to cards_path(query: "parcels") do %>
                 <%= image_tag "ic-board_parcels-white.svg", class: "nav-icon" %>
               <% end %>
@@ -46,6 +49,7 @@
         <% else %>
           <div class="board-icon">
             <div class="icon-box">
+              <div class="noti-badge no-noti"></div>
               <%= link_to cards_path(query: "parcels") do %>
                 <%= image_tag "ic-board_parcels.svg", class: "nav-icon" %>
               <% end %>
@@ -59,6 +63,7 @@
         <% if current_page?(cards_path(query: "mutual-help")) %>
           <div class="board-icon-purple">
             <div class="icon-box">
+              <div class="noti-badge no-noti"></div>
               <%= link_to cards_path(query: "mutual-help") do %>
                 <%= image_tag "ic-board_mutual-help-white.svg", class: "nav-icon" %>
               <% end %>
@@ -67,6 +72,7 @@
         <% else %>
           <div class="board-icon">
             <div class="icon-box">
+              <div class="noti-badge no-noti"></div>
               <%= link_to cards_path(query: "mutual-help") do %>
                 <%= image_tag "ic-board_mutual-help.svg", class: "nav-icon" %>
               <% end %>
@@ -80,6 +86,7 @@
         <% if current_page?(cards_path(query: "community")) %>
           <div class="board-icon-purple">
             <div class="icon-box">
+              <div class="noti-badge no-noti"></div>
               <%= link_to cards_path(query: "community") do %>
                 <%= image_tag "ic-board_community-white.svg", class: "nav-icon" %>
               <% end %>
@@ -88,6 +95,7 @@
         <% else %>
           <div class="board-icon">
             <div class="icon-box">
+              <div class="noti-badge no-noti"></div>
               <%= link_to cards_path(query: "community") do %>
                 <%= image_tag "ic-board_community.svg", class: "nav-icon" %>
               <% end %>

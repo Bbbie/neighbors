@@ -20,7 +20,7 @@
         <% if user.profile.avatar.attached? %>
           <%= image_tag user.profile.avatar, class: "avatar-big" %>
         <% else  %>
-          <%= avatar_for(user.profile) %>
+          <%= index_avatar_for(user.profile) %>
         <% end %>
       <% end %>
     </div>
@@ -37,7 +37,7 @@
           <% if user.profile.avatar.attached? %>
             <%= image_tag user.profile.avatar, class: "avatar-small-list" %>
           <% else %>
-            <%= avatar_for(user.profile) %>
+            <%= list_avatar_for(user.profile) %>
           <% end %>
           <p class="description-card"><%= user.first_name %> <%= user.last_name %>, <%= user.profile.floor %></p>
         <% end %>

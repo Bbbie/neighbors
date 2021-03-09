@@ -68,14 +68,12 @@
   transform: scale(0);
 }
 
-
 .input-category+label {
   background-color: none;
   text-align: center;
   min-width: 44px;
   font-size: 12px;
   font-weight: 400;
-  color: rgba(105, 81, 255, 1);
   padding: 3px 9px;
   border-radius: 20px;
   transition: all .1s ease-in-out;
@@ -88,11 +86,13 @@
     background-color: #00B888;
     color: white;
   }
-  &:checked {
-    background-color: #00B888;
-    color: white;
-  }
 }
+
+#card_category_action:checked+label {
+  background-color: #00B888 !important;
+  color: white;
+}
+
 
 #card_category_request+label {
   border: 1px solid #5577FF;
@@ -175,17 +175,31 @@
   flex-direction: row;
 }
 
-.input-times, .input-dates {
-  display: inline-flex;
-  justify-content: space-between;
+#input-times {
+  display: flex;
+  justify-content: flex-start;
 }
 
-#card_start_time {
-
-  margin-right: 10px;
+#input-dates {
+  display: flex;
+  justify-content: flex-start;
 }
 
-#card_start_date {
+.start_time {
+  width: 356px;
+  margin-right: 10px !important;
+}
 
+.end_time {
+  width: 356px;
+  flex: 0 1 auto;
+}
+
+.start_date {
   margin-right: 10px;
+  width: 356px;
+}
+
+.end_date {
+  width: 356px;
 }

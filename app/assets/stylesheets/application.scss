@@ -141,7 +141,41 @@ h2 {
   }
 }
 
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container-search-center {
+  width: 997px;
+  margin: 0 auto;
+  height: 300px;
+  margin-top: 20%;
+  .search-container {
+    margin-left: 58px;
+    .headline {
+      margin-bottom: 20px;
+    }
+    .sub-header, .headline{
+      max-width: 546px;
+    }
+    .sub-header {
+      margin-bottom: 60px;
+    }
+  }
+  .search-field {
+    margin: 20px 60px;
+    .search-input {
+      display: flex;
+      max-width: 546px;
+    }
+    .btn {
+    margin-left: 8px;
+  }
+  }
+}
+
 .profile-info {
   width: fit-content;
 }
-

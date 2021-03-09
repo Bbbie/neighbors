@@ -104,8 +104,8 @@
 }
 
 #card_category_request:checked+label {
-    background-color: #5577FF;
-    color: white;
+  background-color: #5577FF;
+  color: white;
 }
 
 #card_category_info+label {
@@ -115,10 +115,11 @@
     background-color: #49CCF9;
     color: white;
   }
-  &:checked {
-    background-color: #49CCF9;
-    color: white;
-  }
+}
+
+#card_category_info:checked+label {
+  background-color: #49CCF9;
+  color: white;
 }
 
 #card_category_offer+label {
@@ -128,10 +129,11 @@
     background-color: #FFC800;
     color: white;
   }
-  &:checked {
-    background-color: #FFC800;
-    color: white;
-  }
+}
+
+#card_category_offer:checked+label {
+  background-color: #FFC800;
+  color: white;
 }
 
 #card_category_question+label {
@@ -141,10 +143,11 @@
     background-color: #FD71AF;
     color: white;
   }
-  &:checked {
-    background-color: #FD71AF;
-    color: white;
-  }
+}
+
+#card_category_question:checked+label {
+  background-color: #FD71AF;
+  color: white;
 }
 
 .input-users, #input-select-all {

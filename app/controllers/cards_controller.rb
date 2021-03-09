@@ -46,26 +46,6 @@ class CardsController < ApplicationController
     authorize @card
   end
 
-  # def create
-  #   @card = Card.new(card_params)
-  #   @user = current_user
-  #   @card.user = @user
-  #   @card_users = User.where(id: params['card'][:user_ids])
-  #   @card_users.each do |user|
-  #     CardRecipient.create(user: user, card: @card)
-  #   end
-  #   if @card.board == "parcels"
-  #     redirect_to cards_path(query: "parcels")
-  #   elsif @card.board == "mutual_help"
-  #     redirect_to cards_path(query: "mutual_help")
-  #   elsif cards_path(query: "community")
-  #     redirect_to cards_path(query: "community")
-  #   end
-  #   authorize @card
-  #   raise
-  # end
-
-
   def create
     @card = Card.new(card_params)
     @user = current_user

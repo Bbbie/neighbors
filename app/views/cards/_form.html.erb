@@ -6,7 +6,7 @@
             <%= simple_form_for card  do |f| %>
               <h1 class="headline">Add a card</h1>
                 <%= f.input :board,
-                  collection: [['Parcels 📦', Card::CARD_BOARDS[0]], ['Mutual Help 🤝', Card::CARD_BOARDS[1]], ['Community 🏠 ', Card::CARD_BOARDS[2]]],
+                  collection: [['Parcels 📦', Card::CARD_BOARDS[0]], ['Mutual Help 🤝', Card::CARD_BOARDS[1]], ['Community 🏠', Card::CARD_BOARDS[2]]],
                   label: "Select a board" %>
                 <div class="input-box">
                   <%= f.input :category,

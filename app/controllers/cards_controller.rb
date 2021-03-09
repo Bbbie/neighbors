@@ -54,12 +54,14 @@ class CardsController < ApplicationController
     @card_users.each do |user|
       CardRecipient.create(user: user, card: @card)
     end
-    if @card.board == "parcels"
-      redirect_to cards_path(query: "parcels")
-    elsif @card.board == "mutual_help"
-      redirect_to cards_path(query: "mutual_help")
-    elsif cards_path(query: "community")
-      redirect_to cards_path(query: "community")
+    if @card.save
+      if @card.board == "parcels"
+        redirect_to cards_path(query: "parcels")
+      elsif @card.board == "mutual_help"
+        redirect_to cards_path(query: "mutual_help")
+      elsif cards_path(query: "community")
+        redirect_to cards_path(query: "community")
+      end
     end
     authorize @card
   end

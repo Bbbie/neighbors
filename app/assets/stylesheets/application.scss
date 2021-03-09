@@ -106,13 +106,27 @@ h2 {
   color: #9a9a9a;
 }
 
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .container-search-center {
+  width: 997px;
+  margin: 0 auto;
   height: 300px;
   margin-top: 20%;
-  .home-container {
+  .search-container {
     margin-left: 58px;
     .headline {
-      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    .sub-header, .headline{
+      max-width: 546px;
+    }
+    .sub-header {
+      margin-bottom: 60px;
     }
   }
   .search-field {

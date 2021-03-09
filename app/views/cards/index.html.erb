@@ -17,14 +17,11 @@
     </div>
     <div id="neighbors">
       <% current_user.community.users.each do |user| %>
-        <div class="pairs">
-          <% if user.profile.avatar.attached? %>
-            <%= image_tag user.profile.avatar, class: "avatar-big" %>
-          <% else  %>
-            <%= avatar_for(user.profile) %>
-          <% end %>
-          <div class="hidden-name"><%= user.first_name %> <br> <%= user.last_name %></div>
-        </div>
+        <% if user.profile.avatar.attached? %>
+          <%= image_tag user.profile.avatar, class: "avatar-big" %>
+        <% else  %>
+          <%= avatar_for(user.profile) %>
+        <% end %>
       <% end %>
     </div>
     <div id="neighbors-index" class="display-none">
@@ -105,9 +102,16 @@
               <div class="card-lower-content">
                 <div class="card-avatars">
                   <% card.users.each do |recipient| %>
-                    <div class="card-index-avatars">
-                      <%= image_tag recipient.profile.avatar, class: "avatar-small" %>
-                    </div>
+                    <!-- <div class="card-index-avatars"> -->
+                      <div class="pairs">
+                        <% if recipient.profile.avatar.attached? %>
+                          <%= image_tag recipient.profile.avatar, class: "avatar-small" %>
+                        <% else  %>
+                          <%= avatar_for(recipient.profile) %>
+                        <% end %>
+                        <div class="hidden-name"><%= recipient.first_name %> <%= recipient.last_name %></div>
+                      </div>
+                    <!-- </div> -->
                   <% end %>
                 </div>
               </div>

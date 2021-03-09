@@ -5,7 +5,7 @@
   </div>
   <div class="search-field">
     <%= form_tag communities_path, method: :get, class: "search-input" do %>
-      <%= text_field_tag :query, params[:query], class: "form-control", id: "address_input", placeholder: "Enter your address" %>
+      <%= text_field_tag :query, params[:query], class: "form-control", id: "address_input", placeholder: "Enter your address", required: true %>
       <%= submit_tag "Find community", class: "btn btn-primary btn-shadow" %>
     <% end %>
   </div>

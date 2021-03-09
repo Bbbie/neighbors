@@ -4,9 +4,7 @@
   <ul class="nav flex-column nav-vertical">
 
       <li class="nav-item">
-        <%= link_to cards_path do%>
-          <h1 id="nav-logo-short">n</h1>
-        <% end %>
+        <%= link_to "n", root_path, id: "nav-logo-short" %>
       </li>
 
       <!-- BOARD LINKS -->
@@ -114,8 +112,11 @@
           <% if user_signed_in? %>
 
               <li class="nav-item dropup">
+                <!-- FOR DEFAULT AVATAR -->
                 <% if current_user.profile.avatar.attached? %>
                   <%= image_tag current_user.profile.avatar, class: "avatar-big dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <% else  %>
+                  <%= avatar_for(current_user.profile) %>
                 <% end %>
                 <div class="dropdown-menu dropright" aria-labelledby="navbarDropdown">
 

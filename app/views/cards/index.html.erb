@@ -17,7 +17,14 @@
     </div>
     <div id="neighbors">
       <% current_user.community.users.each do |user| %>
-        <%= image_tag user.profile.avatar, class: "avatar-big" %>
+        <div class="pairs">
+          <% if user.profile.avatar.attached? %>
+            <%= image_tag user.profile.avatar, class: "avatar-big" %>
+          <% else  %>
+            <%= avatar_for(user.profile) %>
+          <% end %>
+          <div class="hidden-name"><%= user.first_name %> <br> <%= user.last_name %></div>
+        </div>
       <% end %>
     </div>
     <div id="neighbors-index" class="display-none">
@@ -30,7 +37,11 @@
       </div>
       <% current_user.community.users.each do |user| %>
         <%= link_to profile_path(user.profile), class:"neighbor" do %>
-          <%= image_tag user.profile.avatar, class: "avatar-small-list" %>
+          <% if user.profile.avatar.attached? %>
+            <%= image_tag user.profile.avatar, class: "avatar-small-list" %>
+          <% else %>
+            <%= avatar_for(user.profile) %>
+          <% end %>
           <p class="description-card"><%= user.first_name %> <%= user.last_name %>, <%= user.profile.floor %></p>
         <% end %>
       <% end %>
@@ -70,24 +81,24 @@
                   <p class="title"><%= card.title %></p>
                 </div>
                 <p class="date-time">
-                      <% if card.start_date || card.end_date || card.start_time || card.end_time %>
+                  <% if card.start_date.present? || card.end_date.present? || card.start_time.present? || card.end_time.present? %>
                         When:
-                        <% if card.start_date %>
-                          <%= card.start_date %>
-                        <% end %>
-                        <% if card.end_date %>
-                          - <%= card.end_date %>
-                        <% end %>
-                        <% if card.start_time %>
-                          <% if card.start_date %>
-                            ,
-                          <% end %>
-                          <%= card.start_time %>
-                        <% end %>
-                        <% if card.end_time %>
-                          - <%= card.end_time %>
-                        <% end %>
+                    <% if card.start_date %>
+                      <%= card.start_date %>
+                    <% end %>
+                    <% if card.end_date %>
+                      - <%= card.end_date %>
+                    <% end %>
+                    <% if card.start_time %>
+                      <% if card.start_date %>
+                        ,
                       <% end %>
+                      <%= card.start_time %>
+                    <% end %>
+                    <% if card.end_time %>
+                      - <%= card.end_time %>
+                    <% end %>
+                  <% end %>
                 </p>
                 <p class="card-description description-card"><%= truncate(card.description,  :length => 82) %></p>
               </div>

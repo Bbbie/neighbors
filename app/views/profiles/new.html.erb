@@ -1,2 +1,20 @@
-<h1>Hi, <%= @current_user.first_name.capitalize %> 👋</h1>
-<%= render "form", profile: @profile %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <div class="form-background  form-logged-out form-new-profile">
+        <h2 class="headline">Hi, <%= current_user.first_name.capitalize %> 👋</h2>
+        <%= simple_form_for @profile do |f| %>
+          <div class="form-inputs">
+            <%= f.input :floor, required: true %>
+            <%= f.input :phone_number %>
+            <%= f.input :about, as: :text %>
+            <%= f.input :avatar, as: :file %>
+            <div class="form-actions">
+              <%= f.submit "Save", class: "btn btn-primary btn-shadow"%>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

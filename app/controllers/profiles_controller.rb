@@ -15,7 +15,7 @@ class ProfilesController < ApplicationController
     @profile = Profile.new(set_params)
     @profile.user = current_user
     if @profile.save
-      redirect_to "/cards"
+      redirect_to cards_path(query: "missed")
     else
       render :new
     end

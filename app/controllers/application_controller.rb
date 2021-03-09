@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(user)
     stored_location_for(user) || cards_path(query: "missed")
+
   end
 
   private

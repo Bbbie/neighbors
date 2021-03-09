@@ -28,7 +28,7 @@
       <div class="neighbors-top">
         <div>
           <p class="title">Your community</p>
-          <p class="from-who">6 members</p>
+          <p class="from-who"><%= pluralize(current_user.community.users.count, "member") %></p>
         </div>
         <%= image_tag "ic-close.svg", id: "ic-close" %>
       </div>

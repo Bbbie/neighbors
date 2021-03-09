@@ -1,12 +1,17 @@
 <div class="container-search-center">
-  <div class="search-container">
-    <h1 class="headline">First enter your address</h1>
-    <p class="sub-header">We need this to look if there's an existing community or if you'd be the founder!</p>
+  <div class="search-left">
+    <div class="search-container">
+      <h1 class="headline">First enter your address</h1>
+      <p class="sub-header">We need this to look if there's an existing community or if you'd be the founder!</p>
+    </div>
+    <div class="search-field">
+      <%= form_tag communities_path, method: :get, class: "search-input" do %>
+        <%= text_field_tag :query, params[:query], class: "form-control", id: "address_input", placeholder: "Enter your address", required: true %>
+        <%= submit_tag "Find community", class: "btn btn-primary btn-shadow" %>
+      <% end %>
+    </div>
   </div>
-  <div class="search-field">
-    <%= form_tag communities_path, method: :get, class: "search-input" do %>
-      <%= text_field_tag :query, params[:query], class: "form-control", id: "address_input", placeholder: "Enter your address", required: true %>
-      <%= submit_tag "Find community", class: "btn btn-primary btn-shadow" %>
-    <% end %>
+  <div class="search-right">
+    <%= image_tag "illu-search.svg", class:"illu-search" %>
   </div>
 </div>

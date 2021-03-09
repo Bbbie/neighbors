@@ -2,33 +2,49 @@
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content card-modal">
     <!-- PARTIAL FOR CARD EDIT -->
-<!--     <div class="container"> -->
-          <!-- <div class="new-modal"> -->
           <div class="modal-body overflow-auto form-background">
             <%= simple_form_for card  do |f| %>
-              <h1>Add a card</h1>
-
-<!--               <div class="form-inputs"> -->
-                <%= f.input :board, collection: Card::CARD_BOARDS %>
-                <%= f.input :category, collection: Card::CARD_CATEGORIES %>
-                <%= f.association :users, collection: User.all, multiple: true, include_hidden: false, label_method: :last_name, label: "Who is this card for?", prompt: "All neighbors" %>
-                <%# f.input :user, collection: User.all, input_html: { multiple: true }, include_hidden: false %>
-                <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-                <%= f.input :start_time  %>
-                <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-                <%= f.input :end_time %>
+              <h1 class="headline">Add a card</h1>
+                <%= f.input :board,
+                  collection: [['Parcels 📦', Card::CARD_BOARDS[0]], ['Mutual Help 🤝', Card::CARD_BOARDS[1]], ['Community 🏠', Card::CARD_BOARDS[2]]],
+                  label: "Select a board" %>
+                <div class="input-box">
+                  <%= f.input :category,
+                    label: "Select a category",
+                    collection: Card::CARD_CATEGORIES,
+                    as: :radio_buttons,
+                    input_html: { class: "input-category" },
+                    item_wrapper_class: 'category-item' %>
+                </div>
+                <%= f.association :users,
+                  collection: User.all,
+                  as: :check_boxes,
+                  multiple: true,
+                  include_hidden: false,
+                  label_method: :last_name,
+                  label: "Who is this card for?",
+                  input_html: { class: "input-users" } %>
+                <div id="input-dates">
+                  <%= f.input :start_date,
+                    as: :string, required:
+                    false, input_html: {class: "datepicker start_date"} %>
+                  <%= f.input :end_date,
+                    as: :string, required:
+                    false,
+                    input_html: {class: "datepicker end_date"} %>
+                </div>
+                <div id="input-times">
+                  <%= f.input :start_time, input_html: {class: "start_time"} %>
+                  <%= f.input :end_time, input_html: {class: "end_time"} %>
+                </div>
                 <%= f.input :title %>
                 <%= f.input :description %>
                 <%= f.input :pictures, as: :file, multiple: true %>
-              <!-- </div> -->
-
               <div class="form-actions">
                 <%= f.submit "Save Card", class: "btn btn-primary btn-shadow"%>
               </div>
             <% end %>
-          </div>
-      <!-- </div> -->
-    <!-- </div> -->
+      </div>
     </div>
   </div>
 </div>

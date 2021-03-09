@@ -116,7 +116,7 @@
                 <% if current_user.profile.avatar.attached? %>
                   <%= image_tag current_user.profile.avatar, class: "avatar-big dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <% else  %>
-                  <%= avatar_for(current_user.profile) %>
+                  <%= navbar_avatar_for(current_user.profile) %>
                 <% end %>
                 <div class="dropdown-menu dropright" aria-labelledby="navbarDropdown">
 

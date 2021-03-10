@@ -18,7 +18,7 @@
     <div id="neighbors">
       <% current_user.community.users.each do |user| %>
         <% if user.profile.avatar.attached? %>
-          <%= image_tag user.profile.avatar, class: "avatar-big" %>
+          <%= image_tag user.profile.avatar, class: "avatar-big avatar-margin" %>
         <% else  %>
           <%= index_avatar_for(user.profile) %>
         <% end %>

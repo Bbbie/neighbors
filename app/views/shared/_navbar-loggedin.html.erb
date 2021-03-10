@@ -62,11 +62,11 @@
 
       <!-- mutual help -->
       <li class="nav-item">
-        <% if current_page?(cards_path(query: "mutual-help")) %>
+        <% if current_page?(cards_path(query: "mutual_help")) %>
           <div class="board-icon-purple">
             <div class="icon-box">
               <div class="noti-badge no-noti"></div>
-              <%= link_to cards_path(query: "mutual-help") do %>
+              <%= link_to cards_path(query: "mutual_help") do %>
                 <%= image_tag "ic-board_mutual-help-white.svg", class: "nav-icon" %>
               <% end %>
             </div>
@@ -75,7 +75,7 @@
           <div class="board-icon">
             <div class="icon-box">
               <div class="noti-badge no-noti"></div>
-              <%= link_to cards_path(query: "mutual-help") do %>
+              <%= link_to cards_path(query: "mutual_help") do %>
                 <%= image_tag "ic-board_mutual-help.svg", class: "nav-icon" %>
               <% end %>
             </div>

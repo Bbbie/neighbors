@@ -57,7 +57,8 @@ $arrow: #6951FF;
   border-radius: 24px;
   max-height: 500px;
   background-color: #6951FF;
-  padding: 100px;
+  padding: 100px auto;
+  object-fit: cover;
 }
 
 .slider > img.active {

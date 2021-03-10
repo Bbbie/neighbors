@@ -18,7 +18,7 @@
     <div id="neighbors">
       <% current_user.community.users.each do |user| %>
         <% if user.profile.avatar.attached? %>
-          <%= image_tag user.profile.avatar, class: "avatar-big" %>
+          <%= image_tag user.profile.avatar, class: "avatar-big avatar-margin" %>
         <% else  %>
           <%= index_avatar_for(user.profile) %>
         <% end %>
@@ -80,19 +80,19 @@
                 <p class="date-time">
                   <% if card.start_date.present? || card.end_date.present? || card.start_time.present? || card.end_time.present? %>
                         When:
-                    <% if card.start_date %>
+                    <% if card.start_date.present? %>
                       <%= card.start_date %>
                     <% end %>
-                    <% if card.end_date %>
+                    <% if card.end_date.present? %>
                       - <%= card.end_date %>
                     <% end %>
-                    <% if card.start_time %>
+                    <% if card.start_time.present? %>
                       <% if card.start_date %>
                         ,
                       <% end %>
                       <%= card.start_time %>
                     <% end %>
-                    <% if card.end_time %>
+                    <% if card.end_time.present? %>
                       - <%= card.end_time %>
                     <% end %>
                   <% end %>

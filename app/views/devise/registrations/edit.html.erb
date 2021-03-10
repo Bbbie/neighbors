@@ -1,7 +1,5 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-6">
-      <div class="form-background  form-logged-out">
+<div class="container-forms">
+      <div class="form-background  form-logged-out form-edit">
         <h2 class="headline">Edit <%= resource_name.to_s.humanize %></h2>
 
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -38,6 +36,5 @@
 
         <%= link_to "Back", :back %>
       </div>
-    </div>
-  </div>
+
 </div>

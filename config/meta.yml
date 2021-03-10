@@ -1,0 +1,5 @@
+meta_product_name: "Neighbors"
+meta_title: "Neighbors - Connect with people next door"
+meta_description: "Neighbors helps you exchange and build meaningful connections with the people that live in the same house as you do."
+meta_image: "cover.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards

@@ -1,5 +1,5 @@
 class CardsController < ApplicationController
-  before_action :set_card, only: [:show, :edit, :archive]
+  before_action :set_card, only: [:show, :edit, :archive, :update]
 
   def index
     # View parcels board
@@ -75,9 +75,9 @@ class CardsController < ApplicationController
   end
 
   def update
-    @card.update
+    @card.update(card_params)
     authorize @card
-    redirect_to card_path(@card)
+    redirect_to cards_path(query: "my-cards")
   end
 
   def archive

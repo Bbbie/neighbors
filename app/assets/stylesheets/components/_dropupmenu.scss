@@ -8,7 +8,6 @@
   padding: 10px;
   box-shadow: 0px 0px 5px 0px #00000026;
   border-radius: 10px;
-
 }
 
 .dropdown-group {
@@ -19,5 +18,8 @@
 
 .drop-item {
   padding: 0.3em 0.5em;
-  color: black;
+  color: #323232;
+  &:hover {
+    color: #323232;
+  }
 }

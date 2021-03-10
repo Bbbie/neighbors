@@ -2,7 +2,7 @@
 <div class="home-banner">
   <div class="home-container">
     <h1 class="headline">Build a community inside your house</h1>
-    <p class="sub-header">We need this to look if there's an existing community or if you'd be the founder!</p>
+    <p class="sub-header">Join your neighbors now or be the founder and create a community to get to know each other!</p>
     <%= form_tag communities_path,  class: "search", method: :get do %>
       <%= text_field_tag :query, params[:query], class: "form-control", id: "address_input", placeholder: "Enter your address", required: true %>
       <%= submit_tag "Find community", class: "btn btn-primary btn-shadow" %>

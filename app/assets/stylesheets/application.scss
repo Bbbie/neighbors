@@ -185,3 +185,40 @@ h2 {
 .profile-info {
   width: fit-content;
 }
+
+.about-background {
+  height: 100vh;
+  .about-container {
+    // margin-top: 56px;
+    padding: 10px 20px;
+    .about-header {
+      text-align: center;
+      height: 150px;
+      padding: 10px 15px;
+      .about-title {
+        font-size: 60px;
+      }
+    }
+    .avatars-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 400px;
+      .team-member {
+        width: fit-content;
+        margin: 5px 15px;
+        .img-container {
+          text-align: center;
+        }
+        .team-member-info {
+          text-align: center;
+        }
+      }
+    }
+    .link {
+      text-align: center;
+      height: 60px;
+      margin-top: 15px;
+    }
+  }
+}

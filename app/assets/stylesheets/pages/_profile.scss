@@ -1,6 +1,10 @@
 .profile-info {
   display: flex;
   flex-direction: column;
+  width: fit-content;
+  .about {
+    width: 300px;
+  }
 }
 
 .profile-picture {

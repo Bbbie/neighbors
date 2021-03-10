@@ -67,9 +67,13 @@
   font-style: italic;
   font-size: 40px;
   color: #323232;
-  &:hover {
+    &:hover {
     color: #323232;
   }
+}
+
+.nav-vertical a {
+  z-index: 100;
 }
 
 .nav-logo-long {
@@ -123,6 +127,7 @@
 }
 
 .nav-grey {
+  transition: all .1s ease-in-out;
   background-color: rgba(250, 250, 250, 0.9);
 }
 
@@ -131,10 +136,12 @@
 }
 
 .nav-logo-grey {
+  transition: all .1s ease-in-out;
   color: #323232 !important;
 }
 
 .btn-login {
+  transition: all .1s ease-in-out;
   margin-right: 10px;
 }
 

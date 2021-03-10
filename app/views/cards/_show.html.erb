@@ -80,8 +80,13 @@
 
             <div class="card-avatars padding-avatar-sm-top">
               <% card.users.each do |recipient| %>
-                <div class="card-index-avatars">
-                  <%= image_tag recipient.profile.avatar, class: "avatar-small" %>
+                <div class="pairs">
+                  <% if recipient.profile.avatar.attached? %>
+                    <%= image_tag recipient.profile.avatar, class: "avatar-small" %>
+                  <% else  %>
+                    <%= avatar_for(recipient.profile) %>
+                  <% end %>
+                  <div class="hidden-name"><%= recipient.first_name %> <%= recipient.last_name %></div>
                 </div>
               <% end %>
 

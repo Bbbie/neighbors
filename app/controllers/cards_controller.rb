@@ -1,5 +1,5 @@
 class CardsController < ApplicationController
-  before_action :set_card, only: [:show, :edit, :archive]
+  before_action :set_card, only: [:show, :edit, :archive, :update]
 
   def index
     # View parcels board
@@ -19,8 +19,12 @@ class CardsController < ApplicationController
 
     # View missed board
     elsif params[:query] == "missed"
-      @cards = policy_scope(Card).where("created_at > ?", current_user.last_logout)
+      # @cards = policy_scope(Card).joins(:comments).where("cards.created_at > ? OR comments.created_at > ?", current_user.last_logout, current_user.last_logout)
+      missed_cards = policy_scope(Card).where("created_at > ?", current_user.last_logout)
+      missed_comments = policy_scope(Card).joins(:comments).where("comments.created_at > ?", current_user.last_logout)
+      @cards = missed_cards.union(missed_comments)
       @title = "What you've missed"
+      # Card.last.comments.last.created_at
 
     # View my cards page
     elsif params[:query] == "my-cards"
@@ -31,6 +35,10 @@ class CardsController < ApplicationController
     elsif params[:query] == "my-cards-archived"
       @cards = policy_scope(Card).where(user: current_user, archived: true).order(created_at: :desc)
       @title = "My cards"
+
+    else
+      @cards = policy_scope(Card).where("created_at > ?", current_user.last_logout)
+      @title = "What you've missed"
     end
     @empty_card = Card.new
     @empty_recipient = CardRecipient.new
@@ -51,9 +59,14 @@ class CardsController < ApplicationController
       CardRecipient.create(user: user, card: @card)
     end
     authorize @card
-    @card.save
-    redirect_to cards_path(query: @card.board)
-
+    @card.save!
+    if @card.board == "parcels"
+      redirect_to cards_path(query: "parcels")
+    elsif @card.board == "mutual_help"
+      redirect_to cards_path(query: "mutual_help")
+    elsif cards_path(query: "community")
+      redirect_to cards_path(query: "community")
+    end
   end
 
   def edit
@@ -62,9 +75,9 @@ class CardsController < ApplicationController
   end
 
   def update
-    @card.update
+    @card.update(card_params)
     authorize @card
-    redirect_to card_path(@card)
+    redirect_to cards_path(query: "my-cards")
   end
 
   def archive

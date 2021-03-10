@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
   before_action :set_profile, only: [:update, :show]
 
   def show
+    @profile_user = @profile.user
     authorize @profile
   end
 
@@ -15,7 +16,7 @@ class ProfilesController < ApplicationController
     @profile = Profile.new(set_params)
     @profile.user = current_user
     if @profile.save
-      redirect_to "/cards"
+      redirect_to cards_path(query: "missed")
     else
       render :new
     end

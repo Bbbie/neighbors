@@ -69,3 +69,47 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
+
+.avatar-margin {
+  margin-left: -12px;
+}
+
+.pairs{
+  position: relative;
+  width: 15px;
+  height: 30px;
+  float: left;
+  margin-right: 10px;
+}
+
+.pairs div{
+  position: absolute;
+  bottom: -33px;
+  left: 0;
+  width: 125px;
+  color: #323232;
+  background-color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-family: "Roboto", "Helvetica", "sans-serif";
+  visibility: hidden;
+  text-align: center;
+}
+
+.pairs:hover{
+  cursor: pointer;
+}
+
+.pairs:hover div{
+ visibility: visible;
+ box-shadow: 1px 1px 5px rgba(0,0,0,.2)
+}
+
+.team-member-avatar {
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+}

@@ -25,10 +25,10 @@
     <div class="main-content">
 
       <div class="profile-picture-box">
-        <% if @profile.avatar %>
+        <% if @profile.avatar.attached? %>
           <%= image_tag @profile.avatar, class: "profile-picture" %>
         <% else %>
-          <%= image_tag "empty-avatar_1", class: "profile-picture" %>
+          <%= profile_avatar_for(@profile) %>
         <% end %>
       </div>
       <% if @profile.about %>
@@ -38,7 +38,19 @@
         <p class="description-modal"><%= @profile.about %></p>
       </div>
       <% end %>
+          <!-- BADGES -->
+      <div class="badges">
+        <p class="from-who">My badges 👑</p>
+        <ul>
+          <li>
+            <% @profile_user.badges.each do |badge| %>
+              <strong><%= badge.name %></strong>
+            <% end %>
+          </li>
+        </ul>
+      </div>
     </div>
+
   </div>
 
   <!-- EDIT BUTTON -->

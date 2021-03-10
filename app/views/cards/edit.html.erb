@@ -1,9 +1,9 @@
-<div id="new-card" class="modal fade" role="dialog">
+<div id="new-card">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content card-modal">
-    <!-- PARTIAL FOR CARD EDIT -->
+
           <div class="modal-body overflow-auto form-background">
-            <%= simple_form_for card  do |f| %>
+            <%= simple_form_for @card  do |f| %>
               <h1 class="headline">Add a card</h1>
                 <%= f.input :board,
                   collection: [['Parcels 📦', Card::CARD_BOARDS[0]], ['Mutual Help 🤝', Card::CARD_BOARDS[1]], ['Community 🏠', Card::CARD_BOARDS[2]]],
@@ -39,9 +39,7 @@
                 </div>
                 <%= f.input :title %>
                 <%= f.input :description %>
-                <%= f.input :pictures, as: :file, input_html: {multiple: true} %>
-              <!-- </div> -->
-
+                <%= f.input :pictures, as: :file, multiple: true %>
               <div class="form-actions">
                 <%= f.submit "Save Card", class: "btn btn-primary btn-shadow"%>
               </div>

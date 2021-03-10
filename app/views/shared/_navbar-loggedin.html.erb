@@ -3,9 +3,11 @@
 <nav class="navbar sticky-top navbar-expand-sm navbar-light navbar-lewagon navbar-vertical">
   <ul class="nav flex-column nav-vertical">
 
-      <li class="nav-item">
-        <%= link_to "n", root_path, id: "nav-logo-short" %>
-      </li>
+      <!-- <li class="nav-item"> -->
+        <%= link_to root_path do %>
+          <h1 id= "nav-logo-short">n</h1>
+        <% end %>
+      <!-- </li> -->
 
       <!-- BOARD LINKS -->
       <div class="navbar-icons">
@@ -16,6 +18,7 @@
           <% if current_page?(cards_path(query: "missed")) %>
             <div class="board-icon-purple">
               <div class="icon-box">
+                <div class="noti-badge no-noti"></div>
                 <%= link_to cards_path(query: "missed") do %>
                   <%= image_tag "ic-board_missed-white.svg", class: "nav-icon" %>
                 <% end %>
@@ -24,6 +27,7 @@
           <% else %>
             <div class="board-icon">
               <div class="icon-box">
+                <div class="noti-badge no-noti"></div>
                 <%= link_to cards_path(query: "missed") do %>
                   <%= image_tag "ic-board_missed.svg", class: "nav-icon" %>
                 <% end %>
@@ -38,6 +42,7 @@
         <% if current_page?(cards_path(query: "parcels")) %>
           <div class="board-icon-purple">
             <div class="icon-box">
+              <div class="noti-badge no-noti"></div>
               <%= link_to cards_path(query: "parcels") do %>
                 <%= image_tag "ic-board_parcels-white.svg", class: "nav-icon" %>
               <% end %>
@@ -46,6 +51,7 @@
         <% else %>
           <div class="board-icon">
             <div class="icon-box">
+              <div class="noti-badge no-noti"></div>
               <%= link_to cards_path(query: "parcels") do %>
                 <%= image_tag "ic-board_parcels.svg", class: "nav-icon" %>
               <% end %>
@@ -59,6 +65,7 @@
         <% if current_page?(cards_path(query: "mutual-help")) %>
           <div class="board-icon-purple">
             <div class="icon-box">
+              <div class="noti-badge no-noti"></div>
               <%= link_to cards_path(query: "mutual-help") do %>
                 <%= image_tag "ic-board_mutual-help-white.svg", class: "nav-icon" %>
               <% end %>
@@ -67,6 +74,7 @@
         <% else %>
           <div class="board-icon">
             <div class="icon-box">
+              <div class="noti-badge no-noti"></div>
               <%= link_to cards_path(query: "mutual-help") do %>
                 <%= image_tag "ic-board_mutual-help.svg", class: "nav-icon" %>
               <% end %>
@@ -80,6 +88,7 @@
         <% if current_page?(cards_path(query: "community")) %>
           <div class="board-icon-purple">
             <div class="icon-box">
+              <div class="noti-badge no-noti"></div>
               <%= link_to cards_path(query: "community") do %>
                 <%= image_tag "ic-board_community-white.svg", class: "nav-icon" %>
               <% end %>
@@ -88,6 +97,7 @@
         <% else %>
           <div class="board-icon">
             <div class="icon-box">
+              <div class="noti-badge no-noti"></div>
               <%= link_to cards_path(query: "community") do %>
                 <%= image_tag "ic-board_community.svg", class: "nav-icon" %>
               <% end %>
@@ -116,7 +126,7 @@
                 <% if current_user.profile.avatar.attached? %>
                   <%= image_tag current_user.profile.avatar, class: "avatar-big dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <% else  %>
-                  <%= avatar_for(current_user.profile) %>
+                  <%= navbar_avatar_for(current_user.profile) %>
                 <% end %>
                 <div class="dropdown-menu dropright" aria-labelledby="navbarDropdown">
 

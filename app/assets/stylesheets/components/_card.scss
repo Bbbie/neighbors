@@ -217,30 +217,17 @@
   }
 }
 
-// photos uploaded
-// .card-photos {
-//   display: flex;
-//   height: 200px;
-//   width: auto;
-//   border-radius: 5px;
-//   margin-bottom: 50px;
-
-// }
-
 .uploaded-pic {
-
-
   width: 100%;
-
+  border-radius: 24px;
   overflow: scroll;
   position: relative;
-
 }
+
 .uploaded-pic img {
-  width: 75%;
+  width: 95%;
   margin-bottom: 24px;
   border-radius: 24px;
-
 }
 
 .card-lower-content {
@@ -249,7 +236,6 @@
   overflow: scroll;
   border-radius: 24px;
   margin-top: 15px;
-
 }
 
 .padding-avatar-sm-top {

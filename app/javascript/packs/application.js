@@ -35,6 +35,7 @@ import { initFlatpickr } from "../plugins/flatpickr";
 // import { initChat } from '../components/comments';
 import { navbarScroll } from '../components/navbar';
 import { initCardCable } from '../channels/card_channel';
+import { initCarousel } from '../components/initCarousel';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -46,6 +47,7 @@ document.addEventListener('turbolinks:load', () => {
   neighbors();
   // initChat();
   initCardCable();
+  initCarousel();
 });
 
 

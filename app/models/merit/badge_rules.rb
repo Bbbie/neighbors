@@ -21,29 +21,36 @@ module Merit
     include Merit::BadgeRulesMethods
 
     def initialize
-      grant_on 'cards#create', badge: '💬 1st card', to: :user do |card|
-        card.user.cards.count >= 1
+      grant_on 'profiles#create', badge_id: 7, to: :user do |profile|
+        profile.user.profile
       end
 
-
-      grant_on 'cards#create', badge: '👍 Rookie', to: :user do |card|
-        card.user.cards.count >= 5
+      grant_on 'comments#create', badge_id: 8, to: :user do |comment|
+        comment.user.comments.count >= 5
       end
 
-      grant_on 'cards#create', badge: '📝 Writer', to: :user do |card|
-        card.user.cards.count >= 10
-      end
-
-      grant_on 'comments#create', badge: '🎤 Socializer', to: :user do |comment|
+      grant_on 'comments#create', badge_id: 4, to: :user do |comment|
         comment.user.comments.count >= 10
       end
 
-      grant_on 'cards#create', badge: '🙌 Popular', to: :user do |comment|
+      grant_on 'comments#create', badge_id: 5, to: :user do |comment|
         comment.user.comments.count >= 20
       end
 
-      grant_on 'cards#create', badge: '⭐️ Superstar', to: :user do |comment|
+      grant_on 'comments#create', badge_id: 6, to: :user do |comment|
         comment.user.comments.count >= 30
+      end
+
+      grant_on 'cards#create', badge_id: 1, to: :user do |card|
+        card.user.cards.count >= 1
+      end
+
+      grant_on 'cards#create', badge_id: 2, to: :user do |card|
+        card.user.cards.count >= 5
+      end
+
+      grant_on 'cards#create', badge_id: 3, to: :user do |card|
+        card.user.cards.count >= 10
       end
 
       # If it creates user, grant badge

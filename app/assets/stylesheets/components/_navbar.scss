@@ -67,9 +67,13 @@
   font-style: italic;
   font-size: 40px;
   color: #323232;
-  &:hover {
+    &:hover {
     color: #323232;
   }
+}
+
+.nav-vertical a {
+  z-index: 100;
 }
 
 .nav-logo-long {

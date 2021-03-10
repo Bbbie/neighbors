@@ -39,7 +39,9 @@
                 </div>
                 <%= f.input :title %>
                 <%= f.input :description %>
-                <%= f.input :pictures, as: :file, multiple: true %>
+                <%= f.input :pictures, as: :file, input_html: {multiple: true} %>
+              <!-- </div> -->
+
               <div class="form-actions">
                 <%= f.submit "Save Card", class: "btn btn-primary btn-shadow"%>
               </div>

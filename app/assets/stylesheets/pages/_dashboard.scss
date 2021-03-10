@@ -43,7 +43,8 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
   row-gap: 40px;
-  width: 100%
+  width: 100%;
+  overflow: auto;
 }
 
 .empty-state {

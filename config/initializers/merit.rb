@@ -18,14 +18,38 @@ end
 
 Merit::Badge.create!(
   id: 1,
-  name: "1st card",
+  name: "💬 1st card",
   description: "You created your first card!"
 )
 
 Merit::Badge.create!(
   id: 2,
-  name: "Rookie",
-  description: "You created 5 cards!"
+  name: "👍 Rookie",
+  description: "You created more than 5 cards!"
+)
+
+Merit::Badge.create!(
+  id: 3,
+  name: "📝 Writer",
+  description: "You created more than 10 cards!"
+)
+
+Merit::Badge.create!(
+  id: 4,
+  name: "🎤 Socializer",
+  description: "You commented more than 10 cards!"
+)
+
+Merit::Badge.create!(
+  id: 5,
+  name: "🙌 Popular",
+  description: "You commented more than 20 times!"
+)
+
+Merit::Badge.create!(
+  id: 6,
+  name: "⭐️ Superstar",
+  description: "You commented more than 30 times!"
 )
 
 # Merit::Badge.create!(

@@ -44,12 +44,7 @@
         <ul class="badges-list">
           <% @profile_user.badges.each do |badge| %>
             <li class="badge">
-              <% if badge.name == "1st card" %>
-                <span class="emoji">💬</span>
-              <% elsif badge.name == "Rookie" %>
-                <span class="emoji">📝</span>
-              <% end %>
-              <strong><%= badge.name %></strong> - <%= badge.description %>
+                <strong><%= badge.name %> </strong> - <%= badge.description %>
             </li>
           <% end %>
         </ul>

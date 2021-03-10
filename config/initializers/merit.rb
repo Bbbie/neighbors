@@ -18,10 +18,22 @@ end
 
 Merit::Badge.create!(
   id: 1,
-  name: "Champion Jr.",
-  description: "Wrote at least 5 cards",
-  custom_fields: { difficulty: :bronze }
+  name: "1st card",
+  description: "You created your first card!"
 )
+
+Merit::Badge.create!(
+  id: 2,
+  name: "Rookie",
+  description: "You created 5 cards!"
+)
+
+# Merit::Badge.create!(
+#   id: 1,
+#   name: "Novice",
+#   description: "You created your first card!",
+#   custom_fields: { difficulty: :bronze }
+# )
 
 # Create application badges (uses https://github.com/norman/ambry)
 # badge_id = 0

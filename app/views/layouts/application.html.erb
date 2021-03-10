@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <% if controller_name == 'pages' && action_name == 'home'|| controller_name == 'profiles' && action_name == 'new' || controller_name == "registrations" || controller_name == "sessions" || controller_name == "communities" %>
+    <% if controller_name == 'pages' && action_name == 'home' || controller_name == 'pages' && action_name == 'about' || controller_name == 'profiles' && action_name == 'new' || controller_name == "registrations" || controller_name == "sessions" || controller_name == "communities" %>
       <%= render 'shared/navbar' %>
     <% else %>
       <%= render 'shared/navbar-loggedin' %>

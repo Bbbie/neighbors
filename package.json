@@ -9,8 +9,11 @@
     "@rails/webpacker": "4.3.0",
     "bootstrap": "^4.6.0",
     "flatpickr": "^4.6.9",
-    "jquery": "^3.5.1",
+    "jquery": "^3.6.0",
     "mapbox-gl": "^2.1.1",
+    "owl.carousel": "^2.3.4",
+    "owl.carousel2": "^2.2.1",
+    "owlcarousel": "^1.3.3",
     "popper.js": "^1.16.1",
     "turbolinks": "^5.2.0"
   },

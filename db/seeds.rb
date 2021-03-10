@@ -139,7 +139,7 @@ CardRecipient.create(user: ana, card: card_five)
 
 puts ">Card 4..."
 card_four = Card.create(board: "parcels", category: "info", title: "I got your parcel!", description: "Hey there, got your parcel. Just come by in the time specified above or let me know when it suits you better.", start_date: "12Febr", start_date: "Feb 01", start_time: "8 AM", end_date: "Feb 01", end_time: "8 PM", user: achim)
-CardRecipient.create(user: cassandra, card: card_four)
+CardRecipient.create(user: magnus, card: card_four)
 
 
 
@@ -164,7 +164,7 @@ CardRecipient.create(user: cassandra, card: card_seven)
 CardRecipient.create(user: claudia, card: card_seven)
 
 puts ">Card 8..."
-card_eight = Card.create(board: "mutual_help", category: "offer", title: "Tomatos & Bread 4 free", description: "I’m going on vacation tomorrow and still have some leftovers in my fridge! Come get em if you like.", start_date: "Feb 2", user: sebastian)
+card_eight = Card.create(board: "mutual_help", category: "offer", title: "Tomatos & Bread 4 free", description: "I’m going on vacation tomorrow and still have some leftovers in my fridge! Come get em if you like.", start_date: "Feb 2", user: cassandra)
 CardRecipient.create(user: ana, card: card_eight)
 CardRecipient.create(user: achim, card: card_eight)
 CardRecipient.create(user: magnus, card: card_eight)

@@ -148,6 +148,8 @@ h2 {
 }
 
 .container-search-center {
+  display: flex;
+  align-items: center;
   width: 997px;
   margin: 0 auto;
   height: 300px;
@@ -173,6 +175,10 @@ h2 {
     .btn {
     margin-left: 8px;
   }
+  }
+  .illu-search {
+    width: 420px;
+    padding-left: 30px;
   }
 }
 

@@ -69,11 +69,18 @@
                 <% end%>
               </p>
             <p class="card-description description-card"><%= card.description %></p>
-            <%# card.pictures.each do |picture| %>
-              <%#= image_tag picture, class: "card-photos" %>
-            <%# end %>
+
+
           </div>
           <div class="card-lower-content">
+
+
+            <div class="card-pictures">
+              <% card.pictures.each do |picture| %>
+                <%= image_tag picture, class: "card-photos" %>
+              <% end %>
+            </div>
+
             <div class="card-avatars">
               <% card.users.each do |recipient| %>
                 <div class="pairs">

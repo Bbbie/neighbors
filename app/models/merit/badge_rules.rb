@@ -21,9 +21,38 @@ module Merit
     include Merit::BadgeRulesMethods
 
     def initialize
-      grant_on 'cards#create', badge: 'Champion Jr.', to: :user do |card|
-        card.user.cards.count >= 5 && card.user.cards.count < 10
+      grant_on 'profiles#create', badge_id: 7, to: :user do |profile|
+        profile.user.profile
       end
+
+      grant_on 'comments#create', badge_id: 8, to: :user do |comment|
+        comment.user.comments.count >= 5
+      end
+
+      grant_on 'comments#create', badge_id: 4, to: :user do |comment|
+        comment.user.comments.count >= 10
+      end
+
+      grant_on 'comments#create', badge_id: 5, to: :user do |comment|
+        comment.user.comments.count >= 20
+      end
+
+      grant_on 'comments#create', badge_id: 6, to: :user do |comment|
+        comment.user.comments.count >= 30
+      end
+
+      grant_on 'cards#create', badge_id: 1, to: :user do |card|
+        card.user.cards.count >= 1
+      end
+
+      grant_on 'cards#create', badge_id: 2, to: :user do |card|
+        card.user.cards.count >= 5
+      end
+
+      grant_on 'cards#create', badge_id: 3, to: :user do |card|
+        card.user.cards.count >= 10
+      end
+
       # If it creates user, grant badge
       # Should be "current_user" after registration for badge to be granted.
       # Find badge by badge_id, badge_id takes presidence over badge

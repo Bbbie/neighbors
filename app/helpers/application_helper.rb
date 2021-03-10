@@ -25,4 +25,10 @@ module ApplicationHelper
     @avatar_user = image_tag(CURRENT_AVATAR, class: "profile-picture")
     return @avatar_user
   end
+
+  def chat_avatar_for(profile)
+    @avatar = profile.avatar
+    @avatar_user = image_tag(CURRENT_AVATAR, class: "avatar-small")
+    return @avatar_user
+  end
 end

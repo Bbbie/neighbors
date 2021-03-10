@@ -39,14 +39,14 @@
       </div>
       <% end %>
           <!-- BADGES -->
-      <div class="badges">
-        <p class="from-who">My badges 👑</p>
-        <ul>
-          <li>
-            <% @profile_user.badges.each do |badge| %>
-              <strong><%= badge.name %></strong>
-            <% end %>
-          </li>
+      <div class="badges-container">
+        <p class="from-who">My badges</p>
+        <ul class="badges-list">
+          <% @profile_user.badges.each do |badge| %>
+            <li class="badge">
+                <strong><%= badge.name %> </strong> - <%= badge.description %>
+            </li>
+          <% end %>
         </ul>
       </div>
     </div>

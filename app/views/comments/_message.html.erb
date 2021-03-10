@@ -1,6 +1,10 @@
 <div class="chat-bubble">
   <!-- USER AVATAR -->
-  <%= image_tag comment.user.profile.avatar, class: "avatar-small" %>
+  <% if comment.user.profile.avatar.attached? %>
+    <%= image_tag comment.user.profile.avatar, class: "avatar-small" %>
+  <% else  %>
+    <%= chat_avatar_for(comment.user.profile) %>
+  <% end %>
   <!-- COMMENT CONTENT -->
   <div class="messages-container" id="message-<%= comment.id %>">
     <div class="author">

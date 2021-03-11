@@ -49,7 +49,7 @@
               <p class="from-who"><%= card.user.first_name %> <%= card.user.last_name %>, <%= card.user.profile.floor %></p>
               <p class="title"><%= card.title %></p>
             </div>
-            <div class="card-lower-content">
+            <div class="card-lower-content-show">
               <p class="date-time">
                 <% if card.start_date || card.end_date || card.start_time || card.end_time %>
                   <% time_date = [card.start_date, card.end_date, card.start_time, card.end_time] %>

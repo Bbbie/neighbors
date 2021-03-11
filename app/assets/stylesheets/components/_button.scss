@@ -108,12 +108,12 @@ a {
     border: 1px solid rgba(255, 255, 255, 0.6);
   }
   &:focus {
-    color: $dark-purple;
+    color: rgba(255, 255, 255, 0.6);
     background-color: rgba(255, 255, 255, 0) !important;
     border: 1px solid rgba(255, 255, 255, 0.6) !important;
   }
   &:active {
-    color: $dark-purple;
+    color: rgba(255, 255, 255, 0.6);
     background-color: rgba(255, 255, 255, 0) !important;
     border: 1px solid rgba(255, 255, 255, 0.6) !important;
   }

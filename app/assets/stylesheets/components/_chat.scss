@@ -15,7 +15,7 @@
 // }
 
 .chat-body {
-  height: 360px;
+  height: 465px;
 }
 
 .input-field {
@@ -52,11 +52,11 @@
 
 .chat-bubble {
   display: inline-flex;
-  margin-left: 30px;
+  margin-left: 20px;
   margin-top: 26px;
-  margin-right: 30px;
+  margin-right: 20px;
   .avatar-small {
-    margin-right: 11px;
+    margin-right: 8px;
   }
 }
 

@@ -225,18 +225,22 @@
 }
 
 .uploaded-pic img {
-  width: 95%;
+  width: 100%;
   margin-bottom: 24px;
   border-radius: 24px;
+  padding-top: 10px;
 }
 
 .card-lower-content {
   position: relative;
   margin-top: 15px;
+  overflow: scroll;
+  max-height: 400px;
 }
 
 .card-show-scroll {
-  overflow: scroll;
+  // overflow: scroll;
+  // height: 300px;
 }
 
 .padding-avatar-sm-top {

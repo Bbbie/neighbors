@@ -24,7 +24,13 @@
     padding: 12px;
     background-color: #fff;
     border-radius: 16px;
+    transition: all .3s ease-in-out;
     box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.12);
   }
 }
 
+.badge-emoji:hover {
+  transform: scale(1.02);
+  font-size: 34px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
+}

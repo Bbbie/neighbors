@@ -49,6 +49,7 @@
               <p class="from-who"><%= card.user.first_name %> <%= card.user.last_name %>, <%= card.user.profile.floor %></p>
               <p class="title"><%= card.title %></p>
             </div>
+            <div class="card-lower-content card-show-scroll">
               <p class="date-time">
                 <% if card.start_date || card.end_date || card.start_time || card.end_time %>
                   <% time_date = [card.start_date, card.end_date, card.start_time, card.end_time] %>
@@ -69,26 +70,26 @@
                 <% end%>
               </p>
             <p class="card-description description-card"><%= card.description %></p>
-        </div>
-          <div class="card-lower-content">
+
              <div class="card-pictures uploaded-pic">
                 <% card.pictures.each do |picture| %>
                   <%= image_tag picture, class: "card-photos" %>
                 <% end %>
             </div>
           </div>
+        </div>
 
-            <div class="card-avatars padding-avatar-sm-top">
-              <% card.users.each do |recipient| %>
-                <div class="pairs">
-                  <% if recipient.profile.avatar.attached? %>
-                    <%= image_tag recipient.profile.avatar, class: "avatar-small" %>
-                  <% else  %>
-                    <%= avatar_for(recipient.profile) %>
-                  <% end %>
-                  <div class="hidden-name"><%= recipient.first_name %> <%= recipient.last_name %></div>
-                </div>
-              <% end %>
+          <div class="card-avatars padding-avatar-sm-top">
+            <% card.users.each do |recipient| %>
+              <div class="pairs">
+                <% if recipient.profile.avatar.attached? %>
+                   <%= image_tag recipient.profile.avatar, class: "avatar-small" %>
+                <% else  %>
+                  <%= avatar_for(recipient.profile) %>
+                <% end %>
+                <div class="hidden-name"><%= recipient.first_name %> <%= recipient.last_name %></div>
+              </div>
+            <% end %>
 
           </div>
         </div>

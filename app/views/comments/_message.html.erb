@@ -8,7 +8,7 @@
   <!-- COMMENT CONTENT -->
   <div class="messages-container" id="message-<%= comment.id %>">
     <div class="author">
-      <p class="text-small"><%= comment.user.first_name.capitalize %> <%= card.user.last_name.capitalize %></p>
+      <p class="text-small"><%= comment.user.first_name.capitalize %> <%= comment.user.last_name.capitalize %></p>
       <p class="date-time-small"><%= comment.created_at.strftime("%b %e at %l:%M%p") %></p>
     </div>
     <p><%= comment.content %></p>

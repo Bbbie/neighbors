@@ -40,11 +40,15 @@
       <% end %>
           <!-- BADGES -->
       <div class="badges-container">
-        <p class="from-who">My badges</p>
+        <p class="from-who">My rewards</p>
         <ul class="badges-list">
           <% @profile_user.badges.each do |badge| %>
             <li class="badge">
-                <strong><%= badge.name %> </strong> - <%= badge.description %>
+              <p class="badge-emoji"><%= badge.level %></p>
+              <div class="badge-infos">
+                <p class="from-who badge-name"><%= badge.name %></p>
+                <p class="description-modal"><%= badge.description %></p>
+              </div>
             </li>
           <% end %>
         </ul>

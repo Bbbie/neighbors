@@ -3,15 +3,28 @@
   margin-left: 80px;
   .badges-list {
     font-size: 20px;
-    .badge {
-      font-weight: normal;
-      padding-left: 0;
-      display: flex;
-      align-items: center;
-      .emoji {
-        font-size: 30px;
-        padding-right: 8px;
-      }
-    }
   }
 }
+
+.badges-container .badges-list .badge {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  padding-left: 0;
+  margin-bottom: 10px;
+  .badge-infos {
+    text-align: start;
+    .badge-name {
+      font-style: italic;
+    }
+  }
+  .badge-emoji {
+    font-size: 32px;
+    margin-right: 20px;
+    padding: 12px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.12);
+  }
+}
+

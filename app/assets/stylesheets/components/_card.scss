@@ -230,17 +230,20 @@
 .uploaded-pic img {
   width: 100%;
   margin-bottom: 24px;
-  border-radius: 33px;
+  border-radius: 24px;
   padding-top: 10px;
 }
 
 .card-lower-content {
   position: relative;
   margin-top: 15px;
+}
+
+.card-lower-content-show {
+  position: relative;
+  margin-top: 15px;
   overflow: scroll;
   max-height: 400px;
-  border-bottom-left-radius: 24px;
-  border-bottom-right-radius: 24px;
 }
 
 .card-show-scroll {

@@ -51,23 +51,22 @@
             </div>
             <div class="card-lower-content-show">
               <p class="date-time">
-                <% if card.start_date || card.end_date || card.start_time || card.end_time %>
-                  <% time_date = [card.start_date, card.end_date, card.start_time, card.end_time] %>
-                  When:
-                  <% time_date.each do |item| %>
-                    <% if item %>
-                      <% if item == card.start_date %>
-                        <%= item %>
-                      <% elsif item == card.end_date && card.end_date != card.start_date %>
-                        - <%= item %>
-                      <% elsif item == card.start_time %>
-                        , <%= item %>
-                      <% elsif item == card.end_time %>
-                        - <%= item %>
-                      <% end %>
+                    <% if card.start_date.present? || card.end_date.present? || card.start_time.present? || card.end_time.present? %>
+                        When:
+                    <% if card.start_date.present? %>
+                      <%= card.start_date.strip %>
+                    <% end %>
+                    <% if card.end_date.present? %>
+                      - <%= card.end_date.strip %>
+                    <% end %>
+                    <% if card.start_time.present? %>
+                      <% if card.start_date %>
+                      <% end %><%= ", " + card.start_time %>
+                    <% end %>
+                    <% if card.end_time.present? %>
+                      - <%= card.end_time %>
                     <% end %>
                   <% end %>
-                <% end%>
               </p>
             <p class="card-description description-card"><%= card.description %></p>
 

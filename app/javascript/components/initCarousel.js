@@ -45,7 +45,7 @@ function keyPress(e) {
     showNextItem();
   }
 }
-if (items) {
+if (items && nextItem && previousItem) {
   nextItem.addEventListener('click', showNextItem);
   previousItem.addEventListener('click', showPreviousItem);
   document.addEventListener('keydown', keyPress);

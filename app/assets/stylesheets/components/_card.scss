@@ -232,10 +232,12 @@
 
 .card-lower-content {
   position: relative;
-  // overflow: hidden;
-  overflow: scroll;
-  border-radius: 24px;
   margin-top: 15px;
+}
+
+.card-show-scroll {
+  overflow: scroll;
+  border-radius: 24px;;
 }
 
 .padding-avatar-sm-top {

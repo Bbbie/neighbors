@@ -1,0 +1,33 @@
+.neighbors-about {
+  display: inline;
+  font-family: 'Asap', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.about-header {
+  .headline {
+    margin-bottom: 4px;
+  }
+}
+
+.emojis-about {
+  margin-top: 10px;
+  font-size: 32px;
+}
+
+.about-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.members-about {
+  display: flex;
+  .team-member {
+    text-align: center;
+    padding: 20px;
+  }
+}

@@ -156,3 +156,13 @@
     margin-right: 20px;
   }
 }
+
+.dropdown-group {
+  padding-left: 10px;
+    &:hover {
+    background-color: #F6F6F6 !important;
+    margin: 0;
+
+  }
+}
+

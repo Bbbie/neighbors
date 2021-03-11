@@ -6,12 +6,14 @@ const initCardCable = () => {
       messagesContainers.forEach((chat) => {
       const id = chat.dataset.cardId;
       const messagesContainer = document.getElementById(`messages-${id}`);
+      // const formField = document.getElementById(`form-${id}`);
       if (messagesContainer) {
 
         consumer.subscriptions.create({ channel: "CardChannel", id: id }, {
           received(data) {
             messagesContainer.insertAdjacentHTML('beforeend', data);
             clearForm();
+            // formField.reset();
           },
         });
       }

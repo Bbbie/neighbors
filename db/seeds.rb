@@ -152,20 +152,20 @@ CardRecipient.create(user: ana, card: card_six)
 CardRecipient.create(user: sebastian, card: card_six)
 CardRecipient.create(user: claudia, card: card_six)
 
-puts ">Card 7..."
-card_seven = Card.create(board: "mutual_help", category: "question", title: "Has anybody seen my cat? 😿", description: "Alert, alert! My cat is gone since five days already! That happens sometimes but usually he comes back after 3 days max... I am really worried! Please let me know if you see him. He's called Jimmy! This is what he looks like:", start_date: "Jan 28", user: ana)
-card_seven.pictures.each do |picture|
-  picture.attach(io: picture_cat, filename: 'picture-cat.jpg', content_type: 'image/jpg')
-end
-CardRecipient.create(user: sebastian, card: card_seven)
-CardRecipient.create(user: achim, card: card_seven)
-CardRecipient.create(user: magnus, card: card_seven)
-CardRecipient.create(user: cassandra, card: card_seven)
-CardRecipient.create(user: claudia, card: card_seven)
+# puts ">Card 7..."
+# card_seven = Card.create(board: "mutual_help", category: "question", title: "Has anybody seen my cat? 😿", description: "Alert, alert! My cat is gone since five days already! That happens sometimes but usually he comes back after 3 days max... I am really worried! Please let me know if you see him. He's called Jimmy! This is what he looks like:", start_date: "Jan 28", user: ana)
+# card_seven.pictures.each do |picture|
+#   picture.attach(io: picture_cat, filename: 'picture-cat.jpg', content_type: 'image/jpg')
+# end
+# CardRecipient.create(user: sebastian, card: card_seven)
+# CardRecipient.create(user: achim, card: card_seven)
+# CardRecipient.create(user: magnus, card: card_seven)
+# CardRecipient.create(user: cassandra, card: card_seven)
+# CardRecipient.create(user: claudia, card: card_seven)
 
 puts ">Card 8..."
-card_eight = Card.create(board: "mutual_help", category: "offer", title: "Tomatos & Bread 4 free", description: "I’m going on vacation tomorrow and still have some leftovers in my fridge! Come get em if you like.", start_date: "Feb 2", user: cassandra)
-CardRecipient.create(user: ana, card: card_eight)
+card_eight = Card.create(board: "mutual_help", category: "offer", title: "Tomatos & Bread 4 free", description: "I’m going on vacation tomorrow and still have some leftovers in my fridge! Come get em if you like.", start_date: "Feb 2", user: ana)
+CardRecipient.create(user: cassandra, card: card_eight)
 CardRecipient.create(user: achim, card: card_eight)
 CardRecipient.create(user: magnus, card: card_eight)
 

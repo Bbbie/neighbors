@@ -2,7 +2,7 @@
 
   <!-- HOME link via 'neighbors' if logged out to home, if logged-in, to dashboard -->
   <%= link_to user_signed_in? ? cards_path(query: "missed") : root_path, class: "navbar-brand" do %>
-   <h1 class="nav-logo-long <%= 'nav-logo-grey' if controller_name == 'registrations' || controller_name == 'sessions' || controller_name == 'communities' %>">neighbors.</h1>
+   <h1 class="nav-logo-long <%= 'nav-logo-grey' if controller_name == 'registrations' || controller_name == 'sessions' || controller_name == 'communities' || current_page?(about_path) %>">neighbors.</h1>
   <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,6 +15,9 @@
         <% if !user_signed_in? %>
           <% if current_page?(root_path) %>
             <%= link_to "Log In", new_user_session_path, class: "btn btn-secondary-white btn-medium btn-login" %>
+            <%= link_to "Sign Up", search_communities_path, class: "btn btn-primary btn-medium" %>
+          <% elsif current_page?(about_path) %>
+            <%= link_to "Log In", new_user_session_path, class: "btn btn-secondary btn-medium btn-login" %>
             <%= link_to "Sign Up", search_communities_path, class: "btn btn-primary btn-medium" %>
           <% elsif current_page?(communities_path) || current_page?(search_communities_path) || current_page?(new_profile_path) || current_page?(new_user_registration_path) %>
             <div class="nav-log">

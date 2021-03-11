@@ -44,7 +44,9 @@
         <ul class="badges-list">
           <% @profile_user.badges.each do |badge| %>
             <li class="badge">
-                <strong><%= badge.name %> </strong> - <%= badge.description %>
+              <p class="badge-emoji"><%= badge.level %></p>
+              <p class="badge-name"><%= badge.name %></p>
+              <p class="description-modal"> - <%= badge.description %></p>
             </li>
           <% end %>
         </ul>

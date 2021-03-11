@@ -18,50 +18,58 @@ end
 
 Merit::Badge.create!(
   id: 1,
-  name: "💬 1st card",
-  description: "You created your first card!"
+  name: "1st card",
+  description: "You created your first card!",
+  level: "💬"
 )
 
 Merit::Badge.create!(
   id: 2,
-  name: "👍 Rookie",
-  description: "You created at least 5 cards!"
+  name: "Rookie",
+  description: "You created at least 5 cards!",
+  level:  "👍"
 )
 
 Merit::Badge.create!(
   id: 3,
-  name: "📝 Writer",
-  description: "You created at least 10 cards!"
+  name: "Writer",
+  description: "You created at least 10 cards!",
+  level: "📝"
 )
 
 Merit::Badge.create!(
   id: 4,
-  name: "🎤 Socializer",
-  description: "You commented at least 10 cards!"
+  name: "Socializer",
+  description: "You commented at least 10 cards!",
+  level: "🎤"
 )
 
 Merit::Badge.create!(
   id: 5,
-  name: "🙌 Popular",
-  description: "You commented at least 20 times!"
+  name: "Popular",
+  description: "You commented at least 20 times!",
+  level:  "🙌"
 )
 
 Merit::Badge.create!(
   id: 6,
-  name: "⭐️ Superstar",
-  description: "You commented at least 30 times!"
+  name: "Superstar",
+  description: "You commented at least 30 times!",
+  level: "⭐️"
 )
 
 Merit::Badge.create!(
   id: 7,
-  name: "👋 Sharing",
-  description: "You created your profile!"
+  name: "Sharing",
+  description: "You created your profile!",
+  level: "👋"
 )
 
 Merit::Badge.create!(
   id: 8,
-  name: "😬 Friendly",
-  description: "You commented at least 5 cards!"
+  name: "Friendly",
+  description: "You commented at least 5 cards!",
+  level: "😬"
 )
 
 # Merit::Badge.create!(

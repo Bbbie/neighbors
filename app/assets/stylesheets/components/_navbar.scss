@@ -46,12 +46,22 @@
   margin-bottom: 10px;
   background-color: #6951FF;
   border-radius: 8px;
+  position: relative;
   &:hover {
     background-color: #5b46dd;
   }
   &:active {
     background-color: #5b46dd;
   }
+}
+
+.active-side-indicator {
+  position: absolute;
+  border-radius: 8px;
+  left: -20px;
+  width: 8px;
+  height: 48px;
+  background-color: #6951FF;
 }
 
 .active-purple {

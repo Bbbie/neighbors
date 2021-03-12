@@ -17,6 +17,9 @@
         <% if cards_path(query: "missed") %>
           <% if current_page?(cards_path(query: "missed")) %>
             <div class="board-icon-purple">
+              <div class="active-side-indicator">
+                <!-- Nothing here -->
+              </div>
               <div class="icon-box">
                 <div class="noti-badge no-noti"></div>
                 <%= link_to cards_path(query: "missed") do %>
@@ -41,6 +44,9 @@
       <li class="nav-item">
         <% if current_page?(cards_path(query: "parcels")) %>
           <div class="board-icon-purple">
+            <div class="active-side-indicator">
+              <!-- Nothing here -->
+            </div>
             <div class="icon-box">
               <div class="noti-badge no-noti"></div>
               <%= link_to cards_path(query: "parcels") do %>
@@ -64,6 +70,9 @@
       <li class="nav-item">
         <% if current_page?(cards_path(query: "mutual_help")) %>
           <div class="board-icon-purple">
+            <div class="active-side-indicator">
+              <!-- Nothing here -->
+            </div>
             <div class="icon-box">
               <div class="noti-badge no-noti"></div>
               <%= link_to cards_path(query: "mutual_help") do %>
@@ -87,6 +96,9 @@
       <li class="nav-item">
         <% if current_page?(cards_path(query: "community")) %>
           <div class="board-icon-purple">
+            <div class="active-side-indicator">
+              <!-- Nothing here -->
+            </div>
             <div class="icon-box">
               <div class="noti-badge no-noti"></div>
               <%= link_to cards_path(query: "community") do %>

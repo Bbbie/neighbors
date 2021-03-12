@@ -52,7 +52,7 @@
     <div class="cards cards-on-index">
       <% @cards.each do |card| %>
       <!-- MODAL LINK STARTS HERE -->
-        <button type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#myModal<%= card.id %>">
+        <button type="button" id="button-card-<%= card.id %>" class="btn btn-light btn-lg" data-toggle="modal" data-target="#myModal<%= card.id %>">
           <!-- CARD CONTENT STARTS HERE -->
           <div class="custom-card">
             <div class="card-content">

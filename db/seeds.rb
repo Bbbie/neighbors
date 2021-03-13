@@ -18,6 +18,9 @@ Profile.destroy_all
 puts "> users..."
 User.destroy_all
 
+puts "> communities..."
+Community.destroy_all
+
 
 # ASSETS
 puts "Fetching assets..."

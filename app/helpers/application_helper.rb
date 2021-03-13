@@ -10,7 +10,7 @@ module ApplicationHelper
 
   def index_avatar_for(profile)
     @avatar = profile.avatar
-    @avatar_user = image_tag(CURRENT_AVATAR, class: "avatar-big")
+    @avatar_user = image_tag(CURRENT_AVATAR, class: "avatar-big avatar-margin")
     return @avatar_user
   end
 

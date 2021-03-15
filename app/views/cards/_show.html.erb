@@ -84,7 +84,7 @@
                 <% if recipient.profile.avatar.attached? %>
                    <%= image_tag recipient.profile.avatar, class: "avatar-small" %>
                 <% else  %>
-                  <%= avatar_for(recipient.profile) %>
+                  <%= chat_avatar_for(recipient.profile) %>
                 <% end %>
                 <div class="hidden-name"><%= recipient.first_name %> <%= recipient.last_name %></div>
               </div>

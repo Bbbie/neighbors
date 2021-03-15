@@ -17,7 +17,7 @@
                     item_wrapper_class: 'category-item' %>
                 </div>
                 <%= f.association :users,
-                  collection: User.all,
+                  collection: User.where(community_id: current_user.community_id),
                   as: :check_boxes,
                   multiple: true,
                   include_hidden: false,

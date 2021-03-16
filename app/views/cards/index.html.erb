@@ -101,7 +101,7 @@
               </div>
               <div class="card-lower-content">
                 <div class="card-avatars">
-                  <% card.users.each do |recipient| %>
+                  <% card.users.order(:last_name).each do |recipient| %>
                     <!-- <div class="card-index-avatars"> -->
                       <div class="pairs">
                         <% if recipient.profile.avatar.attached? %>

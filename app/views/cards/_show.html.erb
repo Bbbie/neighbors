@@ -79,7 +79,7 @@
         </div>
 
           <div class="card-avatars padding-avatar-sm-top">
-            <% card.users.each do |recipient| %>
+            <% card.users.order(:last_name).each do |recipient| %>
               <div class="pairs">
                 <% if recipient.profile.avatar.attached? %>
                    <%= image_tag recipient.profile.avatar, class: "avatar-small" %>

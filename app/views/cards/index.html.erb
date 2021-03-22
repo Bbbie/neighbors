@@ -70,7 +70,7 @@
                       <%# elsif (card.created_at.strftime("%e %m %y") > Date.today.strftime("%e %m %y") - 7) && (card.created_at.strftime("%e %m %y") < Date.yesterday.strftime("%e %m %y")) %>
                         <%#= card.created_at.strftime("%A, %l:%M %p") %>
                       <% else %>
-                        <%= card.created_at.strftime("%B, %l:%M %p") %>
+                        <%= card.created_at.strftime("%B %d, %l:%M %p") %>
                       <% end %>
                     </p>
                   </div>

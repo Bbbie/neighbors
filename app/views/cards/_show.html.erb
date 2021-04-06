@@ -8,6 +8,7 @@
           <div class="card-upper-content">
             <div class="card-top">
 
+              <!-- Card Menu (archive/edit) -->
               <% if current_user == card.user && card.archived == false %>
                 <div class='<%= "toggle-id-#{card.id} card-actions display-menu" %>'>
                   <div class="link-wrapper">

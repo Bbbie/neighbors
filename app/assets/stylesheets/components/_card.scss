@@ -70,9 +70,7 @@
   margin-right: 6px;
 }
 
-// .hover-link .edit {
-//   padding-bottom: 10px;
-// }
+// Menu on card show view (edit/archive)
 
 .archive {
   border-bottom-right-radius: 8px;
@@ -107,6 +105,7 @@
 
 .card-actions .hover-link:hover {
   background-color: #F6F6F6;
+  opacity: 1;
 }
 
 .display-menu {
@@ -124,6 +123,8 @@
   width: 100%;
   flex-grow: 1;
   display: inline-flex;
+  transition: ease .3s;
+  opacity: .6;
 }
 
 .actual-link {
@@ -133,9 +134,9 @@
 }
 
 .actual-link .hover-menu-text {
-  color: #9a9a9a !important;
+  color: #323232 !important;
   &:hover {
-    color: #9a9a9a !important;
+    color: #323232 !important;
   }
 }
 

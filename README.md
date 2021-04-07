@@ -25,17 +25,35 @@ The app features 3 main boards around the topics 'Parcels', 'Mutual help' and 'C
 
 <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c30fca24-3e9e-4c31-8d01-1b540dc5394b/Bildschirmfoto_2021-03-19_um_18.13.37.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210407T151621Z&X-Amz-Expires=86400&X-Amz-Signature=ae4f65712956da56408af7e069aa9088a590587f2300026d3ca560c6efc61cae&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Bildschirmfoto_2021-03-19_um_18.13.37.png%22"/>
 
-<img src=""/>
 
-<img src=""/>
+**Cards**
 
-<img src=""/>
+Users can create cards for the different boards and select their desired category. They can choose from 'action', 'request', 'info', 'offer' or 'question' depending on their need and choose who the card should be directed to, which could either be a group or a single person. Users can add a title and fill in optionals, like a description, start- and end- date, start- and end time or upload pictures.
 
-<img src=""/>
+In order to have discussions that are topic-related, each card has a comments section where people can exchange.
 
-<img src=""/>
+Cards will only be visible to it's creator and it's recipients and can be edited or archived by their creator.
 
-<img src=""/>
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c2c79fd1-4fba-4d95-9758-77f6d1698614/Bildschirmfoto_2021-03-19_um_17.57.54.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210407T151705Z&X-Amz-Expires=86400&X-Amz-Signature=d5ccfd86b3f42c237c25801695feaa4af1e00e9ca88af551028871f95583d18b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Bildschirmfoto_2021-03-19_um_17.57.54.png%22"/>
 
-<img src=""/>
+All the users cards can be viewed by accesing 'My cards' in the menu that's revealed on click on the users avatar in the nav bar.
+
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/20ae8cf4-2e02-4a07-8066-cd851c1ae2b8/Bildschirmfoto_2021-03-19_um_17.58.17.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210407T151731Z&X-Amz-Expires=86400&X-Amz-Signature=a4bddeb15066d46ece5e6976e0fd4d7bf3e9e25a2e52596444198dd3e636dddd&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Bildschirmfoto_2021-03-19_um_17.58.17.png%22"/>
+
+Archived cards are shown in a separate tab.
+
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9415c57c-d9c0-40ee-82f3-083193af7ec8/Bildschirmfoto_2021-03-19_um_17.37.26.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210407T151756Z&X-Amz-Expires=86400&X-Amz-Signature=385df5f2d522a037fb1b7323b8791f69588d7170e652136cd89caaaa8176df80&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Bildschirmfoto_2021-03-19_um_17.37.26.png%22"/>
+
+
+**Profile**
+
+User profiles can be accessed through a list of users that is revealed on click on the avatars in the upper right corner of the dashboard.
+
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fd7627d5-515c-4f89-976e-09228fcc1ace/Bildschirmfoto_2021-03-19_um_18.11.04.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210407T151817Z&X-Amz-Expires=86400&X-Amz-Signature=a2628fa0116b0e0ece8a53ecac311e6aefd05fa1743493b7ec9ac62caf258a4c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Bildschirmfoto_2021-03-19_um_18.11.04.png%22"/>
+
+Each user has a profile where as much information can be shared as the user wants. The only mandatory information that is displayed are the name and the floor of the user. Users get rewarded with different badges depending on the number of cards made and the number of comments given.
+
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ba502957-1164-45ef-9a93-7c3bfe27dd8b/Bildschirmfoto_2021-03-19_um_18.00.23.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210407T151840Z&X-Amz-Expires=86400&X-Amz-Signature=d87b1f8d6d1ed9fda93c61c744868d896a278996acc396c7aeb1670b858537a5&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Bildschirmfoto_2021-03-19_um_18.00.23.png%22"/>
+
+Is you discover any 🐞s or have any suggestions feel free to write us!
 

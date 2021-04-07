@@ -32,9 +32,11 @@ Users can create cards for the different boards and select their desired categor
 
 In order to have discussions that are topic-related, each card has a comments section where people can exchange.
 
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c2c79fd1-4fba-4d95-9758-77f6d1698614/Bildschirmfoto_2021-03-19_um_17.57.54.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210407T151705Z&X-Amz-Expires=86400&X-Amz-Signature=d5ccfd86b3f42c237c25801695feaa4af1e00e9ca88af551028871f95583d18b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Bildschirmfoto_2021-03-19_um_17.57.54.png%22"/>
+
 Cards will only be visible to it's creator and it's recipients and can be edited or archived by their creator.
 
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c2c79fd1-4fba-4d95-9758-77f6d1698614/Bildschirmfoto_2021-03-19_um_17.57.54.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210407T151705Z&X-Amz-Expires=86400&X-Amz-Signature=d5ccfd86b3f42c237c25801695feaa4af1e00e9ca88af551028871f95583d18b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Bildschirmfoto_2021-03-19_um_17.57.54.png%22"/>
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/34fb6841-5cd8-4d8a-9577-825a54f272ee/Bildschirmfoto_2021-04-07_um_17.22.38.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210407T152321Z&X-Amz-Expires=86400&X-Amz-Signature=7d1c875f9673377b052c59cc401e39e3cd8a9cd14ef4c06923df636e7b4114aa&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Bildschirmfoto_2021-04-07_um_17.22.38.png%22"/>
 
 All the users cards can be viewed by accesing 'My cards' in the menu that's revealed on click on the users avatar in the nav bar.
 

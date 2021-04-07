@@ -1,5 +1,6 @@
-This rails app is the final project of Ammy Varela Rodriguez, Davinia Tosco Abreu and Deborah Sillmann.
-Neighbors is an app to connect neighbors that live under the same roof and help them organize and exchange around topics like parcels, mutual help and community.
+### Neighbors - Connect with people next door
+**This rails app is the final project of Ammy Varela Rodriguez, Davinia Tosco Abreu and Deborah Sillmann.
+Neighbors is an app to connect neighbors that live under the same roof and help them organize and exchange around topics like parcels, mutual help and community.**
 
 3 developers | 10 days
 

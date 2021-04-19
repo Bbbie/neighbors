@@ -13,4 +13,14 @@ class ProfilesTest < ApplicationSystemTestCase
 
     assert_equal cards_path, page.current_path
   end
+
+  test "see profile content" do
+    login_as users(:ammy)
+    visit cards_path
+    find('img#navbarDropdown').click
+    click_on "My profile"
+
+    assert_selector ".from-who", text: "Where I live"
+    assert_text "I am Ammy Varela"
+  end
 end

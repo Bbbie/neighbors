@@ -1,0 +1,16 @@
+first_card:
+  board: "community"
+  category: "action"
+  title: "This is a card from Ana"
+  description: "Just for testing purposes"
+  start_date: "Apr 19"
+  start_time: "17pm"
+  user_id: 2
+second_card:
+  board: "community"
+  category: "action"
+  title: "This is a card from Ammy"
+  description: "Just for testing purposes"
+  start_date: "Apr 19"
+  start_time: "17pm"
+  user_id: 1

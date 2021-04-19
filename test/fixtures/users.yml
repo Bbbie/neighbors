@@ -2,10 +2,10 @@ ammy:
   email: "ammy@varela.com"
   first_name: "ammyº"
   last_name: "varela"
-  community_id: 14
+  community_id: 1
 
 ana:
   email: "ana@garcia.com"
   first_name: "Ana"
   last_name: "Garcia"
-  community_id: 13
+  community_id: 1

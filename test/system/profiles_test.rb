@@ -16,11 +16,16 @@ class ProfilesTest < ApplicationSystemTestCase
 
   test "see profile content" do
     login_as users(:ana)
-    visit profile_path(params: {id: 33})
+
+    save_and_open_screenshot
+
+    within('div#neighbors-index') do
+      click_on ("Ana Garcia, VH, 3.OG")
+    end
 
     save_and_open_screenshot
     # (params: [id: 33])
     # assert_selector "p.from-who", text: "Where I live"
-    assert_text "Where I live"
+    assert_text "What you've missed"
   end
 end

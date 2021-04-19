@@ -1,5 +1,5 @@
 first_card:
-  board: "community"
+  board: "missed"
   category: "action"
   title: "This is a card from Ana"
   description: "Just for testing purposes"
@@ -7,7 +7,7 @@ first_card:
   start_time: "17pm"
   user_id: 2
 second_card:
-  board: "community"
+  board: "missed"
   category: "action"
   title: "This is a card from Ammy"
   description: "Just for testing purposes"

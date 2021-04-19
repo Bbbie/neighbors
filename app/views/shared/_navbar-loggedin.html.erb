@@ -133,19 +133,19 @@
         <ul class="navbar-nav mr-auto">
           <% if user_signed_in? %>
 
-              <li class="nav-item dropup">
-                <!-- FOR DEFAULT AVATAR -->
-                <% if current_user.profile.avatar.attached? %>
-                  <%= image_tag current_user.profile.avatar, class: "avatar-big dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                <% else  %>
-                  <%= navbar_avatar_for(current_user.profile) %>
-                <% end %>
-                <div class="dropdown-menu dropright" aria-labelledby="navbarDropdown">
+            <li class="nav-item dropup">
+              <!-- FOR DEFAULT AVATAR -->
+              <% if current_user.profile.avatar.attached? %>
+                <%= image_tag current_user.profile.avatar, class: "avatar-big dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <% else  %>
+                <%= navbar_avatar_for(current_user.profile) %>
+              <% end %>
 
-                <div class="dropdown-group">
-                   <%= image_tag "ic-mycards.svg", class: "dropdown-icon" %>
+              <div class="dropdown-menu dropright" aria-labelledby="navbarDropdown">
+
+                 <div class="dropdown-group">
+                  <%= image_tag "ic-mycards.svg", class: "nav-dropdown-icon" %>
                   <%= link_to "My cards", cards_path(query: "my-cards"), class: "drop-item" %>
-
                 </div>
 
                 <div class="dropdown-group">
@@ -156,18 +156,17 @@
                 </div>
 
                 <div class="dropdown-group">
-                   <%= image_tag "ic-settings.svg", class: "nav-dropdown-icon" %>
+                  <%= image_tag "ic-settings.svg", class: "nav-dropdown-icon" %>
                   <%= link_to "Settings", "#", class: "drop-item" %>
-
                 </div>
 
                 <div class="dropdown-group">
                   <%= image_tag "ic-logout.svg", class: "nav-dropdown-icon" %>
                   <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "drop-item" %>
-
                 </div>
 
               </div>
+
             </li>
 
           <% else %>

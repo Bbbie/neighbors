@@ -12,15 +12,23 @@
   right: 60px;
   background-color: white;
   border-radius: 24px;
-  padding: 30px;
+  padding-bottom: 25px;
   z-index: 1;
   box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.12);
 }
 
 .neighbor {
+  padding: 8px 30px;
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  &:hover {
+    background-color: #f7f7f7;
+  }
+}
+
+.neighbor:hover .description-card {
+  color: #323232;
+  opacity: 1;
 }
 
 .neighbors-inline {
@@ -28,22 +36,19 @@
 }
 
 .neighbors-top {
+  padding: 0 30px;
+  padding-top: 30px;
+  padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-}
-
-.neighbors-top .from-who {
-  margin-bottom: 10px;
 }
 
 .display-none {
   display: none;
 }
 
-#neighbors-index p {
+.description-card {
   color: #323232;
-  &:hover {
-    color: #323232;
-  }
+  opacity: .8;
 }

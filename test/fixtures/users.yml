@@ -3,3 +3,9 @@ ammy:
   first_name: "ammyº"
   last_name: "varela"
   community_id: 14
+
+ana:
+  email: "ana@garcia.com"
+  first_name: "Ana"
+  last_name: "Garcia"
+  community_id: 13

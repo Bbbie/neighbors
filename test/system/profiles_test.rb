@@ -9,18 +9,18 @@ class ProfilesTest < ApplicationSystemTestCase
     fill_in "profile_about", with: "Hey there I am a test"
     click_on "Save"
 
-    save_and_open_screenshot
+    # save_and_open_screenshot
 
     assert_equal cards_path, page.current_path
   end
 
   test "see profile content" do
-    login_as users(:ammy)
-    visit cards_path
-    find('img#navbarDropdown').click
-    click_on "My profile"
+    login_as users(:ana)
+    visit profile_path(params: {id: 33})
 
-    assert_selector ".from-who", text: "Where I live"
-    assert_text "I am Ammy Varela"
+    save_and_open_screenshot
+    # (params: [id: 33])
+    # assert_selector "p.from-who", text: "Where I live"
+    assert_text "Where I live"
   end
 end

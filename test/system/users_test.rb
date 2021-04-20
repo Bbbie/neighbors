@@ -23,6 +23,5 @@ class UsersTest < ApplicationSystemTestCase
 
     assert_equal cards_path, page.current_path
     assert_selector "h1", text: "What you've missed"
-    assert_selector ".custom-card", count: Card.count
   end
 end

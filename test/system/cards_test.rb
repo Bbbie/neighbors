@@ -30,5 +30,6 @@ class CardsTest < ApplicationSystemTestCase
 
     assert_selector "h1", text: "Mutual help"
     assert_selector "p", text: "This is a test for cards"
+    assert_selector ".custom-card", count: Card.count
   end
 end

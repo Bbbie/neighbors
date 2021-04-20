@@ -23,6 +23,11 @@ class CardsTest < ApplicationSystemTestCase
     click_on "Save"
 
     visit cards_path
+    find('button.btn-shadow').click
+    find('select#card_board option', :text => "Mutual Help 🤝").click
+    find('label.form-check-label', :text => "action").click
+    fill_in "card_title", with: "This is a test for cards"
+
     save_and_open_screenshot
   end
 end

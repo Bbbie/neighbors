@@ -28,6 +28,7 @@ class CardsTest < ApplicationSystemTestCase
     find('label.form-check-label', :text => "action").click
     fill_in "card_title", with: "This is a test for cards"
 
-    save_and_open_screenshot
+    assert_selector "h1", text: "Mutual help"
+    assert_selector "p", text: "This is a test for cards"
   end
 end
